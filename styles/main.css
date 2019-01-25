@@ -1,0 +1,98 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #eee !important;
+}
+
+.configurable-application--loading {
+  text-align: center;
+  display: block;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  background-color: #fff;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-image: url(../assets/loader-ie9.gif)
+}
+
+.configurable-application--loading .configurable-application__group-container {
+  display: none
+}
+
+.cursor {
+  cursor: pointer;
+}
+
+/* top navbar */
+.nav_title {
+  margin-left: 70px;
+  font-size: 1.4019rem;
+}
+
+.nav-logo {
+  height: 70px;
+  width: 70px;
+  position: absolute;
+}
+
+.top-nav {
+  background-color: #eee !important;
+}
+
+.header-container {
+  background-image: url('/assets/images/sdgs-banner-background-dark.jpg');
+  height: 220px;
+  background-size: cover;
+}
+
+.flag {
+  height: 200px;
+  width: 175px !important;
+}
+
+.flag-override {
+  height: 20px;
+  position: absolute !important;
+  background-position: 0 !important;
+}
+
+.header-subtitle {
+  font-size: 18px;
+  font-weight: normal;
+}
+
+.card-image-override {
+  width: 130px !important;
+  height: 130px !important;
+  min-width: 0 !important;
+  margin: 0 auto !important;  
+}
+.card-wide-image {
+  position: inherit !important;
+}
+
+.card-override {
+  margin-top: -30px;
+  padding-left: 0px !important;
+}
+
+.panel-override {
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1), 0 0 16px 0 rgba(0, 0, 0, 0.05);
+}
+
+.modal-overlay .card {
+  height: 70px;
+}
+
+.modal-country-name {
+  margin-left: 40px;
+}
+
+.list-numbered > li:before {
+  font-size: 1.30rem !important;
+  content: '' !important;
+}
