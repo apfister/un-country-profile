@@ -1,10 +1,10 @@
 {
     "release": "2018.Q4.G.02",
-    "country_code": "624",
-    "country_name": "Guinea-Bissau",
-    "X": "-14.40182514",
-    "Y": "12.11760394",
-    "ISO3CD": "GNB",
+    "country_code": "180",
+    "country_name": "Democratic Republic of the Congo",
+    "X": "23.65496507",
+    "Y": "-2.877154732",
+    "ISO3CD": "COD",
     "UNMember": "1",
     "CountryProfile": "1",
     "facts": [
@@ -22,56 +22,40 @@
             "slice_dimensions": {},
             "data": [
                 {
-                    "value": "53.9",
-                    "year": "2002"
+                    "value": "77.1",
+                    "year": "2012"
                 },
                 {
-                    "value": "64",
-                    "year": "1993"
-                },
-                {
-                    "value": "43",
-                    "year": "1991"
-                },
-                {
-                    "value": "67.1",
-                    "year": "2010"
+                    "value": "94.1",
+                    "year": "2004"
                 }
             ],
             "text_type": "1",
             "fact_title": "Proportion of population below international poverty line (%)",
-            "fact_text": "The proportion of the population living below the extreme poverty line increased from <span class='fact-value'>43</span> <span class='fact-unit'>%</span> in <span class='fact-year'>1991</span> to <span class='fact-value'>67.1%</span>  in  <span class='fact-year'>2010</span>.",
+            "fact_text": "The proportion of the population living below the extreme poverty line declined from <span class='fact-value'>94.1</span> <span class='fact-unit'>%</span> in <span class='fact-year'>2004</span> to <span class='fact-value'>77.1%</span>  in  <span class='fact-year'>2012</span>.",
             "fact_values": [
-                "43%",
-                "67.1%"
+                "94.1%",
+                "77.1%"
             ],
             "fact_years": [
-                "1991",
-                "2010"
+                "2004",
+                "2012"
             ],
             "data_years": [
-                "2002",
-                "1993",
-                "1991",
-                "2010"
+                "2012",
+                "2004"
             ],
             "data_values": [
-                "53.9",
-                "64",
-                "43",
-                "67.1"
+                "77.1",
+                "94.1"
             ],
             "data_is_censored": [
-                false,
-                false,
                 false,
                 false
             ],
             "data_numeric_part": [
-                54.0,
-                64.0,
-                43.0,
-                67.0
+                77.0,
+                94.0
             ]
         },
         {
@@ -91,42 +75,42 @@
             },
             "data": [
                 {
-                    "value": "61.9",
+                    "value": "77.7",
                     "Age": "15+",
                     "Sex": "BOTHSEX",
-                    "year": "2010"
+                    "year": "2012"
                 },
                 {
-                    "value": "51.0",
+                    "value": "95.6",
                     "Age": "15+",
                     "Sex": "BOTHSEX",
-                    "year": "2002"
+                    "year": "2005"
                 }
             ],
             "text_type": "2",
             "fact_title": "Employed population below international poverty line, by sex and age (%)",
-            "fact_text": "In <span class='fact-year'>2010</span>, <span class='fact-value'>61.9</span> <span class='fact-unit'>% </span>  of the country's workers and their families were living on less than 1.90 US dollars per person per day",
+            "fact_text": "In <span class='fact-year'>2012</span>, <span class='fact-value'>77.7</span> <span class='fact-unit'>% </span>  of the country's workers and their families were living on less than 1.90 US dollars per person per day",
             "fact_values": [
-                "61.9% "
+                "77.7% "
             ],
             "fact_years": [
-                "2010"
+                "2012"
             ],
             "data_years": [
-                "2010",
-                "2002"
+                "2012",
+                "2005"
             ],
             "data_values": [
-                "61.9",
-                "51.0"
+                "77.7",
+                "95.6"
             ],
             "data_is_censored": [
                 false,
                 false
             ],
             "data_numeric_part": [
-                62.0,
-                51.0
+                78.0,
+                96.0
             ]
         },
         {
@@ -147,32 +131,32 @@
                 {
                     "value": "69.3",
                     "Location": "ALLAREA",
-                    "year": "2010"
+                    "year": "2004"
                 },
                 {
-                    "value": "64.7",
+                    "value": "63.9",
                     "Location": "ALLAREA",
-                    "year": "2002"
+                    "year": "2012"
                 }
             ],
             "text_type": "1",
             "fact_title": "Proportion of population living below the national poverty line (%)",
-            "fact_text": "The proportion of population living below the national poverty line increased from <span class='fact-value'>64.7</span> <span class='fact-unit'>%</span> in <span class='fact-year'>2002</span> to <span class='fact-value'>69.3%</span>  in  <span class='fact-year'>2010</span>.",
+            "fact_text": "The proportion of population living below the national poverty line declined from <span class='fact-value'>69.3</span> <span class='fact-unit'>%</span> in <span class='fact-year'>2004</span> to <span class='fact-value'>63.9%</span>  in  <span class='fact-year'>2012</span>.",
             "fact_values": [
-                "64.7%",
-                "69.3%"
+                "69.3%",
+                "63.9%"
             ],
             "fact_years": [
-                "2002",
-                "2010"
+                "2004",
+                "2012"
             ],
             "data_years": [
-                "2010",
-                "2002"
+                "2004",
+                "2012"
             ],
             "data_values": [
                 "69.3",
-                "64.7"
+                "63.9"
             ],
             "data_is_censored": [
                 false,
@@ -180,7 +164,7 @@
             ],
             "data_numeric_part": [
                 69.0,
-                65.0
+                64.0
             ]
         },
         {
@@ -200,222 +184,62 @@
             },
             "data": [
                 {
-                    "value": "36.1",
+                    "value": "44.4",
                     "Age": "<5Y",
                     "Bounds": "MP",
-                    "year": "2000"
+                    "year": "2001"
                 },
                 {
-                    "value": "47.7",
+                    "value": "45.8",
                     "Age": "<5Y",
                     "Bounds": "MP",
-                    "year": "2006"
+                    "year": "2007"
                 },
                 {
-                    "value": "32.2",
+                    "value": "43.5",
                     "Age": "<5Y",
                     "Bounds": "MP",
                     "year": "2010"
                 },
                 {
-                    "value": "27.6",
+                    "value": "42.6",
                     "Age": "<5Y",
                     "Bounds": "MP",
-                    "year": "2014"
+                    "year": "2013"
                 }
             ],
             "text_type": "2",
             "fact_title": "Proportion of children moderately or severely stunted (%)",
-            "fact_text": "In <span class='fact-year'>2014</span>, <span class='fact-value'>27.6</span> <span class='fact-unit'>% </span> of children under age 5 had stunted growth",
+            "fact_text": "In <span class='fact-year'>2013</span>, <span class='fact-value'>42.6</span> <span class='fact-unit'>% </span> of children under age 5 had stunted growth",
             "fact_values": [
-                "27.6% "
+                "42.6% "
             ],
             "fact_years": [
-                "2014"
+                "2013"
             ],
             "data_years": [
-                "2000",
-                "2006",
-                "2010",
-                "2014"
-            ],
-            "data_values": [
-                "36.1",
-                "47.7",
-                "32.2",
-                "27.6"
-            ],
-            "data_is_censored": [
-                false,
-                false,
-                false,
-                false
-            ],
-            "data_numeric_part": [
-                36.0,
-                48.0,
-                32.0,
-                28.0
-            ]
-        },
-        {
-            "goalCode": "2",
-            "goalDesc": "End hunger, achieve food security and improved nutrition and promote sustainable agriculture",
-            "targetCode": "2.1",
-            "targetDesc": "By 2030, end hunger and ensure access by all people, in particular the poor and people in vulnerable situations, including infants, to safe, nutritious and sufficient food all year round",
-            "indicatorCode": "2.1.1",
-            "indicatorDesc": "Prevalence of undernourishment",
-            "indicatorTier": "1",
-            "seriesCode": "SN_ITK_DEFC",
-            "seriesDesc": "Prevalence of undernourishment (%)",
-            "hub": "65925035bb984f66aa03480f6754c4fe",
-            "slice_dimensions": {},
-            "data": [
-                {
-                    "value": "25.1",
-                    "year": "2003"
-                },
-                {
-                    "value": "25.1",
-                    "year": "2004"
-                },
-                {
-                    "value": "24.9",
-                    "year": "2005"
-                },
-                {
-                    "value": "24.6",
-                    "year": "2006"
-                },
-                {
-                    "value": "24.2",
-                    "year": "2007"
-                },
-                {
-                    "value": "23.8",
-                    "year": "2008"
-                },
-                {
-                    "value": "23.3",
-                    "year": "2009"
-                },
-                {
-                    "value": "22.8",
-                    "year": "2010"
-                },
-                {
-                    "value": "22.7",
-                    "year": "2011"
-                },
-                {
-                    "value": "23.4",
-                    "year": "2012"
-                },
-                {
-                    "value": "25",
-                    "year": "2013"
-                },
-                {
-                    "value": "26.8",
-                    "year": "2014"
-                },
-                {
-                    "value": "28.3",
-                    "year": "2015"
-                },
-                {
-                    "value": "24.7",
-                    "year": "2002"
-                },
-                {
-                    "value": "25",
-                    "year": "2001"
-                },
-                {
-                    "value": "26.4",
-                    "year": "2000"
-                }
-            ],
-            "text_type": "7",
-            "fact_title": "Prevalence of undernourishment (%)",
-            "fact_text": "The proportion of the population suffering from hunger was <span class='fact-value'> 28.3</span>  <span class='fact-unit'>%</span>  in <span class='fact-year'> 2015</span> .",
-            "fact_values": [
-                "28.3%"
-            ],
-            "fact_years": [
-                "2015"
-            ],
-            "data_years": [
-                "2003",
-                "2004",
-                "2005",
-                "2006",
-                "2007",
-                "2008",
-                "2009",
-                "2010",
-                "2011",
-                "2012",
-                "2013",
-                "2014",
-                "2015",
-                "2002",
                 "2001",
-                "2000"
+                "2007",
+                "2010",
+                "2013"
             ],
             "data_values": [
-                "25.1",
-                "25.1",
-                "24.9",
-                "24.6",
-                "24.2",
-                "23.8",
-                "23.3",
-                "22.8",
-                "22.7",
-                "23.4",
-                "25",
-                "26.8",
-                "28.3",
-                "24.7",
-                "25",
-                "26.4"
+                "44.4",
+                "45.8",
+                "43.5",
+                "42.6"
             ],
             "data_is_censored": [
-                false,
-                false,
-                false,
-                false,
-                false,
-                false,
-                false,
-                false,
-                false,
-                false,
-                false,
-                false,
                 false,
                 false,
                 false,
                 false
             ],
             "data_numeric_part": [
-                25.0,
-                25.0,
-                25.0,
-                25.0,
-                24.0,
-                24.0,
-                23.0,
-                23.0,
-                23.0,
-                23.0,
-                25.0,
-                27.0,
-                28.0,
-                25.0,
-                25.0,
-                26.0
+                44.0,
+                46.0,
+                44.0,
+                43.0
             ]
         },
         {
@@ -435,52 +259,52 @@
             },
             "data": [
                 {
-                    "value": "5.1",
+                    "value": "4.4",
                     "Age": "<5Y",
                     "Bounds": "MP",
-                    "year": "2000"
+                    "year": "2013"
                 },
                 {
-                    "value": "17.0",
+                    "value": "6.8",
                     "Age": "<5Y",
                     "Bounds": "MP",
-                    "year": "2006"
+                    "year": "2007"
                 },
                 {
-                    "value": "3.2",
+                    "value": "6.5",
+                    "Age": "<5Y",
+                    "Bounds": "MP",
+                    "year": "2001"
+                },
+                {
+                    "value": "4.9",
                     "Age": "<5Y",
                     "Bounds": "MP",
                     "year": "2010"
-                },
-                {
-                    "value": "2.3",
-                    "Age": "<5Y",
-                    "Bounds": "MP",
-                    "year": "2014"
                 }
             ],
             "text_type": "1",
             "fact_title": "Proportion of children moderately or severely overweight (%)",
-            "fact_text": "The share of overweight children under age 5 decreased from <span class='fact-value'>5.1</span> <span class='fact-unit'>%</span> in <span class='fact-year'>2000</span> to <span class='fact-value'>2.3%</span>  in  <span class='fact-year'>2014</span>.",
+            "fact_text": "The share of overweight children under age 5 decreased from <span class='fact-value'>6.5</span> <span class='fact-unit'>%</span> in <span class='fact-year'>2001</span> to <span class='fact-value'>4.4%</span>  in  <span class='fact-year'>2013</span>.",
             "fact_values": [
-                "5.1%",
-                "2.3%"
+                "6.5%",
+                "4.4%"
             ],
             "fact_years": [
-                "2000",
-                "2014"
+                "2001",
+                "2013"
             ],
             "data_years": [
-                "2000",
-                "2006",
-                "2010",
-                "2014"
+                "2013",
+                "2007",
+                "2001",
+                "2010"
             ],
             "data_values": [
-                "5.1",
-                "17.0",
-                "3.2",
-                "2.3"
+                "4.4",
+                "6.8",
+                "6.5",
+                "4.9"
             ],
             "data_is_censored": [
                 false,
@@ -489,10 +313,10 @@
                 false
             ],
             "data_numeric_part": [
-                5.1,
-                17.0,
-                3.2,
-                2.3
+                4.4,
+                6.8,
+                6.5,
+                4.9
             ]
         },
         {
@@ -512,109 +336,109 @@
             },
             "data": [
                 {
-                    "value": "126",
+                    "value": "124.5",
                     "Age": "<5Y",
                     "Sex": "BOTHSEX",
                     "year": "2008"
                 },
                 {
-                    "value": "132.4",
+                    "value": "129",
                     "Age": "<5Y",
                     "Sex": "BOTHSEX",
                     "year": "2007"
                 },
                 {
-                    "value": "139",
+                    "value": "133.6",
                     "Age": "<5Y",
                     "Sex": "BOTHSEX",
                     "year": "2006"
                 },
                 {
-                    "value": "170.2",
-                    "Age": "<5Y",
-                    "Sex": "BOTHSEX",
-                    "year": "2001"
-                },
-                {
-                    "value": "164.3",
+                    "value": "152.6",
                     "Age": "<5Y",
                     "Sex": "BOTHSEX",
                     "year": "2002"
                 },
                 {
-                    "value": "175.8",
+                    "value": "161.3",
                     "Age": "<5Y",
                     "Sex": "BOTHSEX",
                     "year": "2000"
                 },
                 {
-                    "value": "151.9",
+                    "value": "157",
+                    "Age": "<5Y",
+                    "Sex": "BOTHSEX",
+                    "year": "2001"
+                },
+                {
+                    "value": "143.1",
                     "Age": "<5Y",
                     "Sex": "BOTHSEX",
                     "year": "2004"
                 },
                 {
-                    "value": "145.5",
+                    "value": "138.3",
                     "Age": "<5Y",
                     "Sex": "BOTHSEX",
                     "year": "2005"
                 },
                 {
-                    "value": "158.2",
+                    "value": "147.9",
                     "Age": "<5Y",
                     "Sex": "BOTHSEX",
                     "year": "2003"
                 },
                 {
-                    "value": "87.4",
+                    "value": "94.4",
                     "Age": "<5Y",
                     "Sex": "BOTHSEX",
                     "year": "2016"
                 },
                 {
-                    "value": "94.5",
+                    "value": "101",
                     "Age": "<5Y",
                     "Sex": "BOTHSEX",
                     "year": "2014"
                 },
                 {
-                    "value": "90.7",
+                    "value": "97.6",
                     "Age": "<5Y",
                     "Sex": "BOTHSEX",
                     "year": "2015"
                 },
                 {
-                    "value": "84.2",
+                    "value": "91.1",
                     "Age": "<5Y",
                     "Sex": "BOTHSEX",
                     "year": "2017"
                 },
                 {
-                    "value": "113.8",
+                    "value": "116.1",
                     "Age": "<5Y",
                     "Sex": "BOTHSEX",
                     "year": "2010"
                 },
                 {
-                    "value": "119.8",
-                    "Age": "<5Y",
-                    "Sex": "BOTHSEX",
-                    "year": "2009"
-                },
-                {
-                    "value": "98.4",
-                    "Age": "<5Y",
-                    "Sex": "BOTHSEX",
-                    "year": "2013"
-                },
-                {
-                    "value": "108.2",
+                    "value": "112.1",
                     "Age": "<5Y",
                     "Sex": "BOTHSEX",
                     "year": "2011"
                 },
                 {
-                    "value": "103",
+                    "value": "120.2",
+                    "Age": "<5Y",
+                    "Sex": "BOTHSEX",
+                    "year": "2009"
+                },
+                {
+                    "value": "104.7",
+                    "Age": "<5Y",
+                    "Sex": "BOTHSEX",
+                    "year": "2013"
+                },
+                {
+                    "value": "108.3",
                     "Age": "<5Y",
                     "Sex": "BOTHSEX",
                     "year": "2012"
@@ -622,10 +446,10 @@
             ],
             "text_type": "1",
             "fact_title": "Under-five mortality rate, by sex (deaths per 1,000 live births)",
-            "fact_text": "The mortality rate of children under age 5 fell from <span class='fact-value'>175.8</span> <span class='fact-unit'> per 1,000 live births</span> in <span class='fact-year'>2000</span> to <span class='fact-value'>84.2 per 1,000 live births</span>  in  <span class='fact-year'>2017</span>.",
+            "fact_text": "The mortality rate of children under age 5 fell from <span class='fact-value'>161.3</span> <span class='fact-unit'> per 1,000 live births</span> in <span class='fact-year'>2000</span> to <span class='fact-value'>91.1 per 1,000 live births</span>  in  <span class='fact-year'>2017</span>.",
             "fact_values": [
-                "175.8 per 1,000 live births",
-                "84.2 per 1,000 live births"
+                "161.3 per 1,000 live births",
+                "91.1 per 1,000 live births"
             ],
             "fact_years": [
                 "2000",
@@ -635,9 +459,9 @@
                 "2008",
                 "2007",
                 "2006",
-                "2001",
                 "2002",
                 "2000",
+                "2001",
                 "2004",
                 "2005",
                 "2003",
@@ -646,30 +470,30 @@
                 "2015",
                 "2017",
                 "2010",
+                "2011",
                 "2009",
                 "2013",
-                "2011",
                 "2012"
             ],
             "data_values": [
-                "126",
-                "132.4",
-                "139",
-                "170.2",
-                "164.3",
-                "175.8",
-                "151.9",
-                "145.5",
-                "158.2",
-                "87.4",
-                "94.5",
-                "90.7",
-                "84.2",
-                "113.8",
-                "119.8",
-                "98.4",
-                "108.2",
-                "103"
+                "124.5",
+                "129",
+                "133.6",
+                "152.6",
+                "161.3",
+                "157",
+                "143.1",
+                "138.3",
+                "147.9",
+                "94.4",
+                "101",
+                "97.6",
+                "91.1",
+                "116.1",
+                "112.1",
+                "120.2",
+                "104.7",
+                "108.3"
             ],
             "data_is_censored": [
                 false,
@@ -692,24 +516,24 @@
                 false
             ],
             "data_numeric_part": [
-                126.0,
-                132.0,
-                139.0,
-                170.0,
-                164.0,
-                176.0,
-                152.0,
-                146.0,
-                158.0,
-                87.0,
-                95.0,
-                91.0,
-                84.0,
-                114.0,
-                120.0,
+                125.0,
+                129.0,
+                134.0,
+                153.0,
+                161.0,
+                157.0,
+                143.0,
+                138.0,
+                148.0,
+                94.0,
+                101.0,
                 98.0,
-                108.0,
-                103.0
+                91.0,
+                116.0,
+                112.0,
+                120.0,
+                105.0,
+                108.0
             ]
         },
         {
@@ -729,103 +553,103 @@
             },
             "data": [
                 {
-                    "value": "2.48",
+                    "value": "0.43",
                     "Age": "ALLAGE",
                     "Sex": "BOTHSEX",
                     "year": "2008"
                 },
                 {
-                    "value": "2.89",
+                    "value": "0.49",
                     "Age": "ALLAGE",
                     "Sex": "BOTHSEX",
                     "year": "2007"
                 },
                 {
-                    "value": "1.68",
+                    "value": "0.33",
                     "Age": "ALLAGE",
                     "Sex": "BOTHSEX",
                     "year": "2010"
                 },
                 {
-                    "value": "2.02",
+                    "value": "0.37",
                     "Age": "ALLAGE",
                     "Sex": "BOTHSEX",
                     "year": "2009"
                 },
                 {
-                    "value": "3.92",
-                    "Age": "ALLAGE",
-                    "Sex": "BOTHSEX",
-                    "year": "2004"
-                },
-                {
-                    "value": "3.28",
-                    "Age": "ALLAGE",
-                    "Sex": "BOTHSEX",
-                    "year": "2006"
-                },
-                {
-                    "value": "3.70",
+                    "value": "0.65",
                     "Age": "ALLAGE",
                     "Sex": "BOTHSEX",
                     "year": "2005"
                 },
                 {
-                    "value": "0.72",
+                    "value": "0.73",
+                    "Age": "ALLAGE",
+                    "Sex": "BOTHSEX",
+                    "year": "2004"
+                },
+                {
+                    "value": "0.57",
+                    "Age": "ALLAGE",
+                    "Sex": "BOTHSEX",
+                    "year": "2006"
+                },
+                {
+                    "value": "0.17",
                     "Age": "ALLAGE",
                     "Sex": "BOTHSEX",
                     "year": "2016"
                 },
                 {
-                    "value": "0.90",
+                    "value": "0.19",
                     "Age": "ALLAGE",
                     "Sex": "BOTHSEX",
                     "year": "2015"
                 },
                 {
-                    "value": "1.21",
+                    "value": "0.27",
                     "Age": "ALLAGE",
                     "Sex": "BOTHSEX",
                     "year": "2012"
                 },
                 {
-                    "value": "1.42",
+                    "value": "0.30",
                     "Age": "ALLAGE",
                     "Sex": "BOTHSEX",
                     "year": "2011"
                 },
                 {
-                    "value": "0.93",
+                    "value": "0.22",
                     "Age": "ALLAGE",
                     "Sex": "BOTHSEX",
                     "year": "2014"
                 },
                 {
-                    "value": "0.96",
+                    "value": "0.24",
                     "Age": "ALLAGE",
                     "Sex": "BOTHSEX",
                     "year": "2013"
                 },
                 {
-                    "value": "3.85",
+                    "value": "1.00",
                     "Age": "ALLAGE",
                     "Sex": "BOTHSEX",
                     "year": "2001"
                 },
                 {
-                    "value": "3.57",
+                    "value": "1.11",
                     "Age": "ALLAGE",
                     "Sex": "BOTHSEX",
                     "year": "2000"
                 },
                 {
-                    "value": "4.08",
+                    "value": "0.81",
                     "Age": "ALLAGE",
                     "Sex": "BOTHSEX",
                     "year": "2003"
                 },
                 {
-                    "value": "4.00",
+                    "value": "0.93",
                     "Age": "ALLAGE",
                     "Sex": "BOTHSEX",
                     "year": "2002"
@@ -833,9 +657,9 @@
             ],
             "text_type": "13",
             "fact_title": "Number of new HIV infections per 1,000 uninfected population, by sex and age (per 1,000 uninfected population)",
-            "fact_text": "In <span class='fact-year'> 2016</span> , there were about <span class='fact-value'> 0.72</span>  <span class='fact-unit'> people</span>  in every 100,000 uninfected population that became newly infected with HIV.",
+            "fact_text": "In <span class='fact-year'> 2016</span> , there were about <span class='fact-value'> 0.17</span>  <span class='fact-unit'> people</span>  in every 100,000 uninfected population that became newly infected with HIV.",
             "fact_values": [
-                "0.72 people"
+                "0.17 people"
             ],
             "fact_years": [
                 "2016"
@@ -845,9 +669,9 @@
                 "2007",
                 "2010",
                 "2009",
+                "2005",
                 "2004",
                 "2006",
-                "2005",
                 "2016",
                 "2015",
                 "2012",
@@ -860,23 +684,23 @@
                 "2002"
             ],
             "data_values": [
-                "2.48",
-                "2.89",
-                "1.68",
-                "2.02",
-                "3.92",
-                "3.28",
-                "3.70",
-                "0.72",
-                "0.90",
-                "1.21",
-                "1.42",
-                "0.93",
-                "0.96",
-                "3.85",
-                "3.57",
-                "4.08",
-                "4.00"
+                "0.43",
+                "0.49",
+                "0.33",
+                "0.37",
+                "0.65",
+                "0.73",
+                "0.57",
+                "0.17",
+                "0.19",
+                "0.27",
+                "0.30",
+                "0.22",
+                "0.24",
+                "1.00",
+                "1.11",
+                "0.81",
+                "0.93"
             ],
             "data_is_censored": [
                 false,
@@ -898,23 +722,23 @@
                 false
             ],
             "data_numeric_part": [
-                2.5,
-                2.9,
-                1.7,
-                2.0,
-                3.9,
-                3.3,
-                3.7,
-                0.72,
-                0.9,
-                1.2,
-                1.4,
-                0.93,
-                0.96,
-                3.9,
-                3.6,
-                4.1,
-                4.0
+                0.43,
+                0.49,
+                0.33,
+                0.37,
+                0.65,
+                0.73,
+                0.57,
+                0.17,
+                0.19,
+                0.27,
+                0.3,
+                0.22,
+                0.24,
+                1.0,
+                1.1,
+                0.81,
+                0.93
             ]
         },
         {
@@ -933,202 +757,202 @@
             },
             "data": [
                 {
-                    "value": "907",
-                    "Bounds": "MP",
-                    "year": "1990"
-                },
-                {
-                    "value": "877",
-                    "Bounds": "MP",
-                    "year": "1991"
-                },
-                {
-                    "value": "745",
-                    "Bounds": "MP",
-                    "year": "2004"
-                },
-                {
-                    "value": "775",
-                    "Bounds": "MP",
-                    "year": "2003"
-                },
-                {
-                    "value": "793",
-                    "Bounds": "MP",
-                    "year": "2002"
-                },
-                {
-                    "value": "799",
-                    "Bounds": "MP",
-                    "year": "2001"
-                },
-                {
-                    "value": "714",
-                    "Bounds": "MP",
-                    "year": "2005"
-                },
-                {
-                    "value": "587",
-                    "Bounds": "MP",
-                    "year": "2009"
-                },
-                {
-                    "value": "614",
-                    "Bounds": "MP",
-                    "year": "2008"
-                },
-                {
-                    "value": "643",
-                    "Bounds": "MP",
-                    "year": "2007"
-                },
-                {
-                    "value": "679",
-                    "Bounds": "MP",
-                    "year": "2006"
-                },
-                {
-                    "value": "800",
-                    "Bounds": "MP",
-                    "year": "2000"
-                },
-                {
-                    "value": "780",
-                    "Bounds": "MP",
-                    "year": "1995"
-                },
-                {
-                    "value": "799",
-                    "Bounds": "MP",
-                    "year": "1994"
-                },
-                {
-                    "value": "825",
-                    "Bounds": "MP",
-                    "year": "1993"
-                },
-                {
-                    "value": "848",
-                    "Bounds": "MP",
-                    "year": "1992"
-                },
-                {
-                    "value": "777",
-                    "Bounds": "MP",
-                    "year": "1996"
-                },
-                {
-                    "value": "788",
+                    "value": "902",
                     "Bounds": "MP",
                     "year": "1999"
                 },
                 {
-                    "value": "782",
+                    "value": "874",
                     "Bounds": "MP",
-                    "year": "1998"
+                    "year": "2000"
                 },
                 {
-                    "value": "776",
+                    "value": "919",
                     "Bounds": "MP",
                     "year": "1997"
                 },
                 {
-                    "value": "554",
+                    "value": "915",
+                    "Bounds": "MP",
+                    "year": "1998"
+                },
+                {
+                    "value": "793",
+                    "Bounds": "MP",
+                    "year": "2004"
+                },
+                {
+                    "value": "808",
+                    "Bounds": "MP",
+                    "year": "2003"
+                },
+                {
+                    "value": "830",
+                    "Bounds": "MP",
+                    "year": "2002"
+                },
+                {
+                    "value": "853",
+                    "Bounds": "MP",
+                    "year": "2001"
+                },
+                {
+                    "value": "920",
+                    "Bounds": "MP",
+                    "year": "1996"
+                },
+                {
+                    "value": "879",
+                    "Bounds": "MP",
+                    "year": "1990"
+                },
+                {
+                    "value": "881",
+                    "Bounds": "MP",
+                    "year": "1991"
+                },
+                {
+                    "value": "914",
+                    "Bounds": "MP",
+                    "year": "1995"
+                },
+                {
+                    "value": "904",
+                    "Bounds": "MP",
+                    "year": "1994"
+                },
+                {
+                    "value": "890",
+                    "Bounds": "MP",
+                    "year": "1993"
+                },
+                {
+                    "value": "883",
+                    "Bounds": "MP",
+                    "year": "1992"
+                },
+                {
+                    "value": "693",
+                    "Bounds": "MP",
+                    "year": "2015"
+                },
+                {
+                    "value": "787",
+                    "Bounds": "MP",
+                    "year": "2005"
+                },
+                {
+                    "value": "792",
+                    "Bounds": "MP",
+                    "year": "2008"
+                },
+                {
+                    "value": "793",
+                    "Bounds": "MP",
+                    "year": "2009"
+                },
+                {
+                    "value": "789",
+                    "Bounds": "MP",
+                    "year": "2006"
+                },
+                {
+                    "value": "803",
+                    "Bounds": "MP",
+                    "year": "2007"
+                },
+                {
+                    "value": "746",
                     "Bounds": "MP",
                     "year": "2013"
                 },
                 {
-                    "value": "553",
+                    "value": "771",
                     "Bounds": "MP",
                     "year": "2012"
                 },
                 {
-                    "value": "563",
+                    "value": "777",
                     "Bounds": "MP",
                     "year": "2011"
                 },
                 {
-                    "value": "570",
+                    "value": "794",
                     "Bounds": "MP",
                     "year": "2010"
                 },
                 {
-                    "value": "553",
+                    "value": "717",
                     "Bounds": "MP",
                     "year": "2014"
-                },
-                {
-                    "value": "549",
-                    "Bounds": "MP",
-                    "year": "2015"
                 }
             ],
             "text_type": "14",
             "fact_title": "Maternal mortality ratio",
-            "fact_text": "The maternal mortality ratio decreased from <span class='fact-value'>907</span>  <span class='fact-unit'> per 100,000 live births</span>  in <span class='fact-year'> 1990</span>  to <span class='fact-value'> 549</span>  <span class='fact-unit'> per 100,000 live births</span>  in <span class='fact-year'> 2015</span> .",
+            "fact_text": "The maternal mortality ratio decreased from <span class='fact-value'>879</span>  <span class='fact-unit'> per 100,000 live births</span>  in <span class='fact-year'> 1990</span>  to <span class='fact-value'> 693</span>  <span class='fact-unit'> per 100,000 live births</span>  in <span class='fact-year'> 2015</span> .",
             "fact_values": [
-                "907 per 100,000 live births",
-                "549 per 100,000 live births"
+                "879 per 100,000 live births",
+                "693 per 100,000 live births"
             ],
             "fact_years": [
                 "1990",
                 "2015"
             ],
             "data_years": [
-                "1990",
-                "1991",
+                "1999",
+                "2000",
+                "1997",
+                "1998",
                 "2004",
                 "2003",
                 "2002",
                 "2001",
-                "2005",
-                "2009",
-                "2008",
-                "2007",
-                "2006",
-                "2000",
+                "1996",
+                "1990",
+                "1991",
                 "1995",
                 "1994",
                 "1993",
                 "1992",
-                "1996",
-                "1999",
-                "1998",
-                "1997",
+                "2015",
+                "2005",
+                "2008",
+                "2009",
+                "2006",
+                "2007",
                 "2013",
                 "2012",
                 "2011",
                 "2010",
-                "2014",
-                "2015"
+                "2014"
             ],
             "data_values": [
-                "907",
-                "877",
-                "745",
-                "775",
+                "902",
+                "874",
+                "919",
+                "915",
                 "793",
-                "799",
-                "714",
-                "587",
-                "614",
-                "643",
-                "679",
-                "800",
-                "780",
-                "799",
-                "825",
-                "848",
+                "808",
+                "830",
+                "853",
+                "920",
+                "879",
+                "881",
+                "914",
+                "904",
+                "890",
+                "883",
+                "693",
+                "787",
+                "792",
+                "793",
+                "789",
+                "803",
+                "746",
+                "771",
                 "777",
-                "788",
-                "782",
-                "776",
-                "554",
-                "553",
-                "563",
-                "570",
-                "553",
-                "549"
+                "794",
+                "717"
             ],
             "data_is_censored": [
                 false,
@@ -1159,32 +983,32 @@
                 false
             ],
             "data_numeric_part": [
-                907.0,
-                877.0,
-                745.0,
-                775.0,
+                902.0,
+                874.0,
+                919.0,
+                915.0,
                 793.0,
-                799.0,
-                714.0,
-                587.0,
-                614.0,
-                643.0,
-                679.0,
-                800.0,
-                780.0,
-                799.0,
-                825.0,
-                848.0,
+                808.0,
+                830.0,
+                853.0,
+                920.0,
+                879.0,
+                881.0,
+                914.0,
+                904.0,
+                890.0,
+                883.0,
+                693.0,
+                787.0,
+                792.0,
+                793.0,
+                789.0,
+                803.0,
+                746.0,
+                771.0,
                 777.0,
-                788.0,
-                782.0,
-                776.0,
-                554.0,
-                553.0,
-                563.0,
-                570.0,
-                553.0,
-                549.0
+                794.0,
+                717.0
             ]
         },
         {
@@ -1204,60 +1028,60 @@
             },
             "data": [
                 {
-                    "value": "20",
-                    "Age": "30-70",
-                    "Sex": "BOTHSEX",
-                    "year": "2016"
-                },
-                {
-                    "value": "22.3",
-                    "Age": "30-70",
-                    "Sex": "BOTHSEX",
-                    "year": "2005"
-                },
-                {
-                    "value": "21.5",
+                    "value": "20.1",
                     "Age": "30-70",
                     "Sex": "BOTHSEX",
                     "year": "2010"
                 },
                 {
-                    "value": "19.8",
+                    "value": "21.3",
                     "Age": "30-70",
                     "Sex": "BOTHSEX",
-                    "year": "2015"
+                    "year": "2005"
                 },
                 {
-                    "value": "23.4",
+                    "value": "22.7",
                     "Age": "30-70",
                     "Sex": "BOTHSEX",
                     "year": "2000"
+                },
+                {
+                    "value": "19.4",
+                    "Age": "30-70",
+                    "Sex": "BOTHSEX",
+                    "year": "2016"
+                },
+                {
+                    "value": "19.4",
+                    "Age": "30-70",
+                    "Sex": "BOTHSEX",
+                    "year": "2015"
                 }
             ],
             "text_type": "1",
             "fact_title": "Mortality rate attributed to cardiovascular disease, cancer, diabetes or chronic respiratory disease (probability)",
-            "fact_text": "The risk of dying between the ages of 30 and 70 from one of four main non-communicable diseases (NCDs) - cardiovascular disease, cancer, diabetes or chronic respiratory disease - fell from <span class='fact-value'>23.4</span> <span class='fact-unit'>%</span> in <span class='fact-year'>2000</span> to <span class='fact-value'>20%</span>  in  <span class='fact-year'>2016</span>.",
+            "fact_text": "The risk of dying between the ages of 30 and 70 from one of four main non-communicable diseases (NCDs) - cardiovascular disease, cancer, diabetes or chronic respiratory disease - fell from <span class='fact-value'>22.7</span> <span class='fact-unit'>%</span> in <span class='fact-year'>2000</span> to <span class='fact-value'>19.4%</span>  in  <span class='fact-year'>2016</span>.",
             "fact_values": [
-                "23.4%",
-                "20%"
+                "22.7%",
+                "19.4%"
             ],
             "fact_years": [
                 "2000",
                 "2016"
             ],
             "data_years": [
-                "2016",
-                "2005",
                 "2010",
-                "2015",
-                "2000"
+                "2005",
+                "2000",
+                "2016",
+                "2015"
             ],
             "data_values": [
-                "20",
-                "22.3",
-                "21.5",
-                "19.8",
-                "23.4"
+                "20.1",
+                "21.3",
+                "22.7",
+                "19.4",
+                "19.4"
             ],
             "data_is_censored": [
                 false,
@@ -1268,53 +1092,96 @@
             ],
             "data_numeric_part": [
                 20.0,
-                22.0,
-                22.0,
-                20.0,
-                23.0
+                21.0,
+                23.0,
+                19.0,
+                19.0
             ]
         },
         {
             "goalCode": "4",
             "goalDesc": "Ensure inclusive and equitable quality education and promote lifelong learning opportunities for all",
-            "targetCode": "4.2",
-            "targetDesc": "By 2030, ensure that all girls and boys have access to quality early childhood development, care and pre-primary education so that they are ready for primary education",
-            "indicatorCode": "4.2.2",
-            "indicatorDesc": "Participation rate in organized learning (one year before the official primary entry age), by sex",
+            "targetCode": "4.5",
+            "targetDesc": "By 2030, eliminate gender disparities in education and ensure equal access to all levels of education and vocational training for the vulnerable, including persons with disabilities, indigenous peoples and children in vulnerable situations",
+            "indicatorCode": "4.5.1",
+            "indicatorDesc": "Parity indices (female/male, rural/urban, bottom/top wealth quintile and others such as disability status, indigenous peoples and conflict-affected, as data become available) for all education indicators on this list that can be disaggregated",
             "indicatorTier": "1",
-            "seriesCode": "SE_PRE_PARTN",
-            "seriesDesc": "Participation rate in organized learning (one year before the official primary entry age), by sex (%)",
-            "hub": "3459681b792a4979a9d9731c75f7f80d",
+            "seriesCode": "SE_GPI_MATACH",
+            "seriesDesc": "Gender parity index for achievement in mathematics, by education level (ratio)",
+            "hub": "c24e8fbbada54780b6c36fd899f864b2",
             "slice_dimensions": {
-                "Sex": "BOTHSEX"
+                "Education level": "PRIMAR"
             },
             "data": [
                 {
-                    "value": "16.26055",
-                    "Sex": "BOTHSEX",
-                    "year": "2000"
+                    "value": "0.96639",
+                    "Education level": "PRIMAR",
+                    "year": "2011"
                 }
             ],
-            "text_type": "2",
-            "fact_title": "Participation rate in organized learning (one year before the official primary entry age), by sex (%)",
-            "fact_text": "In <span class='fact-year'>2000</span>, <span class='fact-value'>16.26055</span> <span class='fact-unit'>% </span> of children participated in pre-primary or primary education in the year prior to the official entrance age for primary school",
+            "text_type": "4",
+            "fact_title": "Gender parity index for achievement in mathematics, by education level (ratio)",
+            "fact_text": "Gender parity index for achievement in mathematics at the end of primary education was <span class='fact-value'>0.96639</span>  in <span class='fact-year'> 2011</span> , meaning 96.639 girls per 100 boys achieved at least a minimum proficiency level in mathematics.",
             "fact_values": [
-                "16.26055% "
+                "0.96639"
             ],
             "fact_years": [
-                "2000"
+                "2011"
             ],
             "data_years": [
-                "2000"
+                "2011"
             ],
             "data_values": [
-                "16.26055"
+                "0.96639"
             ],
             "data_is_censored": [
                 false
             ],
             "data_numeric_part": [
-                16.0
+                0.97
+            ]
+        },
+        {
+            "goalCode": "4",
+            "goalDesc": "Ensure inclusive and equitable quality education and promote lifelong learning opportunities for all",
+            "targetCode": "4.5",
+            "targetDesc": "By 2030, eliminate gender disparities in education and ensure equal access to all levels of education and vocational training for the vulnerable, including persons with disabilities, indigenous peoples and children in vulnerable situations",
+            "indicatorCode": "4.5.1",
+            "indicatorDesc": "Parity indices (female/male, rural/urban, bottom/top wealth quintile and others such as disability status, indigenous peoples and conflict-affected, as data become available) for all education indicators on this list that can be disaggregated",
+            "indicatorTier": "1",
+            "seriesCode": "SE_GPI_REAACH",
+            "seriesDesc": "Gender parity index for achievement in reading, by education level (ratio)",
+            "hub": "7f75a26e77c7487e993799b22ad7ba88",
+            "slice_dimensions": {
+                "Education level": "PRIMAR"
+            },
+            "data": [
+                {
+                    "value": "0.93208",
+                    "Education level": "PRIMAR",
+                    "year": "2011"
+                }
+            ],
+            "text_type": "4",
+            "fact_title": "Gender parity index for achievement in reading, by education level (ratio)",
+            "fact_text": "Gender parity index for achievement in reading at the end of primary education was <span class='fact-value'>0.93208</span>  in <span class='fact-year'> 2011</span> , meaning 93.208 girls per 100 boys achieved at least a minimum proficiency level in reading.",
+            "fact_values": [
+                "0.93208"
+            ],
+            "fact_years": [
+                "2011"
+            ],
+            "data_years": [
+                "2011"
+            ],
+            "data_values": [
+                "0.93208"
+            ],
+            "data_is_censored": [
+                false
+            ],
+            "data_numeric_part": [
+                0.93
             ]
         },
         {
@@ -1333,120 +1200,102 @@
             },
             "data": [
                 {
-                    "value": "13.7255",
-                    "Sex": "FEMALE",
-                    "year": "2018"
-                },
-                {
-                    "value": "13.7255",
+                    "value": "8.9431",
                     "Sex": "FEMALE",
                     "year": "2016"
                 },
                 {
-                    "value": "14",
+                    "value": "8.9431",
+                    "Sex": "FEMALE",
+                    "year": "2018"
+                },
+                {
+                    "value": "8.9431",
                     "Sex": "FEMALE",
                     "year": "2013"
                 },
                 {
-                    "value": "11",
-                    "Sex": "FEMALE",
-                    "year": "2014"
-                },
-                {
-                    "value": "13.7255",
+                    "value": "8.9431",
                     "Sex": "FEMALE",
                     "year": "2015"
                 },
                 {
-                    "value": "13.7255",
+                    "value": "8.9431",
                     "Sex": "FEMALE",
                     "year": "2017"
                 },
                 {
-                    "value": "7.8431",
+                    "value": "10.6426",
                     "Sex": "FEMALE",
-                    "year": "2003"
+                    "year": "2014"
                 },
                 {
-                    "value": "14",
+                    "value": "12",
+                    "Sex": "FEMALE",
+                    "year": "2004"
+                },
+                {
+                    "value": "12",
                     "Sex": "FEMALE",
                     "year": "2006"
                 },
                 {
-                    "value": "14",
+                    "value": "12",
                     "Sex": "FEMALE",
                     "year": "2005"
                 },
                 {
-                    "value": "7.8431",
-                    "Sex": "FEMALE",
-                    "year": "2001"
-                },
-                {
-                    "value": "7.8431",
-                    "Sex": "FEMALE",
-                    "year": "2000"
-                },
-                {
-                    "value": "7.8431",
-                    "Sex": "FEMALE",
-                    "year": "2002"
-                },
-                {
-                    "value": "10",
+                    "value": "8.4",
                     "Sex": "FEMALE",
                     "year": "2010"
                 },
                 {
-                    "value": "10",
+                    "value": "8.9431",
                     "Sex": "FEMALE",
                     "year": "2012"
                 },
                 {
-                    "value": "10",
+                    "value": "8.4",
                     "Sex": "FEMALE",
                     "year": "2011"
                 },
                 {
-                    "value": "14",
+                    "value": "8.4",
                     "Sex": "FEMALE",
                     "year": "2007"
                 },
                 {
-                    "value": "10",
+                    "value": "8.4",
                     "Sex": "FEMALE",
                     "year": "2009"
                 },
                 {
-                    "value": "14",
+                    "value": "8.4",
                     "Sex": "FEMALE",
                     "year": "2008"
                 }
             ],
             "text_type": "1",
             "fact_title": "Proportion of seats held by women in national parliaments (% of total number of seats)",
-            "fact_text": "The proportion of seats held by women in single or lower houses of parliament increased from <span class='fact-value'>7.8431</span> <span class='fact-unit'>%</span> in <span class='fact-year'>2000</span> to <span class='fact-value'>13.7255%</span>  in  <span class='fact-year'>2018</span>.",
+            "fact_text": "The proportion of seats held by women in single or lower houses of parliament declined from <span class='fact-value'>12</span> <span class='fact-unit'>%</span> in <span class='fact-year'>2004</span> to <span class='fact-value'>8.9431%</span>  in  <span class='fact-year'>2018</span>.",
             "fact_values": [
-                "7.8431%",
-                "13.7255%"
+                "12%",
+                "8.9431%"
             ],
             "fact_years": [
-                "2000",
+                "2004",
                 "2018"
             ],
             "data_years": [
-                "2018",
                 "2016",
+                "2018",
                 "2013",
-                "2014",
                 "2015",
                 "2017",
-                "2003",
+                "2014",
+                "2004",
                 "2006",
                 "2005",
-                "2001",
-                "2000",
-                "2002",
                 "2010",
                 "2012",
                 "2011",
@@ -1455,29 +1304,23 @@
                 "2008"
             ],
             "data_values": [
-                "13.7255",
-                "13.7255",
-                "14",
-                "11",
-                "13.7255",
-                "13.7255",
-                "7.8431",
-                "14",
-                "14",
-                "7.8431",
-                "7.8431",
-                "7.8431",
-                "10",
-                "10",
-                "10",
-                "14",
-                "10",
-                "14"
+                "8.9431",
+                "8.9431",
+                "8.9431",
+                "8.9431",
+                "8.9431",
+                "10.6426",
+                "12",
+                "12",
+                "12",
+                "8.4",
+                "8.9431",
+                "8.4",
+                "8.4",
+                "8.4",
+                "8.4"
             ],
             "data_is_censored": [
-                false,
-                false,
-                false,
                 false,
                 false,
                 false,
@@ -1495,24 +1338,21 @@
                 false
             ],
             "data_numeric_part": [
-                14.0,
-                14.0,
-                14.0,
+                8.9,
+                8.9,
+                8.9,
+                8.9,
+                8.9,
                 11.0,
-                14.0,
-                14.0,
-                7.8,
-                14.0,
-                14.0,
-                7.8,
-                7.8,
-                7.8,
-                10.0,
-                10.0,
-                10.0,
-                14.0,
-                10.0,
-                14.0
+                12.0,
+                12.0,
+                12.0,
+                8.4,
+                8.9,
+                8.4,
+                8.4,
+                8.4,
+                8.4
             ]
         },
         {
@@ -1532,7 +1372,7 @@
             },
             "data": [
                 {
-                    "value": "24.4",
+                    "value": "37.3",
                     "Age": "20-24",
                     "Sex": "FEMALE",
                     "year": "2014"
@@ -1540,9 +1380,9 @@
             ],
             "text_type": "2",
             "fact_title": "Proportion of women aged 20-24 years who were married or in a union before age 18 (%)",
-            "fact_text": "In <span class='fact-year'>2014</span>, <span class='fact-value'>24.4</span> <span class='fact-unit'>% </span> of women aged 20 to 24 reported that they were married before their eighteenth birthday",
+            "fact_text": "In <span class='fact-year'>2014</span>, <span class='fact-value'>37.3</span> <span class='fact-unit'>% </span> of women aged 20 to 24 reported that they were married before their eighteenth birthday",
             "fact_values": [
-                "24.4% "
+                "37.3% "
             ],
             "fact_years": [
                 "2014"
@@ -1551,13 +1391,13 @@
                 "2014"
             ],
             "data_values": [
-                "24.4"
+                "37.3"
             ],
             "data_is_censored": [
                 false
             ],
             "data_numeric_part": [
-                24.0
+                37.0
             ]
         },
         {
@@ -1579,7 +1419,7 @@
                 },
                 {
                     "value": "<5",
-                    "year": "2005"
+                    "year": "2015"
                 },
                 {
                     "value": "<5",
@@ -1587,11 +1427,11 @@
                 },
                 {
                     "value": "<5",
-                    "year": "2010"
+                    "year": "2005"
                 },
                 {
                     "value": "<5",
-                    "year": "2015"
+                    "year": "2010"
                 }
             ],
             "text_type": "8",
@@ -1605,10 +1445,10 @@
             ],
             "data_years": [
                 "2000",
-                "2005",
+                "2015",
                 "2016",
-                "2010",
-                "2015"
+                "2005",
+                "2010"
             ],
             "data_values": [
                 "less than 5",
@@ -1648,114 +1488,114 @@
             },
             "data": [
                 {
-                    "value": "7.47",
-                    "Location": "ALLAREA",
-                    "year": "2004"
-                },
-                {
-                    "value": "14.54",
+                    "value": "10.23",
                     "Location": "ALLAREA",
                     "year": "2006"
                 },
                 {
-                    "value": "7.98",
+                    "value": "6.00",
                     "Location": "ALLAREA",
                     "year": "2005"
                 },
                 {
-                    "value": "5.41",
+                    "value": "6.70",
                     "Location": "ALLAREA",
                     "year": "2000"
                 },
                 {
-                    "value": "5.94",
-                    "Location": "ALLAREA",
-                    "year": "2001"
-                },
-                {
-                    "value": "6.96",
-                    "Location": "ALLAREA",
-                    "year": "2003"
-                },
-                {
-                    "value": "6.45",
+                    "value": "7.86",
                     "Location": "ALLAREA",
                     "year": "2002"
                 },
                 {
-                    "value": "12.06",
+                    "value": "7.27",
+                    "Location": "ALLAREA",
+                    "year": "2001"
+                },
+                {
+                    "value": "8.45",
+                    "Location": "ALLAREA",
+                    "year": "2003"
+                },
+                {
+                    "value": "9.03",
+                    "Location": "ALLAREA",
+                    "year": "2004"
+                },
+                {
+                    "value": "15.40",
                     "Location": "ALLAREA",
                     "year": "2012"
                 },
                 {
-                    "value": "17.20",
-                    "Location": "ALLAREA",
-                    "year": "2014"
-                },
-                {
-                    "value": "14.00",
+                    "value": "16.42",
                     "Location": "ALLAREA",
                     "year": "2015"
                 },
                 {
-                    "value": "12.71",
+                    "value": "14.97",
                     "Location": "ALLAREA",
                     "year": "2013"
                 },
                 {
-                    "value": "14.66",
+                    "value": "13.50",
+                    "Location": "ALLAREA",
+                    "year": "2014"
+                },
+                {
+                    "value": "17.15",
                     "Location": "ALLAREA",
                     "year": "2016"
                 },
                 {
-                    "value": "9.62",
+                    "value": "11.49",
                     "Location": "ALLAREA",
                     "year": "2008"
                 },
                 {
-                    "value": "4.70",
+                    "value": "12.16",
                     "Location": "ALLAREA",
                     "year": "2009"
                 },
                 {
-                    "value": "9.05",
+                    "value": "15.20",
                     "Location": "ALLAREA",
                     "year": "2007"
                 },
                 {
-                    "value": "11.43",
+                    "value": "13.54",
                     "Location": "ALLAREA",
                     "year": "2011"
                 },
                 {
-                    "value": "6.00",
+                    "value": "12.84",
                     "Location": "ALLAREA",
                     "year": "2010"
                 }
             ],
             "text_type": "1",
             "fact_title": "Proportion of population with access to electricity, by urban/rural (%)",
-            "fact_text": "The proportion of the population with access to electricity increased from <span class='fact-value'>5.41</span> <span class='fact-unit'>%</span> in <span class='fact-year'>2000</span> to <span class='fact-value'>14.66%</span>  in  <span class='fact-year'>2016</span>.",
+            "fact_text": "The proportion of the population with access to electricity increased from <span class='fact-value'>6.70</span> <span class='fact-unit'>%</span> in <span class='fact-year'>2000</span> to <span class='fact-value'>17.15%</span>  in  <span class='fact-year'>2016</span>.",
             "fact_values": [
-                "5.41%",
-                "14.66%"
+                "6.70%",
+                "17.15%"
             ],
             "fact_years": [
                 "2000",
                 "2016"
             ],
             "data_years": [
-                "2004",
                 "2006",
                 "2005",
                 "2000",
+                "2002",
                 "2001",
                 "2003",
-                "2002",
+                "2004",
                 "2012",
-                "2014",
                 "2015",
                 "2013",
+                "2014",
                 "2016",
                 "2008",
                 "2009",
@@ -1764,23 +1604,23 @@
                 "2010"
             ],
             "data_values": [
-                "7.47",
-                "14.54",
-                "7.98",
-                "5.41",
-                "5.94",
-                "6.96",
-                "6.45",
-                "12.06",
-                "17.20",
-                "14.00",
-                "12.71",
-                "14.66",
-                "9.62",
-                "4.70",
-                "9.05",
-                "11.43",
-                "6.00"
+                "10.23",
+                "6.00",
+                "6.70",
+                "7.86",
+                "7.27",
+                "8.45",
+                "9.03",
+                "15.40",
+                "16.42",
+                "14.97",
+                "13.50",
+                "17.15",
+                "11.49",
+                "12.16",
+                "15.20",
+                "13.54",
+                "12.84"
             ],
             "data_is_censored": [
                 false,
@@ -1802,23 +1642,23 @@
                 false
             ],
             "data_numeric_part": [
-                7.5,
+                10.0,
+                6.0,
+                6.7,
+                7.9,
+                7.3,
+                8.5,
+                9.0,
                 15.0,
-                8.0,
-                5.4,
-                5.9,
-                7.0,
-                6.5,
-                12.0,
-                17.0,
+                16.0,
+                15.0,
                 14.0,
-                13.0,
-                15.0,
-                9.6,
-                4.7,
-                9.1,
+                17.0,
                 11.0,
-                6.0
+                12.0,
+                15.0,
+                14.0,
+                13.0
             ]
         },
         {
@@ -1835,122 +1675,120 @@
             "slice_dimensions": {},
             "data": [
                 {
-                    "value": "-1.97303",
-                    "year": "2000"
-                },
-                {
-                    "value": "-3.2696",
-                    "year": "2002"
-                },
-                {
-                    "value": "2.4782",
-                    "year": "2016"
-                },
-                {
-                    "value": "2.45304",
-                    "year": "2015"
-                },
-                {
-                    "value": "-2.36129",
+                    "value": "5.89596",
                     "year": "2014"
                 },
                 {
-                    "value": "0.59371",
+                    "value": "4.92653",
                     "year": "2013"
                 },
                 {
-                    "value": "0.05151",
-                    "year": "2001"
-                },
-                {
-                    "value": "-4.23192",
+                    "value": "3.57038",
                     "year": "2012"
                 },
                 {
-                    "value": "2.02697",
+                    "value": "3.36583",
+                    "year": "2011"
+                },
+                {
+                    "value": "3.59901",
                     "year": "2010"
                 },
                 {
-                    "value": "0.8752",
+                    "value": "-0.50011",
                     "year": "2009"
                 },
                 {
-                    "value": "0.77262",
+                    "value": "2.7843",
                     "year": "2008"
                 },
                 {
-                    "value": "0.88553",
+                    "value": "2.84971",
                     "year": "2007"
                 },
                 {
-                    "value": "0.00403",
+                    "value": "3.44571",
+                    "year": "2015"
+                },
+                {
+                    "value": "1.98388",
                     "year": "2006"
                 },
                 {
-                    "value": "1.96394",
-                    "year": "2005"
-                },
-                {
-                    "value": "0.54335",
+                    "value": "3.4301",
                     "year": "2004"
                 },
                 {
-                    "value": "-1.70101",
+                    "value": "2.3842",
                     "year": "2003"
                 },
                 {
-                    "value": "5.35774",
-                    "year": "2011"
+                    "value": "-0.03071",
+                    "year": "2002"
+                },
+                {
+                    "value": "-4.76663",
+                    "year": "2001"
+                },
+                {
+                    "value": "-9.23914",
+                    "year": "2000"
+                },
+                {
+                    "value": "2.80648",
+                    "year": "2005"
+                },
+                {
+                    "value": "-0.90262",
+                    "year": "2016"
                 }
             ],
             "text_type": "1",
             "fact_title": "Annual growth rate of real GDP per capita (%)",
-            "fact_text": "The annual growth rate of real gross domestic product (GDP) per capita increased from <span class='fact-value'>-1.97303</span> <span class='fact-unit'>%</span> in <span class='fact-year'>2000</span> to <span class='fact-value'>2.4782%</span>  in  <span class='fact-year'>2016</span>.",
+            "fact_text": "The annual growth rate of real gross domestic product (GDP) per capita was <span class='fact-value'>-0.90262</span> <span class='fact-unit'>%</span> in <span class='fact-year'>2016</span>.",
             "fact_values": [
-                "-1.97303%",
-                "2.4782%"
+                "-0.90262%"
             ],
             "fact_years": [
-                "2000",
                 "2016"
             ],
             "data_years": [
-                "2000",
-                "2002",
-                "2016",
-                "2015",
                 "2014",
                 "2013",
-                "2001",
                 "2012",
+                "2011",
                 "2010",
                 "2009",
                 "2008",
                 "2007",
+                "2015",
                 "2006",
-                "2005",
                 "2004",
                 "2003",
-                "2011"
+                "2002",
+                "2001",
+                "2000",
+                "2005",
+                "2016"
             ],
             "data_values": [
-                "-1.97303",
-                "-3.2696",
-                "2.4782",
-                "2.45304",
-                "-2.36129",
-                "0.59371",
-                "0.05151",
-                "-4.23192",
-                "2.02697",
-                "0.8752",
-                "0.77262",
-                "0.88553",
-                "0.00403",
-                "1.96394",
-                "0.54335",
-                "-1.70101",
-                "5.35774"
+                "5.89596",
+                "4.92653",
+                "3.57038",
+                "3.36583",
+                "3.59901",
+                "-0.50011",
+                "2.7843",
+                "2.84971",
+                "3.44571",
+                "1.98388",
+                "3.4301",
+                "2.3842",
+                "-0.03071",
+                "-4.76663",
+                "-9.23914",
+                "2.80648",
+                "-0.90262"
             ],
             "data_is_censored": [
                 false,
@@ -1972,23 +1810,320 @@
                 false
             ],
             "data_numeric_part": [
-                -1.97,
-                -3.27,
-                2.5,
-                2.5,
-                -2.36,
-                0.59,
+                5.9,
+                4.9,
+                3.6,
+                3.4,
+                3.6,
+                -0.5,
+                2.8,
+                2.8,
+                3.4,
+                2.0,
+                3.4,
+                2.4,
+                -0.03,
+                -4.77,
+                -9.24,
+                2.8,
+                -0.9
+            ]
+        },
+        {
+            "goalCode": "8",
+            "goalDesc": "Promote sustained, inclusive and sustainable economic growth, full and productive employment and decent work for all",
+            "targetCode": "8.5",
+            "targetDesc": "By 2030, achieve full and productive employment and decent work for all women and men, including for young people and persons with disabilities, and equal pay for work of equal value",
+            "indicatorCode": "8.5.2",
+            "indicatorDesc": "Unemployment rate, by sex, age and persons with disabilities",
+            "indicatorTier": "1",
+            "seriesCode": "SL_TLF_UEM",
+            "seriesDesc": "Unemployment rate, by sex and age (%)",
+            "hub": "72c32323563d4a0b9432c9edcb85267a",
+            "slice_dimensions": {
+                "Age": "15+",
+                "Sex": "BOTHSEX"
+            },
+            "data": [
+                {
+                    "value": "3.68",
+                    "Age": "15+",
+                    "Sex": "BOTHSEX",
+                    "year": "2005"
+                }
+            ],
+            "text_type": "1",
+            "fact_title": "Unemployment rate, by sex and age (%)",
+            "fact_text": "The total unemployment rate was <span class='fact-value'>3.68</span> <span class='fact-unit'>%</span> in <span class='fact-year'>2005</span>.",
+            "fact_values": [
+                "3.68%"
+            ],
+            "fact_years": [
+                "2005"
+            ],
+            "data_years": [
+                "2005"
+            ],
+            "data_values": [
+                "3.68"
+            ],
+            "data_is_censored": [
+                false
+            ],
+            "data_numeric_part": [
+                3.7
+            ]
+        },
+        {
+            "goalCode": "9",
+            "goalDesc": "Build resilient infrastructure, promote inclusive and sustainable industrialization and foster innovation",
+            "targetCode": "9.4",
+            "targetDesc": "By 2030, upgrade infrastructure and retrofit industries to make them sustainable, with increased resource-use efficiency and greater adoption of clean and environmentally sound technologies and industrial processes, with all countries taking action in accordance with their respective capabilities",
+            "indicatorCode": "9.4.1",
+            "indicatorDesc": "CO2 emission per unit of value added",
+            "indicatorTier": "1",
+            "seriesCode": "EN_ATM_CO2GDP",
+            "seriesDesc": "Carbon dioxide emissions per unit of GDP (kilogrammes of CO2 per constant 2010 United States dollars)",
+            "hub": "b5ff535a5fa841659c576685489dfac7",
+            "slice_dimensions": {},
+            "data": [
+                {
+                    "value": "0.0726",
+                    "year": "2013"
+                },
+                {
+                    "value": "0.03132",
+                    "year": "2002"
+                },
+                {
+                    "value": "0.05147",
+                    "year": "2012"
+                },
+                {
+                    "value": "0.03609",
+                    "year": "2003"
+                },
+                {
+                    "value": "0.04902",
+                    "year": "2015"
+                },
+                {
+                    "value": "0.03493",
+                    "year": "2000"
+                },
+                {
+                    "value": "0.08925",
+                    "year": "2014"
+                },
+                {
+                    "value": "0.02984",
+                    "year": "2001"
+                },
+                {
+                    "value": "0.04828",
+                    "year": "2009"
+                },
+                {
+                    "value": "0.04495",
+                    "year": "2006"
+                },
+                {
+                    "value": "0.04904",
+                    "year": "2008"
+                },
+                {
+                    "value": "0.04684",
+                    "year": "2007"
+                },
+                {
+                    "value": "0.05693",
+                    "year": "2011"
+                },
+                {
+                    "value": "0.03654",
+                    "year": "2004"
+                },
+                {
+                    "value": "0.04851",
+                    "year": "2010"
+                },
+                {
+                    "value": "0.04355",
+                    "year": "2005"
+                }
+            ],
+            "text_type": "1",
+            "fact_title": "Carbon dioxide emissions per unit of GDP (kilogrammes of CO2 per constant 2010 United States dollars)",
+            "fact_text": "The carbon dioxide emissions per unit of GDP increased from <span class='fact-value'>0.03493</span> <span class='fact-unit'> kilograms</span> in <span class='fact-year'>2000</span> to <span class='fact-value'>0.04902 kilograms</span>  in  <span class='fact-year'>2015</span>.",
+            "fact_values": [
+                "0.03493 kilograms",
+                "0.04902 kilograms"
+            ],
+            "fact_years": [
+                "2000",
+                "2015"
+            ],
+            "data_years": [
+                "2013",
+                "2002",
+                "2012",
+                "2003",
+                "2015",
+                "2000",
+                "2014",
+                "2001",
+                "2009",
+                "2006",
+                "2008",
+                "2007",
+                "2011",
+                "2004",
+                "2010",
+                "2005"
+            ],
+            "data_values": [
+                "0.0726",
+                "0.03132",
+                "0.05147",
+                "0.03609",
+                "0.04902",
+                "0.03493",
+                "0.08925",
+                "0.02984",
+                "0.04828",
+                "0.04495",
+                "0.04904",
+                "0.04684",
+                "0.05693",
+                "0.03654",
+                "0.04851",
+                "0.04355"
+            ],
+            "data_is_censored": [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+            ],
+            "data_numeric_part": [
+                0.07,
+                0.03,
                 0.05,
-                -4.23,
-                2.0,
-                0.88,
-                0.77,
-                0.89,
-                0.0,
-                2.0,
-                0.54,
-                -1.7,
-                5.4
+                0.04,
+                0.05,
+                0.03,
+                0.09,
+                0.03,
+                0.05,
+                0.04,
+                0.05,
+                0.05,
+                0.06,
+                0.04,
+                0.05,
+                0.04
+            ]
+        },
+        {
+            "goalCode": "9",
+            "goalDesc": "Build resilient infrastructure, promote inclusive and sustainable industrialization and foster innovation",
+            "targetCode": "9.5",
+            "targetDesc": "Enhance scientific research, upgrade the technological capabilities of industrial sectors in all countries, in particular developing countries, including, by 2030, encouraging innovation and substantially increasing the number of research and development workers per 1 million people and public and private research and development spending",
+            "indicatorCode": "9.5.1",
+            "indicatorDesc": "Research and development expenditure as a proportion of GDP",
+            "indicatorTier": "1",
+            "seriesCode": "GB_XPD_RSDV",
+            "seriesDesc": "Research and development expenditure as a proportion of GDP (%)",
+            "hub": "a4e6d6a6cc804c3598cc9b96cd96ce67",
+            "slice_dimensions": {},
+            "data": [
+                {
+                    "value": "0.08",
+                    "year": "2009"
+                },
+                {
+                    "value": "0.02",
+                    "year": "2015"
+                },
+                {
+                    "value": "0.09",
+                    "year": "2008"
+                },
+                {
+                    "value": "0.27",
+                    "year": "2004"
+                },
+                {
+                    "value": "0.06",
+                    "year": "2005"
+                },
+                {
+                    "value": "0.06",
+                    "year": "2006"
+                },
+                {
+                    "value": "0.14",
+                    "year": "2007"
+                }
+            ],
+            "text_type": "9",
+            "fact_title": "Research and development expenditure as a proportion of GDP (%)",
+            "fact_text": "In <span class='fact-year'> 2015</span> , investment in research and development (R&D) stood at <span class='fact-value'> 0.02</span>  <span class='fact-unit'>% of GDP</span> , a decline from <span class='fact-value'> 0.27</span>  <span class='fact-unit'>%</span>  in <span class='fact-year'> 2004</span> ",
+            "fact_values": [
+                "0.27% of GDP",
+                "0.02% of GDP"
+            ],
+            "fact_years": [
+                "2004",
+                "2015"
+            ],
+            "data_years": [
+                "2009",
+                "2015",
+                "2008",
+                "2004",
+                "2005",
+                "2006",
+                "2007"
+            ],
+            "data_values": [
+                "0.08",
+                "0.02",
+                "0.09",
+                "0.27",
+                "0.06",
+                "0.06",
+                "0.14"
+            ],
+            "data_is_censored": [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+            ],
+            "data_numeric_part": [
+                0.08,
+                0.02,
+                0.09,
+                0.27,
+                0.06,
+                0.06,
+                0.14
             ]
         },
         {
@@ -2007,24 +2142,9 @@
             },
             "data": [
                 {
-                    "value": "83",
+                    "value": "50",
                     "Type of mobile technology": "AL2G",
                     "year": "2016"
-                },
-                {
-                    "value": "86",
-                    "Type of mobile technology": "AL2G",
-                    "year": "2015"
-                },
-                {
-                    "value": "65",
-                    "Type of mobile technology": "AL2G",
-                    "year": "2012"
-                },
-                {
-                    "value": "46",
-                    "Type of mobile technology": "AL2G",
-                    "year": "2011"
                 },
                 {
                     "value": "50",
@@ -2032,37 +2152,108 @@
                     "year": "2010"
                 },
                 {
-                    "value": "65",
+                    "value": "50",
+                    "Type of mobile technology": "AL2G",
+                    "year": "2009"
+                },
+                {
+                    "value": "50",
+                    "Type of mobile technology": "AL2G",
+                    "year": "2008"
+                },
+                {
+                    "value": "50",
+                    "Type of mobile technology": "AL2G",
+                    "year": "2007"
+                },
+                {
+                    "value": "50",
                     "Type of mobile technology": "AL2G",
                     "year": "2006"
+                },
+                {
+                    "value": "50",
+                    "Type of mobile technology": "AL2G",
+                    "year": "2005"
+                },
+                {
+                    "value": "40",
+                    "Type of mobile technology": "AL2G",
+                    "year": "2004"
+                },
+                {
+                    "value": "50",
+                    "Type of mobile technology": "AL2G",
+                    "year": "2011"
+                },
+                {
+                    "value": "50",
+                    "Type of mobile technology": "AL2G",
+                    "year": "2015"
+                },
+                {
+                    "value": "50",
+                    "Type of mobile technology": "AL2G",
+                    "year": "2014"
+                },
+                {
+                    "value": "50",
+                    "Type of mobile technology": "AL2G",
+                    "year": "2013"
+                },
+                {
+                    "value": "50",
+                    "Type of mobile technology": "AL2G",
+                    "year": "2012"
                 }
             ],
             "text_type": "2",
             "fact_title": "Proportion of population covered by a mobile network, by technology (%)",
-            "fact_text": "In <span class='fact-year'>2016</span>, <span class='fact-value'>83</span> <span class='fact-unit'>% </span> of the population was in range of at least a second-generation (2G) cellular signal",
+            "fact_text": "In <span class='fact-year'>2016</span>, <span class='fact-value'>50</span> <span class='fact-unit'>% </span> of the population was in range of at least a second-generation (2G) cellular signal",
             "fact_values": [
-                "83% "
+                "50% "
             ],
             "fact_years": [
                 "2016"
             ],
             "data_years": [
                 "2016",
-                "2015",
-                "2012",
-                "2011",
                 "2010",
-                "2006"
+                "2009",
+                "2008",
+                "2007",
+                "2006",
+                "2005",
+                "2004",
+                "2011",
+                "2015",
+                "2014",
+                "2013",
+                "2012"
             ],
             "data_values": [
-                "83",
-                "86",
-                "65",
-                "46",
                 "50",
-                "65"
+                "50",
+                "50",
+                "50",
+                "50",
+                "50",
+                "50",
+                "40",
+                "50",
+                "50",
+                "50",
+                "50",
+                "50"
             ],
             "data_is_censored": [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
                 false,
                 false,
                 false,
@@ -2071,12 +2262,19 @@
                 false
             ],
             "data_numeric_part": [
-                83.0,
-                86.0,
-                65.0,
-                46.0,
                 50.0,
-                65.0
+                50.0,
+                50.0,
+                50.0,
+                50.0,
+                50.0,
+                50.0,
+                40.0,
+                50.0,
+                50.0,
+                50.0,
+                50.0,
+                50.0
             ]
         },
         {
@@ -2095,16 +2293,16 @@
             },
             "data": [
                 {
-                    "value": "27.1189613342285",
+                    "value": "37.6156578063965",
                     "Location": "ALLAREA",
                     "year": "2016"
                 }
             ],
             "text_type": "10",
             "fact_title": "Annual mean levels of fine particulate matter in cities, urban population (micrograms per cubic meter)",
-            "fact_text": "In <span class='fact-year'> 2016</span> , the annual population-weighted average mean concentration of fine suspended particles of less than 2.5 microns in diameters (PM2.5) was about <span class='fact-value'> 27.1189613342285</span>  <span class='fact-unit'> micrograms per cubic metre</span> .  This is above the maximum level for safety set by WHO of 10 micrograms per cubic metre.",
+            "fact_text": "In <span class='fact-year'> 2016</span> , the annual population-weighted average mean concentration of fine suspended particles of less than 2.5 microns in diameters (PM2.5) was about <span class='fact-value'> 37.6156578063965</span>  <span class='fact-unit'> micrograms per cubic metre</span> .  This is above the maximum level for safety set by WHO of 10 micrograms per cubic metre.",
             "fact_values": [
-                "27.1189613342285 micrograms per cubic metre"
+                "37.6156578063965 micrograms per cubic metre"
             ],
             "fact_years": [
                 "2016"
@@ -2113,13 +2311,13 @@
                 "2016"
             ],
             "data_values": [
-                "27.1189613342285"
+                "37.6156578063965"
             ],
             "data_is_censored": [
                 false
             ],
             "data_numeric_part": [
-                27.0
+                38.0
             ]
         },
         {
@@ -2136,38 +2334,46 @@
             "slice_dimensions": {},
             "data": [
                 {
-                    "value": "82.3",
+                    "value": "74.8",
                     "year": "2014"
                 },
                 {
-                    "value": "83.1",
+                    "value": "61.7",
+                    "year": "2010"
+                },
+                {
+                    "value": "76.4",
                     "year": "2005"
                 }
             ],
             "text_type": "1",
             "fact_title": "Proportion of urban population living in slums (%)",
-            "fact_text": "The proportion of the urban population living in slums was <span class='fact-value'>82.3</span> <span class='fact-unit'>%</span> in <span class='fact-year'>2014</span>.",
+            "fact_text": "The proportion of the urban population living in slums was <span class='fact-value'>74.8</span> <span class='fact-unit'>%</span> in <span class='fact-year'>2014</span>.",
             "fact_values": [
-                "82.3%"
+                "74.8%"
             ],
             "fact_years": [
                 "2014"
             ],
             "data_years": [
                 "2014",
+                "2010",
                 "2005"
             ],
             "data_values": [
-                "82.3",
-                "83.1"
+                "74.8",
+                "61.7",
+                "76.4"
             ],
             "data_is_censored": [
+                false,
                 false,
                 false
             ],
             "data_numeric_part": [
-                82.0,
-                83.0
+                75.0,
+                62.0,
+                76.0
             ]
         },
         {
@@ -2186,146 +2392,146 @@
             },
             "data": [
                 {
-                    "value": "2.81622",
-                    "Type of product": "RAW",
-                    "year": "2002"
-                },
-                {
-                    "value": "2.84863",
+                    "value": "2.58185",
                     "Type of product": "RAW",
                     "year": "2001"
                 },
                 {
-                    "value": "2.8258",
-                    "Type of product": "RAW",
-                    "year": "2003"
-                },
-                {
-                    "value": "2.99164",
-                    "Type of product": "RAW",
-                    "year": "2005"
-                },
-                {
-                    "value": "2.76922",
-                    "Type of product": "RAW",
-                    "year": "2004"
-                },
-                {
-                    "value": "2.79065",
-                    "Type of product": "RAW",
-                    "year": "2006"
-                },
-                {
-                    "value": "2.90247",
+                    "value": "2.62894",
                     "Type of product": "RAW",
                     "year": "2000"
                 },
                 {
-                    "value": "3.83049",
-                    "Type of product": "RAW",
-                    "year": "2015"
-                },
-                {
-                    "value": "3.99666",
-                    "Type of product": "RAW",
-                    "year": "2013"
-                },
-                {
-                    "value": "3.82469",
-                    "Type of product": "RAW",
-                    "year": "2014"
-                },
-                {
-                    "value": "3.8487",
-                    "Type of product": "RAW",
-                    "year": "2016"
-                },
-                {
-                    "value": "3.86517",
-                    "Type of product": "RAW",
-                    "year": "2017"
-                },
-                {
-                    "value": "4.0659",
-                    "Type of product": "RAW",
-                    "year": "2008"
-                },
-                {
-                    "value": "4.29801",
-                    "Type of product": "RAW",
-                    "year": "2009"
-                },
-                {
-                    "value": "3.30456",
+                    "value": "2.64118",
                     "Type of product": "RAW",
                     "year": "2007"
                 },
                 {
-                    "value": "4.04847",
+                    "value": "2.74153",
                     "Type of product": "RAW",
-                    "year": "2012"
+                    "year": "2006"
                 },
                 {
-                    "value": "3.8875",
+                    "value": "2.396",
+                    "Type of product": "RAW",
+                    "year": "2009"
+                },
+                {
+                    "value": "2.43074",
+                    "Type of product": "RAW",
+                    "year": "2008"
+                },
+                {
+                    "value": "2.78425",
+                    "Type of product": "RAW",
+                    "year": "2003"
+                },
+                {
+                    "value": "2.61654",
+                    "Type of product": "RAW",
+                    "year": "2002"
+                },
+                {
+                    "value": "2.94266",
+                    "Type of product": "RAW",
+                    "year": "2005"
+                },
+                {
+                    "value": "2.81715",
+                    "Type of product": "RAW",
+                    "year": "2004"
+                },
+                {
+                    "value": "2.36215",
+                    "Type of product": "RAW",
+                    "year": "2015"
+                },
+                {
+                    "value": "2.40548",
+                    "Type of product": "RAW",
+                    "year": "2014"
+                },
+                {
+                    "value": "2.29852",
+                    "Type of product": "RAW",
+                    "year": "2017"
+                },
+                {
+                    "value": "2.33024",
+                    "Type of product": "RAW",
+                    "year": "2016"
+                },
+                {
+                    "value": "2.33467",
                     "Type of product": "RAW",
                     "year": "2011"
                 },
                 {
-                    "value": "3.97897",
+                    "value": "2.34363",
                     "Type of product": "RAW",
                     "year": "2010"
+                },
+                {
+                    "value": "2.38275",
+                    "Type of product": "RAW",
+                    "year": "2013"
+                },
+                {
+                    "value": "2.4402",
+                    "Type of product": "RAW",
+                    "year": "2012"
                 }
             ],
             "text_type": "1",
             "fact_title": "Proportion of urban population living in slums (%)",
-            "fact_text": "Domestic material consumption increased from <span class='fact-value'>2.90247</span> <span class='fact-unit'> metric tons per capita</span> in <span class='fact-year'>2000</span> to <span class='fact-value'>3.86517 metric tons per capita</span>  in  <span class='fact-year'>2017</span>.",
+            "fact_text": "Domestic material consumption decreased from <span class='fact-value'>2.62894</span> <span class='fact-unit'> metric tons per capita</span> in <span class='fact-year'>2000</span> to <span class='fact-value'>2.29852 metric tons per capita</span>  in  <span class='fact-year'>2017</span>.",
             "fact_values": [
-                "2.90247 metric tons per capita",
-                "3.86517 metric tons per capita"
+                "2.62894 metric tons per capita",
+                "2.29852 metric tons per capita"
             ],
             "fact_years": [
                 "2000",
                 "2017"
             ],
             "data_years": [
-                "2002",
                 "2001",
+                "2000",
+                "2007",
+                "2006",
+                "2009",
+                "2008",
                 "2003",
+                "2002",
                 "2005",
                 "2004",
-                "2006",
-                "2000",
                 "2015",
-                "2013",
                 "2014",
-                "2016",
                 "2017",
-                "2008",
-                "2009",
-                "2007",
-                "2012",
+                "2016",
                 "2011",
-                "2010"
+                "2010",
+                "2013",
+                "2012"
             ],
             "data_values": [
-                "2.81622",
-                "2.84863",
-                "2.8258",
-                "2.99164",
-                "2.76922",
-                "2.79065",
-                "2.90247",
-                "3.83049",
-                "3.99666",
-                "3.82469",
-                "3.8487",
-                "3.86517",
-                "4.0659",
-                "4.29801",
-                "3.30456",
-                "4.04847",
-                "3.8875",
-                "3.97897"
+                "2.58185",
+                "2.62894",
+                "2.64118",
+                "2.74153",
+                "2.396",
+                "2.43074",
+                "2.78425",
+                "2.61654",
+                "2.94266",
+                "2.81715",
+                "2.36215",
+                "2.40548",
+                "2.29852",
+                "2.33024",
+                "2.33467",
+                "2.34363",
+                "2.38275",
+                "2.4402"
             ],
             "data_is_censored": [
                 false,
@@ -2348,24 +2554,64 @@
                 false
             ],
             "data_numeric_part": [
+                2.6,
+                2.6,
+                2.6,
+                2.7,
+                2.4,
+                2.4,
                 2.8,
-                2.8,
-                2.8,
-                3.0,
-                2.8,
-                2.8,
+                2.6,
                 2.9,
-                3.8,
-                4.0,
-                3.8,
-                3.8,
-                3.9,
-                4.1,
-                4.3,
-                3.3,
-                4.0,
-                3.9,
-                4.0
+                2.8,
+                2.4,
+                2.4,
+                2.3,
+                2.3,
+                2.3,
+                2.3,
+                2.4,
+                2.4
+            ]
+        },
+        {
+            "goalCode": "13",
+            "goalDesc": "Take urgent action to combat climate change and its impacts",
+            "targetCode": "13.1",
+            "targetDesc": "Strengthen resilience and adaptive capacity to climate-related hazards and natural disasters in all countries",
+            "indicatorCode": "13.1.2",
+            "indicatorDesc": "Number of countries that adopt and implement national disaster risk reduction strategies in line with the Sendai Framework for Disaster Risk Reduction 2015-2030",
+            "indicatorTier": "1",
+            "seriesCode": "SG_DSR_LEGREG",
+            "seriesDesc": "Countries with legislative and/or regulatory provisions been made for managing disaster risk (1 = YES; 0 = NO)",
+            "hub": "d675ccc2f7054d82b371e64fb2cbface",
+            "slice_dimensions": {},
+            "data": [
+                {
+                    "value": "1",
+                    "year": "2015"
+                }
+            ],
+            "text_type": "12",
+            "fact_title": "Countries with legislative and/or regulatory provisions been made for managing disaster risk (1 = YES; 0 = NO)",
+            "fact_text": "As of <span class='fact-year'> 2015</span> , Democratic Republic of the Congo has developed national and local disaster reduction strategies.",
+            "fact_values": [
+                "1"
+            ],
+            "fact_years": [
+                "2015"
+            ],
+            "data_years": [
+                "2015"
+            ],
+            "data_values": [
+                "1"
+            ],
+            "data_is_censored": [
+                false
+            ],
+            "data_numeric_part": [
+                1.0
             ]
         },
         {
@@ -2382,15 +2628,15 @@
             "slice_dimensions": {},
             "data": [
                 {
-                    "value": "10.00941",
+                    "value": "0.23644",
                     "year": "2017"
                 }
             ],
             "text_type": "8",
             "fact_title": "Coverage of protected areas in relation to marine areas (Exclusive Economic Zones) (%)",
-            "fact_text": "In <span class='fact-year'> 2017</span> , <span class='fact-value'> 10.00941</span>  <span class='fact-unit'>% </span> of the marine environment under national jurisdiction (up to 200 nautical miles from shore) was under protection.",
+            "fact_text": "In <span class='fact-year'> 2017</span> , <span class='fact-value'> 0.23644</span>  <span class='fact-unit'>% </span> of the marine environment under national jurisdiction (up to 200 nautical miles from shore) was under protection.",
             "fact_values": [
-                "10.00941% "
+                "0.23644% "
             ],
             "fact_years": [
                 "2017"
@@ -2399,13 +2645,13 @@
                 "2017"
             ],
             "data_values": [
-                "10.00941"
+                "0.23644"
             ],
             "data_is_censored": [
                 false
             ],
             "data_numeric_part": [
-                10.0
+                0.24
             ]
         },
         {
@@ -2422,44 +2668,42 @@
             "slice_dimensions": {},
             "data": [
                 {
-                    "value": "70.13",
+                    "value": "67.3",
                     "year": "2015"
                 },
                 {
-                    "value": "73.68",
+                    "value": "67.99",
+                    "year": "2010"
+                },
+                {
+                    "value": "68.68",
                     "year": "2005"
                 },
                 {
-                    "value": "75.39",
+                    "value": "69.36",
                     "year": "2000"
-                },
-                {
-                    "value": "71.91",
-                    "year": "2010"
                 }
             ],
             "text_type": "1",
             "fact_title": "Forest area as a proportion of total land area (%)",
-            "fact_text": "Land area covered by forest declined from <span class='fact-value'>75.39</span> <span class='fact-unit'>%</span> in <span class='fact-year'>2000</span> to <span class='fact-value'>70.13%</span>  in  <span class='fact-year'>2015</span>.",
+            "fact_text": "Land area covered by forest was <span class='fact-value'>67.3</span> <span class='fact-unit'>%</span> in <span class='fact-year'>2015</span>.",
             "fact_values": [
-                "75.39%",
-                "70.13%"
+                "67.3%"
             ],
             "fact_years": [
-                "2000",
                 "2015"
             ],
             "data_years": [
                 "2015",
+                "2010",
                 "2005",
-                "2000",
-                "2010"
+                "2000"
             ],
             "data_values": [
-                "70.13",
-                "73.68",
-                "75.39",
-                "71.91"
+                "67.3",
+                "67.99",
+                "68.68",
+                "69.36"
             ],
             "data_is_censored": [
                 false,
@@ -2468,10 +2712,215 @@
                 false
             ],
             "data_numeric_part": [
-                70.0,
-                74.0,
-                75.0,
-                72.0
+                67.0,
+                68.0,
+                69.0,
+                69.0
+            ]
+        },
+        {
+            "goalCode": "15",
+            "goalDesc": "Protect, restore and promote sustainable use of terrestrial ecosystems, sustainably manage forests, combat desertification, and halt and reverse land degradation and halt biodiversity loss",
+            "targetCode": "15.1",
+            "targetDesc": "By 2020, ensure the conservation, restoration and sustainable use of terrestrial and inland freshwater ecosystems and their services, in particular forests, wetlands, mountains and drylands, in line with obligations under international agreements",
+            "indicatorCode": "15.1.2",
+            "indicatorDesc": "Proportion of important sites for terrestrial and freshwater biodiversity that are covered by protected areas, by ecosystem type",
+            "indicatorTier": "1",
+            "seriesCode": "ER_PTD_FRWRT",
+            "seriesDesc": "Average proportion of Freshwater Key Biodiversity Areas (KBAs) covered by protected areas (%)",
+            "hub": "5c12290ecd1c4a49bc3734721d941d10",
+            "slice_dimensions": {
+                "Bounds": "MP"
+            },
+            "data": [
+                {
+                    "value": "29.39644",
+                    "Bounds": "MP",
+                    "year": "2003"
+                },
+                {
+                    "value": "29.39644",
+                    "Bounds": "MP",
+                    "year": "2002"
+                },
+                {
+                    "value": "29.39644",
+                    "Bounds": "MP",
+                    "year": "2005"
+                },
+                {
+                    "value": "29.39644",
+                    "Bounds": "MP",
+                    "year": "2004"
+                },
+                {
+                    "value": "29.39644",
+                    "Bounds": "MP",
+                    "year": "2001"
+                },
+                {
+                    "value": "29.39644",
+                    "Bounds": "MP",
+                    "year": "2000"
+                },
+                {
+                    "value": "32.75968",
+                    "Bounds": "MP",
+                    "year": "2012"
+                },
+                {
+                    "value": "32.75968",
+                    "Bounds": "MP",
+                    "year": "2011"
+                },
+                {
+                    "value": "32.75968",
+                    "Bounds": "MP",
+                    "year": "2014"
+                },
+                {
+                    "value": "32.75968",
+                    "Bounds": "MP",
+                    "year": "2013"
+                },
+                {
+                    "value": "29.39644",
+                    "Bounds": "MP",
+                    "year": "2007"
+                },
+                {
+                    "value": "29.39644",
+                    "Bounds": "MP",
+                    "year": "2006"
+                },
+                {
+                    "value": "32.75968",
+                    "Bounds": "MP",
+                    "year": "2010"
+                },
+                {
+                    "value": "32.75968",
+                    "Bounds": "MP",
+                    "year": "2008"
+                },
+                {
+                    "value": "32.75968",
+                    "Bounds": "MP",
+                    "year": "2009"
+                },
+                {
+                    "value": "32.75968",
+                    "Bounds": "MP",
+                    "year": "2016"
+                },
+                {
+                    "value": "32.75968",
+                    "Bounds": "MP",
+                    "year": "2015"
+                },
+                {
+                    "value": "35.61907",
+                    "Bounds": "MP",
+                    "year": "2018"
+                },
+                {
+                    "value": "35.61907",
+                    "Bounds": "MP",
+                    "year": "2017"
+                }
+            ],
+            "text_type": "7",
+            "fact_title": "Average proportion of Freshwater Key Biodiversity Areas (KBAs) covered by protected areas (%)",
+            "fact_text": "The average proportion of freshwater key biodiversity areas (KBAs) covered by protected areas was <span class='fact-value'> 35.61907</span>  <span class='fact-unit'>%</span>  in <span class='fact-year'> 2018</span> .",
+            "fact_values": [
+                "35.61907%"
+            ],
+            "fact_years": [
+                "2018"
+            ],
+            "data_years": [
+                "2003",
+                "2002",
+                "2005",
+                "2004",
+                "2001",
+                "2000",
+                "2012",
+                "2011",
+                "2014",
+                "2013",
+                "2007",
+                "2006",
+                "2010",
+                "2008",
+                "2009",
+                "2016",
+                "2015",
+                "2018",
+                "2017"
+            ],
+            "data_values": [
+                "29.39644",
+                "29.39644",
+                "29.39644",
+                "29.39644",
+                "29.39644",
+                "29.39644",
+                "32.75968",
+                "32.75968",
+                "32.75968",
+                "32.75968",
+                "29.39644",
+                "29.39644",
+                "32.75968",
+                "32.75968",
+                "32.75968",
+                "32.75968",
+                "32.75968",
+                "35.61907",
+                "35.61907"
+            ],
+            "data_is_censored": [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+            ],
+            "data_numeric_part": [
+                29.0,
+                29.0,
+                29.0,
+                29.0,
+                29.0,
+                29.0,
+                33.0,
+                33.0,
+                33.0,
+                33.0,
+                29.0,
+                29.0,
+                33.0,
+                33.0,
+                33.0,
+                33.0,
+                33.0,
+                36.0,
+                36.0
             ]
         },
         {
@@ -2490,151 +2939,151 @@
             },
             "data": [
                 {
-                    "value": "52.18274",
-                    "Bounds": "MP",
-                    "year": "2004"
-                },
-                {
-                    "value": "52.18274",
-                    "Bounds": "MP",
-                    "year": "2005"
-                },
-                {
-                    "value": "52.18274",
-                    "Bounds": "MP",
-                    "year": "2006"
-                },
-                {
-                    "value": "52.18274",
-                    "Bounds": "MP",
-                    "year": "2007"
-                },
-                {
-                    "value": "52.18274",
-                    "Bounds": "MP",
-                    "year": "2008"
-                },
-                {
-                    "value": "52.18274",
-                    "Bounds": "MP",
-                    "year": "2009"
-                },
-                {
-                    "value": "52.18274",
-                    "Bounds": "MP",
-                    "year": "2003"
-                },
-                {
-                    "value": "52.18274",
+                    "value": "36.6251",
                     "Bounds": "MP",
                     "year": "2000"
                 },
                 {
-                    "value": "52.18274",
+                    "value": "36.6251",
                     "Bounds": "MP",
                     "year": "2001"
                 },
                 {
-                    "value": "52.18274",
+                    "value": "36.6251",
+                    "Bounds": "MP",
+                    "year": "2004"
+                },
+                {
+                    "value": "36.6251",
+                    "Bounds": "MP",
+                    "year": "2003"
+                },
+                {
+                    "value": "36.6251",
                     "Bounds": "MP",
                     "year": "2002"
                 },
                 {
-                    "value": "52.18274",
-                    "Bounds": "MP",
-                    "year": "2010"
-                },
-                {
-                    "value": "52.59632",
-                    "Bounds": "MP",
-                    "year": "2018"
-                },
-                {
-                    "value": "52.59632",
-                    "Bounds": "MP",
-                    "year": "2017"
-                },
-                {
-                    "value": "52.18274",
-                    "Bounds": "MP",
-                    "year": "2011"
-                },
-                {
-                    "value": "52.18274",
-                    "Bounds": "MP",
-                    "year": "2012"
-                },
-                {
-                    "value": "52.18274",
-                    "Bounds": "MP",
-                    "year": "2013"
-                },
-                {
-                    "value": "52.2168",
+                    "value": "38.50456",
                     "Bounds": "MP",
                     "year": "2014"
                 },
                 {
-                    "value": "52.59632",
+                    "value": "38.50456",
                     "Bounds": "MP",
                     "year": "2015"
                 },
                 {
-                    "value": "52.59632",
+                    "value": "38.50456",
+                    "Bounds": "MP",
+                    "year": "2013"
+                },
+                {
+                    "value": "38.50456",
+                    "Bounds": "MP",
+                    "year": "2012"
+                },
+                {
+                    "value": "40.10245",
+                    "Bounds": "MP",
+                    "year": "2018"
+                },
+                {
+                    "value": "40.10245",
+                    "Bounds": "MP",
+                    "year": "2017"
+                },
+                {
+                    "value": "38.50456",
                     "Bounds": "MP",
                     "year": "2016"
+                },
+                {
+                    "value": "36.6251",
+                    "Bounds": "MP",
+                    "year": "2007"
+                },
+                {
+                    "value": "36.6251",
+                    "Bounds": "MP",
+                    "year": "2006"
+                },
+                {
+                    "value": "36.6251",
+                    "Bounds": "MP",
+                    "year": "2005"
+                },
+                {
+                    "value": "38.50456",
+                    "Bounds": "MP",
+                    "year": "2008"
+                },
+                {
+                    "value": "38.50456",
+                    "Bounds": "MP",
+                    "year": "2011"
+                },
+                {
+                    "value": "38.50456",
+                    "Bounds": "MP",
+                    "year": "2010"
+                },
+                {
+                    "value": "38.50456",
+                    "Bounds": "MP",
+                    "year": "2009"
                 }
             ],
             "text_type": "7",
             "fact_title": "Average proportion of Terrestrial Key Biodiversity Areas (KBAs) covered by protected areas (%)",
-            "fact_text": "The average proportion of terrestrial key biodiversity areas (KBAs) covered by protected areas was <span class='fact-value'> 52.59632</span>  <span class='fact-unit'>%</span>  in <span class='fact-year'> 2018</span> .",
+            "fact_text": "The average proportion of terrestrial key biodiversity areas (KBAs) covered by protected areas was <span class='fact-value'> 40.10245</span>  <span class='fact-unit'>%</span>  in <span class='fact-year'> 2018</span> .",
             "fact_values": [
-                "52.59632%"
+                "40.10245%"
             ],
             "fact_years": [
                 "2018"
             ],
             "data_years": [
-                "2004",
-                "2005",
-                "2006",
-                "2007",
-                "2008",
-                "2009",
-                "2003",
                 "2000",
                 "2001",
+                "2004",
+                "2003",
                 "2002",
-                "2010",
-                "2018",
-                "2017",
-                "2011",
-                "2012",
-                "2013",
                 "2014",
                 "2015",
-                "2016"
+                "2013",
+                "2012",
+                "2018",
+                "2017",
+                "2016",
+                "2007",
+                "2006",
+                "2005",
+                "2008",
+                "2011",
+                "2010",
+                "2009"
             ],
             "data_values": [
-                "52.18274",
-                "52.18274",
-                "52.18274",
-                "52.18274",
-                "52.18274",
-                "52.18274",
-                "52.18274",
-                "52.18274",
-                "52.18274",
-                "52.18274",
-                "52.18274",
-                "52.59632",
-                "52.59632",
-                "52.18274",
-                "52.18274",
-                "52.18274",
-                "52.2168",
-                "52.59632",
-                "52.59632"
+                "36.6251",
+                "36.6251",
+                "36.6251",
+                "36.6251",
+                "36.6251",
+                "38.50456",
+                "38.50456",
+                "38.50456",
+                "38.50456",
+                "40.10245",
+                "40.10245",
+                "38.50456",
+                "36.6251",
+                "36.6251",
+                "36.6251",
+                "38.50456",
+                "38.50456",
+                "38.50456",
+                "38.50456"
             ],
             "data_is_censored": [
                 false,
@@ -2658,25 +3107,25 @@
                 false
             ],
             "data_numeric_part": [
-                52.0,
-                52.0,
-                52.0,
-                52.0,
-                52.0,
-                52.0,
-                52.0,
-                52.0,
-                52.0,
-                52.0,
-                52.0,
-                53.0,
-                53.0,
-                52.0,
-                52.0,
-                52.0,
-                52.0,
-                53.0,
-                53.0
+                37.0,
+                37.0,
+                37.0,
+                37.0,
+                37.0,
+                39.0,
+                39.0,
+                39.0,
+                39.0,
+                40.0,
+                40.0,
+                39.0,
+                37.0,
+                37.0,
+                37.0,
+                39.0,
+                39.0,
+                39.0,
+                39.0
             ]
         },
         {
@@ -2695,16 +3144,16 @@
             },
             "data": [
                 {
-                    "value": "23.7000000000000",
+                    "value": "24.6000000000000",
                     "Age": "<5Y",
                     "year": "2014"
                 }
             ],
             "text_type": "3",
             "fact_title": "Proportion of children under 5 years of age whose births have been registered with a civil authority (% of children under 5 years of age)",
-            "fact_text": "In <span class='fact-year'> 2014</span> , there were about <span class='fact-value'> 23.7000000000000</span> <span class='fact-unit'>%</span>  of children under age 5 whose births were registered with a civil authority",
+            "fact_text": "In <span class='fact-year'> 2014</span> , there were about <span class='fact-value'> 24.6000000000000</span> <span class='fact-unit'>%</span>  of children under age 5 whose births were registered with a civil authority",
             "fact_values": [
-                "23.7000000000000%"
+                "24.6000000000000%"
             ],
             "fact_years": [
                 "2014"
@@ -2713,13 +3162,13 @@
                 "2014"
             ],
             "data_values": [
-                "23.7000000000000"
+                "24.6000000000000"
             ],
             "data_is_censored": [
                 false
             ],
             "data_numeric_part": [
-                24.0
+                25.0
             ]
         },
         {
@@ -2736,38 +3185,38 @@
             "slice_dimensions": {},
             "data": [
                 {
-                    "value": "10.47",
-                    "year": "2010"
+                    "value": "13.55",
+                    "year": "2015"
                 },
                 {
-                    "value": "9.55",
-                    "year": "2015"
+                    "value": "14.28",
+                    "year": "2010"
                 }
             ],
             "text_type": "11",
             "fact_title": "Number of victims of intentional homicide per 100,000 population (victims per 100,000 population)",
-            "fact_text": "In <span class='fact-year'> 2015</span> , the intentional homicide rate was <span class='fact-value'> 9.55</span>  <span class='fact-unit'> per 100,000 population</span> . ",
+            "fact_text": "In <span class='fact-year'> 2015</span> , the intentional homicide rate was <span class='fact-value'> 13.55</span>  <span class='fact-unit'> per 100,000 population</span> . ",
             "fact_values": [
-                "9.55 per 100,000 population"
+                "13.55 per 100,000 population"
             ],
             "fact_years": [
                 "2015"
             ],
             "data_years": [
-                "2010",
-                "2015"
+                "2015",
+                "2010"
             ],
             "data_values": [
-                "10.47",
-                "9.55"
+                "13.55",
+                "14.28"
             ],
             "data_is_censored": [
                 false,
                 false
             ],
             "data_numeric_part": [
-                10.0,
-                9.6
+                14.0,
+                14.0
             ]
         },
         {
@@ -2784,169 +3233,94 @@
             "slice_dimensions": {},
             "data": [
                 {
-                    "value": "13.95",
-                    "year": "1993"
+                    "value": "4.28",
+                    "year": "2016"
                 },
                 {
-                    "value": "10.54",
-                    "year": "2003"
-                },
-                {
-                    "value": "0.72",
+                    "value": "3.19",
                     "year": "2014"
                 },
                 {
-                    "value": "19.14",
-                    "year": "1994"
-                },
-                {
-                    "value": "0.63",
+                    "value": "3.66",
                     "year": "2015"
                 },
                 {
-                    "value": "6.42",
-                    "year": "2001"
-                },
-                {
-                    "value": "22.11",
-                    "year": "1990"
-                },
-                {
-                    "value": "5.43",
-                    "year": "2002"
-                },
-                {
-                    "value": "34.69",
-                    "year": "1992"
-                },
-                {
-                    "value": "64.69",
-                    "year": "1991"
-                },
-                {
-                    "value": "5.60",
+                    "value": "7.61",
                     "year": "2008"
                 },
                 {
-                    "value": "6.20",
+                    "value": "12.35",
                     "year": "2009"
                 },
                 {
-                    "value": "14.46",
-                    "year": "1997"
-                },
-                {
-                    "value": "12.49",
+                    "value": "9.04",
                     "year": "2006"
                 },
                 {
-                    "value": "7.35",
-                    "year": "2007"
-                },
-                {
-                    "value": "6.59",
+                    "value": "7.79",
                     "year": "2005"
                 },
                 {
-                    "value": "51.09",
-                    "year": "1995"
+                    "value": "7.53",
+                    "year": "2007"
                 },
                 {
-                    "value": "4.41",
+                    "value": "3.05",
                     "year": "2012"
                 },
                 {
-                    "value": "0.76",
+                    "value": "3.29",
                     "year": "2013"
                 },
                 {
-                    "value": "9.48",
+                    "value": "3.06",
                     "year": "2010"
                 },
                 {
-                    "value": "11.59",
-                    "year": "2004"
-                },
-                {
-                    "value": "1.71",
+                    "value": "2.45",
                     "year": "2011"
-                },
-                {
-                    "value": "37.28",
-                    "year": "1996"
                 }
             ],
             "text_type": "1",
             "fact_title": "Debt service as a proportion of exports of goods and services (%)",
-            "fact_text": "Debt service as a proportion of exports of goods and services was <span class='fact-value'>0.63</span> <span class='fact-unit'>%</span> in <span class='fact-year'>2015</span>.",
+            "fact_text": "Debt service as a proportion of exports of goods and services declined from <span class='fact-value'>7.79</span> <span class='fact-unit'>%</span> in <span class='fact-year'>2005</span> to <span class='fact-value'>4.28%</span>  in  <span class='fact-year'>2016</span>.",
             "fact_values": [
-                "0.63%"
+                "7.79%",
+                "4.28%"
             ],
             "fact_years": [
-                "2015"
+                "2005",
+                "2016"
             ],
             "data_years": [
-                "1993",
-                "2003",
+                "2016",
                 "2014",
-                "1994",
                 "2015",
-                "2001",
-                "1990",
-                "2002",
-                "1992",
-                "1991",
                 "2008",
                 "2009",
-                "1997",
                 "2006",
-                "2007",
                 "2005",
-                "1995",
+                "2007",
                 "2012",
                 "2013",
                 "2010",
-                "2004",
-                "2011",
-                "1996"
+                "2011"
             ],
             "data_values": [
-                "13.95",
-                "10.54",
-                "0.72",
-                "19.14",
-                "0.63",
-                "6.42",
-                "22.11",
-                "5.43",
-                "34.69",
-                "64.69",
-                "5.60",
-                "6.20",
-                "14.46",
-                "12.49",
-                "7.35",
-                "6.59",
-                "51.09",
-                "4.41",
-                "0.76",
-                "9.48",
-                "11.59",
-                "1.71",
-                "37.28"
+                "4.28",
+                "3.19",
+                "3.66",
+                "7.61",
+                "12.35",
+                "9.04",
+                "7.79",
+                "7.53",
+                "3.05",
+                "3.29",
+                "3.06",
+                "2.45"
             ],
             "data_is_censored": [
-                false,
-                false,
-                false,
-                false,
-                false,
-                false,
-                false,
-                false,
-                false,
-                false,
-                false,
                 false,
                 false,
                 false,
@@ -2961,29 +3335,18 @@
                 false
             ],
             "data_numeric_part": [
-                14.0,
-                11.0,
-                0.72,
-                19.0,
-                0.63,
-                6.4,
-                22.0,
-                5.4,
-                35.0,
-                65.0,
-                5.6,
-                6.2,
-                14.0,
+                4.3,
+                3.2,
+                3.7,
+                7.6,
                 12.0,
-                7.4,
-                6.6,
-                51.0,
-                4.4,
-                0.76,
-                9.5,
-                12.0,
-                1.7,
-                37.0
+                9.0,
+                7.8,
+                7.5,
+                3.1,
+                3.3,
+                3.1,
+                2.5
             ]
         },
         {
@@ -3002,46 +3365,31 @@
             },
             "data": [
                 {
-                    "value": "0.03971",
+                    "value": "0.00127",
                     "Type of speed": "ANYS",
                     "year": "2016"
                 },
                 {
-                    "value": "0.058787566569507770",
+                    "value": "0.001403580576157194",
                     "Type of speed": "ANYS",
                     "year": "2015"
                 },
                 {
-                    "value": "0.0799061517999218700",
+                    "value": "0.0007208753595257724",
                     "Type of speed": "ANYS",
                     "year": "2014"
                 },
                 {
-                    "value": "0.085198517827437800",
+                    "value": "0.000666531612550150",
                     "Type of speed": "ANYS",
                     "year": "2013"
-                },
-                {
-                    "value": "0.072314881717379250",
-                    "Type of speed": "ANYS",
-                    "year": "2012"
-                },
-                {
-                    "value": "0.061567710937134444",
-                    "Type of speed": "ANYS",
-                    "year": "2011"
-                },
-                {
-                    "value": "0.05042152394013957",
-                    "Type of speed": "ANYS",
-                    "year": "2010"
                 }
             ],
             "text_type": "15",
             "fact_title": "Fixed Internet broadband subscriptions per 100\u00a0inhabitants, by speed (per 100 inhabitants)",
-            "fact_text": "In <span class='fact-year'> 2016</span> , fixed-broadband internet penetration reached <span class='fact-value'> 0.03971</span>  <span class='fact-unit'>% of the population</span> .",
+            "fact_text": "In <span class='fact-year'> 2016</span> , fixed-broadband internet penetration reached <span class='fact-value'> 0.00127</span>  <span class='fact-unit'>% of the population</span> .",
             "fact_values": [
-                "0.03971% of the population"
+                "0.00127% of the population"
             ],
             "fact_years": [
                 "2016"
@@ -3050,37 +3398,65 @@
                 "2016",
                 "2015",
                 "2014",
-                "2013",
-                "2012",
-                "2011",
-                "2010"
+                "2013"
             ],
             "data_values": [
-                "0.03971",
-                "0.058787566569507770",
-                "0.0799061517999218700",
-                "0.085198517827437800",
-                "0.072314881717379250",
-                "0.061567710937134444",
-                "0.05042152394013957"
+                "0.00127",
+                "0.001403580576157194",
+                "0.0007208753595257724",
+                "0.000666531612550150"
             ],
             "data_is_censored": [
-                false,
-                false,
-                false,
                 false,
                 false,
                 false,
                 false
             ],
             "data_numeric_part": [
-                0.04,
-                0.06,
-                0.08,
-                0.09,
-                0.07,
-                0.06,
-                0.05
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ]
+        },
+        {
+            "goalCode": "17",
+            "goalDesc": "Strengthen the means of implementation and revitalize the Global Partnership for Sustainable Development",
+            "targetCode": "17.18",
+            "targetDesc": "By 2020, enhance capacity-building support to developing countries, including for least developed countries and small island developing States, to increase significantly the availability of high-quality, timely and reliable data disaggregated by income, gender, age, race, ethnicity, migratory status, disability, geographic location and other characteristics relevant in national contexts",
+            "indicatorCode": "17.18.3",
+            "indicatorDesc": "Number of countries with a national statistical plan that is fully funded and under implementation, by source of funding",
+            "indicatorTier": "1",
+            "seriesCode": "SG_STT_NSDSFND",
+            "seriesDesc": "Countries with national statistical plans that are fully funded (1 = YES; 0 = NO)",
+            "hub": "bc201a5c69e94e23b45bad86c828f1be",
+            "slice_dimensions": {},
+            "data": [
+                {
+                    "value": "0",
+                    "year": "2017"
+                }
+            ],
+            "text_type": "12",
+            "fact_title": "Countries with national statistical plans that are fully funded (1 = YES; 0 = NO)",
+            "fact_text": "As of <span class='fact-year'> 2017</span> , Democratic Republic of the Congo does not have national statistical plans that are fully funded.",
+            "fact_values": [
+                "0"
+            ],
+            "fact_years": [
+                "2017"
+            ],
+            "data_years": [
+                "2017"
+            ],
+            "data_values": [
+                "0"
+            ],
+            "data_is_censored": [
+                false
+            ],
+            "data_numeric_part": [
+                0.0
             ]
         },
         {
@@ -3097,200 +3473,88 @@
             "slice_dimensions": {},
             "data": [
                 {
-                    "value": "5.72",
-                    "year": "2008"
-                },
-                {
-                    "value": "6.19",
-                    "year": "2007"
-                },
-                {
-                    "value": "6.10",
-                    "year": "2013"
-                },
-                {
-                    "value": "4.61",
+                    "value": "0.04",
                     "year": "2012"
                 },
                 {
-                    "value": "8.01",
+                    "value": "0.05",
                     "year": "2016"
                 },
                 {
-                    "value": "4.74",
+                    "value": "0.05",
+                    "year": "2007"
+                },
+                {
+                    "value": "0.11",
+                    "year": "2013"
+                },
+                {
+                    "value": "0.08",
+                    "year": "2008"
+                },
+                {
+                    "value": "0.48",
                     "year": "2011"
                 },
                 {
-                    "value": "8.76",
-                    "year": "2014"
-                },
-                {
-                    "value": "5.39",
+                    "value": "0.08",
                     "year": "2010"
                 },
                 {
-                    "value": "8.20",
+                    "value": "0.07",
+                    "year": "2014"
+                },
+                {
+                    "value": "0.39",
                     "year": "2015"
                 },
                 {
-                    "value": "5.92",
-                    "year": "2009"
-                },
-                {
-                    "value": "0.45",
-                    "year": "1991"
-                },
-                {
-                    "value": "0.59",
-                    "year": "1992"
-                },
-                {
-                    "value": "0.41",
-                    "year": "1990"
-                },
-                {
-                    "value": "0.72",
-                    "year": "1995"
-                },
-                {
-                    "value": "0.63",
-                    "year": "1993"
-                },
-                {
-                    "value": "0.71",
-                    "year": "1994"
-                },
-                {
-                    "value": "4.85",
-                    "year": "2003"
-                },
-                {
-                    "value": "5.22",
-                    "year": "2004"
-                },
-                {
-                    "value": "4.24",
-                    "year": "2002"
-                },
-                {
-                    "value": "4.31",
+                    "value": "0.09",
                     "year": "2006"
                 },
                 {
-                    "value": "3.39",
+                    "value": "0.07",
                     "year": "2005"
-                },
-                {
-                    "value": "1.94",
-                    "year": "1998"
-                },
-                {
-                    "value": "0.74",
-                    "year": "1996"
-                },
-                {
-                    "value": "0.74",
-                    "year": "1997"
-                },
-                {
-                    "value": "2.56",
-                    "year": "2001"
-                },
-                {
-                    "value": "2.68",
-                    "year": "1999"
-                },
-                {
-                    "value": "2.17",
-                    "year": "2000"
                 }
             ],
             "text_type": "9",
             "fact_title": "Volume of remittances (in United States dollars) as a proportion of total GDP (%)",
-            "fact_text": "In <span class='fact-year'> 2016</span> , the inflow of personal remittances was <span class='fact-value'> 8.01</span>  <span class='fact-unit'>% of GDP</span> , up from <span class='fact-value'> 0.41</span>  <span class='fact-unit'>%</span>  in <span class='fact-year'> 1990</span> ",
+            "fact_text": "In <span class='fact-year'> 2016</span> , the inflow of personal remittances was <span class='fact-value'> 0.05</span>  <span class='fact-unit'>% of GDP</span> , down from <span class='fact-value'> 0.07</span>  <span class='fact-unit'>%</span>  in <span class='fact-year'> 2005</span> ",
             "fact_values": [
-                "0.41% of GDP",
-                "8.01% of GDP"
+                "0.07% of GDP",
+                "0.05% of GDP"
             ],
             "fact_years": [
-                "1990",
+                "2005",
                 "2016"
             ],
             "data_years": [
-                "2008",
-                "2007",
-                "2013",
                 "2012",
                 "2016",
+                "2007",
+                "2013",
+                "2008",
                 "2011",
-                "2014",
                 "2010",
+                "2014",
                 "2015",
-                "2009",
-                "1991",
-                "1992",
-                "1990",
-                "1995",
-                "1993",
-                "1994",
-                "2003",
-                "2004",
-                "2002",
                 "2006",
-                "2005",
-                "1998",
-                "1996",
-                "1997",
-                "2001",
-                "1999",
-                "2000"
+                "2005"
             ],
             "data_values": [
-                "5.72",
-                "6.19",
-                "6.10",
-                "4.61",
-                "8.01",
-                "4.74",
-                "8.76",
-                "5.39",
-                "8.20",
-                "5.92",
-                "0.45",
-                "0.59",
-                "0.41",
-                "0.72",
-                "0.63",
-                "0.71",
-                "4.85",
-                "5.22",
-                "4.24",
-                "4.31",
-                "3.39",
-                "1.94",
-                "0.74",
-                "0.74",
-                "2.56",
-                "2.68",
-                "2.17"
+                "0.04",
+                "0.05",
+                "0.05",
+                "0.11",
+                "0.08",
+                "0.48",
+                "0.08",
+                "0.07",
+                "0.39",
+                "0.09",
+                "0.07"
             ],
             "data_is_censored": [
-                false,
-                false,
-                false,
-                false,
-                false,
-                false,
-                false,
-                false,
-                false,
-                false,
-                false,
-                false,
-                false,
-                false,
-                false,
-                false,
                 false,
                 false,
                 false,
@@ -3304,33 +3568,17 @@
                 false
             ],
             "data_numeric_part": [
-                5.7,
-                6.2,
-                6.1,
-                4.6,
-                8.0,
-                4.7,
-                8.8,
-                5.4,
-                8.2,
-                5.9,
-                0.45,
-                0.59,
-                0.41,
-                0.72,
-                0.63,
-                0.71,
-                4.9,
-                5.2,
-                4.2,
-                4.3,
-                3.4,
-                1.9,
-                0.74,
-                0.74,
-                2.6,
-                2.7,
-                2.2
+                0.04,
+                0.05,
+                0.05,
+                0.11,
+                0.08,
+                0.48,
+                0.08,
+                0.07,
+                0.39,
+                0.09,
+                0.07
             ]
         }
     ]

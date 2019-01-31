@@ -28,13 +28,24 @@ define([
   'dojo/html',
   'dojo/hash',
   'dojo/on',
+  'dojo/query',
   'dojo/io-query',
+  'dojo/dom-attr',
   'dojo/request/xhr',
   'ApplicationBase/ApplicationBase',
   'dojo/i18n!./nls/resources',
   'node_modules/calcite-web/dist/js/calcite-web.js',
   'dojo/text!/config/country-lookups.json',
-  'dojo/text!/config/sdgs-more-info.json'
+  'dojo/text!/config/sdgs-more-info.json',
+
+  '@esri/arcgis-rest-request',
+  '@esri/arcgis-rest-feature-service',
+  '@esri/cedar',
+
+  'esri/Map',
+  'esri/views/MapView',
+  'esri/WebMap',
+  'esri/core/watchUtils'
 ], function (
   declare,
   dom,
@@ -43,13 +54,24 @@ define([
   html,
   hash,
   on,
+  query,
   ioQuery,
+  domAttr,
   xhr,
   ApplicationBase,
   i18n,
   calciteWeb,
   countryLookups,
-  sdgsMoreInfo
+  sdgsMoreInfo,
+
+  agrr,
+  agfs,
+  cedar,
+
+  Map,
+  MapView,
+  WebMap,
+  watchUtils
 ) {
     return declare(null, {
 
@@ -79,14 +101,25 @@ define([
         return foundItem;
       },
 
+      createNavFilter: function () {
+        var links = query('.third-nav-link');
+        on(links, 'click', (e) => {
+          e.preventDefault();
+          links.removeClass('is-active');
+          domClass.add(e.currentTarget, '`is-active');
+
+          var val = e.currentTarget.innerHTML;
+          if (val === 'All') {
+            // show all
+          } else {
+            var items = query(`[data-goal="${val}"]`);
+          }
+          
+          console.log(items);
+        });
+      },
+
       createModalCountries: function (countryLookups) {
-        // <div class="block trailer-half">
-        //   <div class="card card-bar-blue">
-        //     <div class="card-content">
-        //       <p><a href="#">Afghanistan</a></p>
-        //     </div>
-        //   </div>
-        // </div>
         var container = dom.byId('countryContainer');
         countryLookups.forEach(country => {
           var first = domConstruct.create('div', { class: 'block trailer-half cursor' }, container, 'last');
@@ -108,7 +141,6 @@ define([
             'last');
 
           on(first, 'click', (e) => {
-            // console.log('click!', country.name);
             e.preventDefault();
             calciteWeb.bus.emit('modal:close');
             this.updateActiveCountry(country['alpha-2'].toLowerCase());
@@ -139,13 +171,69 @@ define([
         this.loadCountryProfile(params.country);
       },
 
+      createMap: function () {
+        // var map = new Map({
+        //   basemap: 'streets'
+        // });
+
+        var webmap = new WebMap({ 
+          portalItem: {
+            id: '7ba2b4c8d520493e94a546277ad27199' }
+          }
+        );
+
+        var view = new MapView({
+          container: 'map',
+          map: webmap,  
+          zoom: 4,
+          padding: {
+            left: 200
+          }
+        });
+
+        // webmap.when('loaded', () => {
+        //   this.mapLayer = webmap.allLayers.items[0];
+        // });
+
+        view.ui.remove('attribution');
+        view.ui.remove('zoom');
+
+        this.webmap = webmap;
+        this.view = view;
+      },
+
+      zoomMap: function (x,y) {
+        if (this.webmap.loaded) {
+          this.view.goTo([ x, y], { duration: 1000, easing: 'ease-in-out'});
+        } else {
+          watchUtils.once(this.view, 'ready', () => {
+            this.view.goTo([ x, y], { duration: 1000, easing: 'ease-in-out'});
+          });
+        }
+      },
+
+      highlightFeature: function (iso3code) {
+        if (this.webmap.loaded) {
+          this.mapLayer.definitionExpression = `ISO3CD = '${iso3code}'`;
+        } else {
+          this.webmap.loadAll()
+            .then(()=> {
+              this.mapLayer = this.webmap.allLayers.items[1];
+              this.mapLayer.definitionExpression = `ISO3CD = '${iso3code}'`;
+            });
+        }
+      },
+
       init: function (base) {
         calciteWeb.init();
 
+        this.createMap();
+        
         countryLookups = JSON.parse(countryLookups);
         sdgsMoreInfo = JSON.parse(sdgsMoreInfo).data;
 
         this.createModalCountries(countryLookups);
+        this.createNavFilter();
 
         var urlParams = base.results.urlParams;
         var foundItem = this.parseUrlParams(urlParams);
@@ -157,12 +245,12 @@ define([
         if (countryCode !== 'unitednations') {
           this.loadCountryProfile(countryCode);
         }
-                        
+
         document.body.classList.remove(this.CSS.loading);
       },
 
       updateHeader: function (countryCode, titleText, subTitleText) {
-        this.updateFlagIcon(countryCode.toLowerCase());
+        // this.updateFlagIcon(countryCode.toLowerCase());
         this.updateTitleText(titleText);
       },
 
@@ -200,6 +288,12 @@ define([
               if (response.facts && response.facts.length > 0) {
                 this.updateFactSheet(response);
                 this.showFactSheet();
+                if (response.X && response.Y) {
+                  var x = parseFloat(response.X);
+                  var y = parseFloat(response.Y);
+                  this.zoomMap(x, y);
+                  this.highlightFeature(response.ISO3CD);
+                }
               }
             }))
         }        
@@ -208,16 +302,14 @@ define([
       groupFactsBySDG: function (facts) {
         var groups = {};
         for (var i=0;i < facts.length;i++) {
-          var subFacts = facts[i];
-          for (var j=0;j < subFacts.length;j++) {
-            var subFact = subFacts[j];
-            var goalCode = subFact.goalCode;
-            if (!groups[goalCode]) {
-              groups[goalCode] = { facts: [] };
-              groups[goalCode]['title'] = subFact.goalDesc;
-            }
-            groups[goalCode].facts.push(subFact); 
+          var fact = facts[i];
+          var goalCode = fact.goalCode;
+          if (!groups[goalCode]) {
+            groups[goalCode] = { facts: [] };
+            groups[goalCode]['title'] = fact.goalDesc;
           }
+          groups[goalCode].facts.push(fact); 
+          
         }
         return groups;
       },
@@ -247,7 +339,8 @@ define([
           
           var panelCard = domConstruct.create('div', 
             {
-              class: 'panel modifier-class trailer-3 panel-override'
+              class: 'panel modifier-class trailer-5 panel-override',
+              'data-goal': fact
             },
             factContainer, 
             'last');
@@ -314,9 +407,69 @@ define([
 
           for (var j=0; j < goal.facts.length;j++) {
             var title = goal.facts[j].fact_text;
-            domConstruct.create('li', { innerHTML: title }, ol, 'last');
+            var factLi = domConstruct.create('li', { innerHTML: title }, ol, 'last');
+
+            var chartId = `chart-card-goal${fact}-${j}`;
+            var chartContainer = domConstruct.create('div', { id: chartId, class: 'chart-card'}, ol, 'last');
+            var chartDef = this.createChartCardSpec(goal.facts[j].data_values, goal.facts[j].data_years, goal.facts[j].fact_years, colorInfo.hex);
+            var chart = new cedar.Chart(chartId, chartDef);
+            chart.overrides({
+              // balloon: {enabled:false}
+              graphs: [{
+                balloonText: '<strong>[[dataValue]]</strong><br />[[dataYear]]',
+                colorField: 'color',
+                lineColorField: 'lineColor',
+                alphaField: 'alphaColor'
+              }]
+            });
+
+            chart.show();
+            
+
           }          
         }
+      },
+
+      createChartCardSpec: function (values, years, fact_years, color) {
+        var chartFeatures = [];
+        values.forEach((val, i) => {
+          var year = years[i];
+          var isFactYear = false;
+          if (fact_years.indexOf(year) > -1) {
+            isFactYear = true;
+          }
+          chartFeatures.push({
+            attributes: {
+              dataValue: val,
+              dataYear: year,
+              color: color,
+              lineColor: color,
+              alphaColor: (isFactYear) ? 1 : 0
+            }
+          });
+        });
+
+        chartFeatures.sort(function(a, b) {
+          return parseInt(a.attributes.dataYear) - parseInt(b.attributes.dataYear);
+        });
+
+        return {
+          type: 'bar',
+          datasets: [ { data: chartFeatures } ],
+          style: {
+            colors: [color]
+          },
+          series: [
+            {
+              category: { field: 'dataYear' },
+              value: { field: 'dataValue' }
+            }
+          ]
+        };
+      },
+
+      createMapCard: function () {
+
       }
 
     });

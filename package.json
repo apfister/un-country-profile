@@ -42,6 +42,7 @@
     "lint": "grunt lint"
   },
   "dependencies": {
+    "@esri/cedar": "^1.0.0-rc.1",
     "flag-icon-css": "^3.2.1"
   }
 }

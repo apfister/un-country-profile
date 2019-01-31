@@ -50,7 +50,12 @@
     {
       name: "config",
       location: distPath + "/config"
-    }]
+    }],
+    aliases: [  
+      ['@esri/cedar', 'https://unpkg.com/@esri/cedar/dist/umd/cedar.js'],
+      ['@esri/arcgis-rest-request', 'https://unpkg.com/@esri/arcgis-rest-request'],
+      ['@esri/arcgis-rest-feature-service', 'https://unpkg.com/@esri/arcgis-rest-feature-service']
+] 
   };
   window["dojoConfig"] = config;
 })();

@@ -11,7 +11,7 @@
   <!-- End Responsive -->
   <link rel=icon href=assets/favicon.ico sizes="32x32" type="image/vnd.microsoft.icon">
   <link rel="stylesheet" href="styles/main.css">
-  <link rel="stylesheet" href="styles/flag-icon.min.css">
+  <!-- <link rel="stylesheet" href="styles/flag-icon.min.css"> -->
   <link rel="stylesheet" href="https://js.arcgis.com/4.9/esri/css/main.css">
 
   <!-- Esri Calcite Web -->
@@ -19,6 +19,12 @@
 
   <script src="./app/dojo.js"></script>
   <script src="https://js.arcgis.com/4.9/"></script>
+
+  <!-- Load the Chart.js library -->
+  <script src="https://www.amcharts.com/lib/3/amcharts.js"></script>
+  <script src="https://www.amcharts.com/lib/3/serial.js"></script>
+  <script src="https://unpkg.com/@esri/cedar/dist/umd/themes/amCharts/calcite.js"></script>
+
   <script>
     require(["Application/init"]);
   </script>
@@ -82,22 +88,39 @@
   </header>
 
   <!-- Header -->
-  <div class="grid-container-fluid header-container">
-    <div class="column-5 text-right" style="margin-left: 15px;">
+  <div class="grid-container-fluid header-container trailer-2">
+    <div id="map"></div>
+    <!-- <div class="column-5 text-right" style="margin-left: 15px;">
       <div>
         <span id="flagNode" class="flag flag-icon"></span>
       </div>
-    </div>
-    <div class="column-18 leader-3 text-white">
-      <h2 id="titleNode" class="header-title">SDG Country Profiles</h2>
-      <!-- <p id="subtitleNode" class="header-subtitle">SDG Country Profiles</p> -->
-    </div>
+    </div> -->
+    <!-- <div class="title-node text-white"> -->
+      <p id="titleNode" class="title-node">SDG Country Profiles</p>
+    <!-- </div> -->
   </div>
 
   <!-- TODO: Goal Filter -->
+  <!-- <div class="grid-container">
+    <div class="column-24 text-center">
+        <header class="third-nav">
+            <div class="third-nav-container">
+              <div class="grid-container">
+                <nav class="column-24" role="navigation" aria-labelledby="thirdnav">
+                  <a class="third-nav-link is-active" data-filter="All" href="#">All</a>
+                  <a class="third-nav-link" data-filter="1" href="#">1</a>
+                  <a class="third-nav-link" data-filter="2" href="#">2</a>
+                  <a class="third-nav-link" data-filter="3" href="#">3</a>
+                  <a class="third-nav-link" data-filter="4" href="#">4</a>
+                </nav>
+              </div>
+            </div>
+          </header>
+    </div>
+  </div> -->
 
   <!-- Body -->
-  <div class="grid-container leader-2">
+  <div class="grid-container leader-6">
     <div id="fact-container" class="column-22 pre-1">
     </div>
   </div>
