@@ -34,7 +34,8 @@ define([
   'dojo/request/xhr',
   'ApplicationBase/ApplicationBase',
   'dojo/i18n!./nls/resources',
-  'node_modules/calcite-web/dist/js/calcite-web.js',
+  // 'node_modules/calcite-web/dist/js/calcite-web.js',
+  'calcite-web',
   'dojo/text!/config/country-lookups.json',
   'dojo/text!/config/sdgs-more-info.json',
 
@@ -409,22 +410,24 @@ define([
             var title = goal.facts[j].fact_text;
             var factLi = domConstruct.create('li', { innerHTML: title }, ol, 'last');
 
-            var chartId = `chart-card-goal${fact}-${j}`;
-            var chartContainer = domConstruct.create('div', { id: chartId, class: 'chart-card'}, ol, 'last');
-            var chartDef = this.createChartCardSpec(goal.facts[j].data_values, goal.facts[j].data_years, goal.facts[j].fact_years, colorInfo.hex);
-            var chart = new cedar.Chart(chartId, chartDef);
-            chart.overrides({
-              // balloon: {enabled:false}
-              graphs: [{
-                balloonText: '<strong>[[dataValue]]</strong><br />[[dataYear]]',
-                colorField: 'color',
-                lineColorField: 'lineColor',
-                alphaField: 'alphaColor',
-                lineAlpha: 0.35
-              }]
-            });
+            if (goal.facts[j].data_values.length > 1) {
+              var chartId = `chart-card-goal${fact}-${j}`;
+              var chartContainer = domConstruct.create('div', { id: chartId, class: 'chart-card'}, ol, 'last');
+              var chartDef = this.createChartCardSpec(goal.facts[j].data_values, goal.facts[j].data_years, goal.facts[j].fact_years, colorInfo.hex);
+              var chart = new cedar.Chart(chartId, chartDef);
+              chart.overrides({
+                // balloon: {enabled:false}
+                graphs: [{
+                  balloonText: '<strong>[[dataValue]]</strong><br />[[dataYear]]',
+                  colorField: 'color',
+                  lineColorField: 'lineColor',
+                  alphaField: 'alphaColor',
+                  lineAlpha: 0.35
+                }]
+              });
 
-            chart.show();
+              chart.show();
+            }
             
 
           }          

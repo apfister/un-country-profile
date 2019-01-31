@@ -52,6 +52,7 @@
       location: distPath + "/config"
     }],
     aliases: [  
+      ['calcite-web', 'https://s3-us-west-1.amazonaws.com/patterns.esri.com/files/calcite-web/1.2.4/js/calcite-web.min.js'],
       ['@esri/cedar', 'https://unpkg.com/@esri/cedar/dist/umd/cedar.js'],
       ['@esri/arcgis-rest-request', 'https://unpkg.com/@esri/arcgis-rest-request'],
       ['@esri/arcgis-rest-feature-service', 'https://unpkg.com/@esri/arcgis-rest-feature-service']
