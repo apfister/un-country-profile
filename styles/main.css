@@ -135,6 +135,20 @@ body {
   width: 200px;
 }
 
+/* amCharts override - need to fix this */
 a[href="http://www.amcharts.com"] {
   display: none !important;
+}
+
+/* facts */
+.fact-value {
+  font-weight: bold;
+}
+
+.fact-year {
+  font-weight: bold;  
+}
+
+.fact-unit {
+
 }

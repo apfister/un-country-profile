@@ -419,7 +419,8 @@ define([
                 balloonText: '<strong>[[dataValue]]</strong><br />[[dataYear]]',
                 colorField: 'color',
                 lineColorField: 'lineColor',
-                alphaField: 'alphaColor'
+                alphaField: 'alphaColor',
+                lineAlpha: 0.35
               }]
             });
 
