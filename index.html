@@ -12,20 +12,22 @@
   <link rel=icon href=assets/favicon.ico sizes="32x32" type="image/vnd.microsoft.icon">
   <link rel="stylesheet" href="styles/main.css">
   <!-- <link rel="stylesheet" href="styles/flag-icon.min.css"> -->
-  <link rel="stylesheet" href="https://js.arcgis.com/4.9/esri/css/main.css">
+  <link rel="stylesheet" href="https://js.arcgis.com/4.10/esri/css/main.css">
+
+  <!-- placeholder css -->
+  <link rel="stylesheet" href="https://unpkg.com/placeholder-loading/dist/css/placeholder-loading.min.css">
 
   <!-- Esri Calcite Web -->
   <!-- <link rel="stylesheet" href="node_modules/calcite-web/dist/css/calcite-web.css"> -->
   <link rel="stylesheet" href="https://s3-us-west-1.amazonaws.com/patterns.esri.com/files/calcite-web/1.2.4/css/calcite-web.min.css">
 
   <script src="./app/dojo.js"></script>
-  <script src="https://js.arcgis.com/4.9/"></script>
+  <script src="https://js.arcgis.com/4.10/"></script>
 
   <!-- Load the Chart.js library -->
   <script src="https://www.amcharts.com/lib/3/amcharts.js"></script>
   <script src="https://www.amcharts.com/lib/3/serial.js"></script>
   <script src="https://unpkg.com/@esri/cedar/dist/umd/themes/amCharts/calcite.js"></script>
-
 
   <script>
     require(["Application/init"]);
@@ -98,12 +100,12 @@
       </div>
     </div> -->
     <!-- <div class="title-node text-white"> -->
-      <p id="titleNode" class="title-node">SDG Country Profiles</p>
+      <p id="titleNode" class="title-node"></p>
     <!-- </div> -->
   </div>
 
   <!-- TODO: Goal Filter -->
-  <!-- <div class="grid-container">
+  <div class="grid-container">
     <div class="column-24 text-center">
         <header class="third-nav">
             <div class="third-nav-container">
@@ -119,10 +121,10 @@
             </div>
           </header>
     </div>
-  </div> -->
+  </div>
 
   <!-- Body -->
-  <div class="grid-container leader-6">
+  <div class="grid-container leader-3">
     <div id="fact-container" class="column-22 pre-1">
     </div>
   </div>

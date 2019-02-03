@@ -33,6 +33,10 @@ body {
   font-size: 1.4019rem;
 }
 
+.search-top-nav {
+  font-size: 1.15rem !important;
+}
+
 .nav-logo {
   height: 70px;
   width: 70px;
@@ -45,7 +49,7 @@ body {
 
 .header-container {
   /* background-image: url('/assets/images/sdgs-banner-background-dark.jpg'); */
-  height: 220px;
+  height: 200px;
   /* background-size: cover; */
 }
 
@@ -73,9 +77,13 @@ body {
   font-weight: normal;
 }
 
+.card {
+  box-shadow: 0 0 0 1px rgba(0,0,0,0.1), 6px 6px 20px 4px rgba(0,0,0,0.05) !important;
+}
+
 .card-image-override {
-  width: 130px !important;
-  height: 130px !important;
+  width: 100px !important;
+  height: 100px !important;
   min-width: 0 !important;
   margin: 0 auto !important;  
 }
@@ -84,13 +92,24 @@ body {
 }
 
 .card-wide-image-wrap {
-  width: 20% !important;
+  width: 15% !important;
+  margin-top: 10px !important;
 }
 
 .card-override {
   margin-top: -80px !important;
   margin-left: 10px !important;
   padding-left: 0px !important;
+  min-height: 120px;
+}
+
+.goal-title {
+  font-size: 24px;
+  margin-bottom: 0;
+}
+
+.goal-description {
+  font-size: 16px;
 }
 
 .panel-override {
@@ -126,13 +145,19 @@ body {
 }
 
 .esri-overlay-surface {
-  background: black;
-  opacity: 0.4;
+  background:rgba(0, 0, 0, 0.20);
+  /* opacity: 0.4; */
+}
+.map-card .esri-overlay-surface {
+  background: none !important;
 }
 
 .chart-card {
   height: 200px;
-  width: 200px;
+  width: 100%;
+}
+li.grid-container-fluid::before {
+  border: none !important;
 }
 
 /* amCharts override - need to fix this */
@@ -151,4 +176,32 @@ a[href="http://www.amcharts.com"] {
 
 .fact-unit {
 
+}
+
+.li-fact-1::before { border-right: 1px solid #e5243b !important}.li-fact-2::before { border-right: 1px solid #e5b735 !important}.li-fact-3::before { border-right: 1px solid #4c9f38 !important}.li-fact-4::before { border-right: 1px solid #c5192d !important}.li-fact-5::before { border-right: 1px solid #ff3a21 !important}.li-fact-6::before { border-right: 1px solid #26bde2 !important}.li-fact-7::before { border-right: 1px solid #fcc30b !important}.li-fact-8::before { border-right: 1px solid #a21942 !important}.li-fact-9::before { border-right: 1px solid #fd6925 !important}.li-fact-10::before { border-right: 1px solid #dd1367 !important}.li-fact-11::before { border-right: 1px solid #fd9d24 !important}.li-fact-12::before { border-right: 1px solid #c9992d !important}.li-fact-13::before { border-right: 1px solid #3f7e44 !important}.li-fact-14::before { border-right: 1px solid #0a97d9 !important}.li-fact-15::before { border-right: 1px solid #56c02b !important}.li-fact-16::before { border-right: 1px solid #00689d !important}.li-fact-17::before { border-right: 1px solid #19486a !important}
+
+.map-card-content {
+  height: 100% !important;
+  width: 100% !important;
+  padding: 0 !important;
+}
+.map-card {
+  height: 100%;
+  width: 100%;
+}
+
+.ph-avatar {
+  background-image: url(/assets/images/loading-ph-globe-bw.png)  !important;
+  background-size: contain !important;
+  background-color: transparent !important;
+  background-repeat: no-repeat;
+}
+
+.ph-item {
+  border: 0 !important;
+  margin: 0 auto !important;
+  position: absolute !important;
+  z-index: 1 !important;
+  height: 100% !important;
+  width: 100% !important;
 }

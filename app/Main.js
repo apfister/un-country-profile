@@ -32,9 +32,13 @@ define([
   'dojo/io-query',
   'dojo/dom-attr',
   'dojo/request/xhr',
+  'dojo/_base/fx',
+  'dojo/fx',
+  'dojo/_base/connect',
+  'dojo/Stateful',
+
   'ApplicationBase/ApplicationBase',
   'dojo/i18n!./nls/resources',
-  // 'node_modules/calcite-web/dist/js/calcite-web.js',
   'calcite-web',
   'dojo/text!/config/country-lookups.json',
   'dojo/text!/config/sdgs-more-info.json',
@@ -44,6 +48,11 @@ define([
   '@esri/cedar',
 
   'esri/Map',
+  'esri/layers/Layer',
+  'esri/layers/VectorTileLayer',
+  'esri/layers/GraphicsLayer',
+  'esri/Graphic',
+  'esri/Basemap',
   'esri/views/MapView',
   'esri/WebMap',
   'esri/core/watchUtils'
@@ -59,6 +68,11 @@ define([
   ioQuery,
   domAttr,
   xhr,
+  fx,
+  coreFx,
+  connect,
+  Stateful,
+
   ApplicationBase,
   i18n,
   calciteWeb,
@@ -70,6 +84,11 @@ define([
   cedar,
 
   Map,
+  Layer,
+  VectorTileLayer,
+  GraphicsLayer,
+  Graphic,
+  Basemap,
   MapView,
   WebMap,
   watchUtils
@@ -186,21 +205,74 @@ define([
         var view = new MapView({
           container: 'map',
           map: webmap,  
-          zoom: 4,
+          zoom: 3,
           padding: {
             left: 200
           }
         });
 
-        // webmap.when('loaded', () => {
-        //   this.mapLayer = webmap.allLayers.items[0];
-        // });
-
-        view.ui.remove('attribution');
-        view.ui.remove('zoom');
+        this.removeMapViewUIComponents(view);
+        this.diasbleAllMapInteraction(view);
 
         this.webmap = webmap;
         this.view = view;
+      },
+
+      removeMapViewUIComponents: function (view) {
+        view.ui.remove('attribution');
+        view.ui.remove('zoom');
+      },
+
+      diasbleAllMapInteraction: function (view) {
+        // prevents panning with the mouse drag event
+        view.on("drag", function(event){
+          event.stopPropagation();
+        });
+
+        // prevent panning by arrow keys
+        view.on("key-down", function(event){
+          // prevents panning with the arrow keys
+          var keyPressed = event.key;
+          if(keyPressed.slice(0,5) === "Arrow"){
+            event.stopPropagation();
+          }
+        });
+
+        // prevents mouse wheel zoom
+        view.on("mouse-wheel", function(event){
+          event.stopPropagation();
+        });
+
+        // Disable the default +/- key-down gestures
+        view.on("key-down", function(event){
+          var prohibitedKeys = [ "+", "-", "Shift", "_", "=" ];
+          var keyPressed = event.key;
+          if(prohibitedKeys.indexOf(keyPressed) !== -1){
+            event.stopPropagation();
+          }
+        });
+
+        // prevents double click zoom
+        view.on("double-click", function(event){
+          event.stopPropagation();
+        });
+        view.on("double-click", ["Control"], function(event){
+          event.stopPropagation();
+        });
+
+        // Disable pinch zoom and panning
+        view.on("drag", function(event){
+          event.stopPropagation();
+        });
+
+        // Disable the view's zoom box
+        view.on("drag", ["Shift"], function(event){
+          event.stopPropagation();
+        });
+        
+        view.on("drag", ["Shift", "Control"], function(event){
+          event.stopPropagation();
+        });
       },
 
       zoomMap: function (x,y) {
@@ -251,19 +323,7 @@ define([
       },
 
       updateHeader: function (countryCode, titleText, subTitleText) {
-        // this.updateFlagIcon(countryCode.toLowerCase());
         this.updateTitleText(titleText);
-      },
-
-      updateFlagIcon: function (countryCode) {
-        var node = dom.byId('flagNode');
-
-        domClass.remove(node, this.currentFlagClass);
-        
-        var flagClass = `flag-icon-${countryCode}`;
-        domClass.add(node, flagClass);
-
-        this.currentFlagClass = flagClass;
       },
 
       updateTitleText: function (titleText) {
@@ -276,7 +336,7 @@ define([
       },
 
       loadCountryProfile: function (countryCode) {
-        this.hideFactSheet();
+        // this.hideFactSheet();
         
         this.clearCountryProfile();
 
@@ -288,7 +348,7 @@ define([
               // console.log(response);
               if (response.facts && response.facts.length > 0) {
                 this.updateFactSheet(response);
-                this.showFactSheet();
+                // this.showFactSheet();
                 if (response.X && response.Y) {
                   var x = parseFloat(response.X);
                   var y = parseFloat(response.Y);
@@ -325,6 +385,8 @@ define([
       },
 
       updateFactSheet: function (response) {
+        var testing = false;
+
         var facts = response.facts;
         var groupedFacts = this.groupFactsBySDG(facts);
         
@@ -355,8 +417,8 @@ define([
 
           var goalCardIcon = domConstruct.create('figure', 
             {
-              class: 'card-wide-image-wrap',
-              style: `background-color: ${colorInfo.hex}`
+              class: 'card-wide-image-wrap'
+              // ,style: `background-color: ${colorInfo.hex}`
             },
             goalCard,
             'first');
@@ -364,7 +426,7 @@ define([
           var goalCardIconImg = domConstruct.create('img', 
             {
               class: 'card-wide-image card-image-override',
-              src: `/assets/images/sdg-icons/en/TGG_Icon_Only_Color_${fact}.gif`
+              src: `/assets/images/sdg-icons-new/E_SDG%20goals_icons-individual-rgb-${fact}.png`
             },
             goalCardIcon,
             'first');
@@ -378,7 +440,7 @@ define([
           
           var goalHeader = domConstruct.create('h4', 
             {
-              class: 'trailer-half',
+              class: 'goal-title',
               innerHTML: goalTitle
             },
             goalCardContent,
@@ -386,7 +448,7 @@ define([
 
           var goalDescContent = domConstruct.create('p', 
             {
-              class: 'font-size--1 trailer-half',
+              class: 'trailer-half goal-description',
               innerHTML: goalDesc
             },
             goalCardContent,
@@ -408,30 +470,43 @@ define([
 
           for (var j=0; j < goal.facts.length;j++) {
             var title = goal.facts[j].fact_text;
-            var factLi = domConstruct.create('li', { innerHTML: title }, ol, 'last');
+            var factLi = domConstruct.create('li', { class: `li-fact-${fact}`, innerHTML: title }, ol, 'last');
 
-            if (goal.facts[j].data_values.length > 1) {
-              var chartId = `chart-card-goal${fact}-${j}`;
-              var chartContainer = domConstruct.create('div', { id: chartId, class: 'chart-card'}, ol, 'last');
-              var chartDef = this.createChartCardSpec(goal.facts[j].data_values, goal.facts[j].data_years, goal.facts[j].fact_years, colorInfo.hex);
-              var chart = new cedar.Chart(chartId, chartDef);
-              chart.overrides({
-                // balloon: {enabled:false}
-                graphs: [{
-                  balloonText: '<strong>[[dataValue]]</strong><br />[[dataYear]]',
-                  colorField: 'color',
-                  lineColorField: 'lineColor',
-                  alphaField: 'alphaColor',
-                  lineAlpha: 0.35
-                }]
-              });
+            if (goal.facts[j].data_values.length > 1 && goal.facts[j].text_type !== '7') {
+              var groupId = `${fact}-${j}`;
 
-              chart.show();
+              var cardGroupContainer = this.createCardGroupContainer(ol, groupId);
+
+              var chartId = `chart-card-goal${fact}-${j}`;              
+              var chartSpec = this.createLineChartCardSpec(goal.facts[j].data_values, goal.facts[j].data_years, goal.facts[j].fact_years, colorInfo.hex);
+              
+              this.createChartCard(cardGroupContainer, chartId, chartSpec);
+
+              // if (!testing) {
+              if (goal.facts[j].hub) {
+                testing = true;
+                var mapId = `map-card-goal-${fact}-${j}`;  
+                var responseInfo = {
+                  lat: response.Y,
+                  lng: response.X,
+                  iso3cd: response.ISO3CD,
+                  sliceDimensions: goal.facts[j].slice_dimensions,
+                  hubItemId: goal.facts[j].hub
+                }
+                this.createMapCard(cardGroupContainer, mapId, colorInfo.hex, responseInfo);                
+              }
             }
-            
-
           }          
         }
+      },
+
+      createCardGroupContainer: function (ol, groupId) {
+        var returnId = `card-group-container-${groupId}`;
+        var groupHtml = `<li class="grid-container-fluid"> <div class="column-20"> <div id="${returnId}" class="block-group block-group-2-up tablet-block-group-1-up phone-block-group-1-up"> </div> </div> </li>`;
+        var groupNode = domConstruct.toDom(groupHtml);
+        domConstruct.place(groupNode, ol, 'last');
+
+        return returnId;
       },
 
       createChartCardSpec: function (values, years, fact_years, color) {
@@ -472,8 +547,190 @@ define([
         };
       },
 
-      createMapCard: function () {
+      createLineChartCardSpec: function (values, years, fact_years, color) {
+        
+        //adjust years
+        var min, max;
+        years.forEach(year => {
+          min = Math.min(min, parseInt(year))
+          max = Math.max(max, parseInt(year));
+        })
+        
+        var chartFeatures = [];
+        values.forEach((val, i) => {
+          var year = years[i];
+          var isFactYear = false;
+          if (fact_years.indexOf(year) > -1) {
+            isFactYear = true;
+          }
+          chartFeatures.push({
+            attributes: {
+              dataValue: val,
+              dataYear: year,
+              color: color,
+              lineColor: color,
+              alphaColor: (isFactYear) ? 1 : 0
+            }
+          });
+        });
 
+        chartFeatures.sort(function(a, b) {
+          return parseInt(a.attributes.dataYear) - parseInt(b.attributes.dataYear);
+        });
+
+        return {
+          type: 'line',
+          datasets: [ { data: chartFeatures } ],
+          style: {
+            colors: [color]
+          },
+          series: [
+            {
+              category: { field: 'dataYear' },
+              value: { field: 'dataValue' }
+            }
+          ]
+        };
+      },
+
+      createChartCard: function (cardGroupContainer, chartId, chartSpec) {
+        var cardTopStyle = `border-top: 3px solid ${chartSpec.style.colors[0]}`;
+        var innerHTML = `<div class="card card-bar-blue block" style="${cardTopStyle}"> <div class="card-content"> <div class="chart-card" id="card-attach-${chartId}"></div> </div> </div>`;
+       
+        var chartCard = domConstruct.toDom(innerHTML);
+
+        domConstruct.place(chartCard, cardGroupContainer, 'last');
+
+        var chart = new cedar.Chart(`card-attach-${chartId}`, chartSpec);
+        chart.overrides({
+          // balloon: {enabled:false}
+          graphs: [{
+            balloonText: '<strong>[[dataValue]]</strong><br />[[dataYear]]',
+            colorField: 'color',
+            lineColorField: 'lineColor',
+            alphaField: 'alphaColor',
+            lineAlpha: 0.35
+          }]
+        });
+
+        chart.show();
+      },
+
+      createMapCard: function (cardGroupContainer, mapId, topColor, responseInfo) {
+        var mapCardTopStyle = `border-top: 3px solid ${topColor}`;
+        var newMapId = `card-attach-${mapId}`;
+        var newMapIdImg = `${newMapId}-img`;
+        var loaderId = `${newMapId}-loader`;
+        var innerHTML = `<div class="card card-bar-blue block" style="${mapCardTopStyle}"> <div class="card-content map-card-content"> <div class="ph-item" id="${loaderId}"> <div class="ph-col-4 pre-3"> <div class="ph-avatar"></div></div></div> <img id="${newMapIdImg}" src=""/><div class="map-card" id="${newMapId}"></div> </div> </div>`;
+        // testing w/o the loading div
+        // var innerHTML = `<div class="card card-bar-blue block" style="${mapCardTopStyle}"> <div class="card-content map-card-content">  <img id="${newMapIdImg}" src=""/><div class="map-card" id="${newMapId}"></div> </div> </div>`;
+        var mapCard = domConstruct.toDom(innerHTML);
+        domConstruct.place(mapCard, cardGroupContainer, 'last');
+
+        var mapOptions = {
+          newMapId: newMapId,
+          newMapIdImg: newMapIdImg,
+          loaderId: loaderId,
+          responseInfo: responseInfo
+        };
+
+        this.createMapObserver(mapOptions);
+      },
+      
+      createMapObserver: function(mapOptions) {
+        var observer;
+      
+        var options = {
+          root: null,
+          rootMargin: "0px",
+          threshold: [0.5]
+        };
+      
+        observer = new IntersectionObserver((entries, self) => {
+          // console.log(entries);
+          console.log('observing ..');
+          entries.forEach(entry => {
+            if (entry.isIntersecting && entry.intersectionRatio >= 0.5) {
+              // console.log(entry.intersectionRatio);
+              // remove observer and create map
+              observer.unobserve(dom.byId(mapOptions.newMapId));
+              this.initMapCard(mapOptions);
+            }
+          });
+        }, options);
+
+        observer.observe(dom.byId(mapOptions.newMapId));
+      },
+
+      initMapCard: function (mapOptions) {
+        var unbasemap = new VectorTileLayer({ url: 'http://undesa.maps.arcgis.com/sharing/rest/content/items/1b93d39e30e944479101cdec2351dca0/resources/styles/root.json'});
+        var basemap = new Basemap({ baseLayers: [ unbasemap ] });
+
+        var map = new Map({ basemap: basemap });
+        
+        var view = new MapView({
+          container: mapOptions.newMapId,
+          map: map,
+          zoom: 4,
+          center: [ mapOptions.responseInfo.lng, mapOptions.responseInfo.lat ]
+        });
+
+        var highlightGraphic = new Graphic({
+          geometry: view.center,
+          symbol: {
+            type: "simple-marker",
+            color: [226, 119, 40, 0],
+            outline: {
+              width: 0.4,
+              color: 'red'
+            }
+          }
+        });
+
+        var graphicsLayer = new GraphicsLayer({ graphics: [ highlightGraphic ] });
+
+        this.diasbleAllMapInteraction(view);
+        this.removeMapViewUIComponents(view);
+
+        Layer.fromPortalItem({
+          portalItem: {
+            id: mapOptions.responseInfo.hubItemId
+          }
+        }).then(function(layer) {
+
+          map.addMany([unbasemap, graphicsLayer, layer]);
+
+          view.whenLayerView(layer).then(function(lyrView){
+            watchUtils.watch(lyrView, 'updating', function(ov, nv) {
+              // console.log(ov, nv);
+              // take screenshot and dispose of map
+              var options = {
+                width: 476,
+                height: 232,
+                quality: 100,
+                format: 'png'
+              };
+                
+              view.takeScreenshot(options).then(function(screenshot) {
+                var imageElement = document.getElementById(mapOptions.newMapIdImg);
+                imageElement.src = screenshot.dataUrl;
+
+                domConstruct.destroy(mapOptions.newMapId);
+                var anOut = fx.fadeOut({ node: mapOptions.loaderId });
+                var anIn = fx.fadeIn({ node: mapOptions.newMapIdImg });
+                
+                var comb = coreFx.combine([anOut, anIn]);
+                connect.connect(comb, 'onEnd', () => {
+                  domConstruct.destroy(mapOptions.loaderId);
+                  delete view;
+                  delete map;
+                });
+                comb.play();
+              });
+            });
+          });
+        });
+        
       }
 
     });
