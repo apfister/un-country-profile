@@ -41,13 +41,13 @@
     {
       name: "ApplicationBase",
       // location: appPath + "/node_modules/@esri/application-base-js",
-      location: appPath + "/app/ApplicationBase",
+      location: distPath + "/app/ApplicationBase",
       main: "ApplicationBase"
     },
     {
       name: "TemplateApplicationBase",
       // location: templateAppPath + "/node_modules/@esri/application-base-js",
-      location: appPath + "/app/ApplicationBase",
+      location: distPath + "/app/ApplicationBase",
       main: "ApplicationBase"
     },
     {
