@@ -16,7 +16,7 @@ body {
   background-color: #fff;
   background-position: center center;
   background-repeat: no-repeat;
-  background-image: url(../assets/loader-ie9.gif)
+  background-image: url(https://s3.amazonaws.com/un-country-profiles-2019/loader-ie9.gif)
 }
 
 .configurable-application--loading .configurable-application__group-container {
@@ -202,7 +202,7 @@ a[href="http://www.amcharts.com"] {
 }
 
 .ph-avatar {
-  background-image: url(/../assets/images/loading-ph-globe-bw.png)  !important;
+  background-image: url(https://s3.amazonaws.com/un-country-profiles-2019/loading-ph-globe-bw.png)  !important;
   background-size: contain !important;
   background-color: transparent !important;
   background-repeat: no-repeat;

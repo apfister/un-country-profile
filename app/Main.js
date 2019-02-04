@@ -427,7 +427,7 @@ define([
           var goalCardIconImg = domConstruct.create('img', 
             {
               class: 'card-wide-image card-image-override',
-              src: `/../assets/images/sdg-icons-new/E_SDG%20goals_icons-individual-rgb-${fact}.png`
+              src: `https://s3.amazonaws.com/un-country-profiles-2019/SDG_ICONS_2019/E_SDG+goals_icons-individual-rgb-${fact}.png`
             },
             goalCardIcon,
             'first');
