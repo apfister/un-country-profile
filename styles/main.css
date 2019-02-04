@@ -202,7 +202,7 @@ a[href="http://www.amcharts.com"] {
 }
 
 .ph-avatar {
-  background-image: url(/assets/images/loading-ph-globe-bw.png)  !important;
+  background-image: url(../assets/images/loading-ph-globe-bw.png)  !important;
   background-size: contain !important;
   background-color: transparent !important;
   background-repeat: no-repeat;
