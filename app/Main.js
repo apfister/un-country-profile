@@ -35,13 +35,14 @@ define([
   'dojo/_base/fx',
   'dojo/fx',
   'dojo/_base/connect',
+  'dojo/_base/lang',
   'dojo/Stateful',
 
   'ApplicationBase/ApplicationBase',
   'dojo/i18n!./nls/resources',
   'calcite-web',
-  'dojo/text!/config/country-lookups.json',
-  'dojo/text!/config/sdgs-more-info.json',
+  'dojo/text!../config/country-lookups.json',
+  'dojo/text!../config/sdgs-more-info.json',
 
   '@esri/arcgis-rest-request',
   '@esri/arcgis-rest-feature-service',
@@ -71,6 +72,7 @@ define([
   fx,
   coreFx,
   connect,
+  lang,
   Stateful,
 
   ApplicationBase,
@@ -418,7 +420,6 @@ define([
           var goalCardIcon = domConstruct.create('figure', 
             {
               class: 'card-wide-image-wrap'
-              // ,style: `background-color: ${colorInfo.hex}`
             },
             goalCard,
             'first');
@@ -456,35 +457,41 @@ define([
           
           var subFactsContainer = domConstruct.create('div', 
             { 
-              class: 'column-18' 
+              class: 'column-21' 
             }, 
             panelCard,
             'last');
 
-          var ol = domConstruct.create('ol', 
-            { 
-              class: 'list-numbered font-size-1' 
-            }, 
-            subFactsContainer,
-            'last');
-
           for (var j=0; j < goal.facts.length;j++) {
             var title = goal.facts[j].fact_text;
-            var factLi = domConstruct.create('li', { class: `li-fact-${fact}`, innerHTML: title }, ol, 'last');
+            var divFact = domConstruct.create('div', { class: `leader-1 font-size-1 column-18`, innerHTML: title }, subFactsContainer, 'last');
+            var factMenu = domConstruct.create('div', { class: 'leader-1 li-menu column-2 text-right', style:'cursor:pointer;' }, subFactsContainer, 'last');
+            
+            var url = `http://www.sdg.org/datasets/${goal.facts[j].hub}`;
+            var downloadIcon = domConstruct.create('div', { class: 'icon-ui-download', 'data-url': url }, factMenu, 'last');
+            on(downloadIcon, 'click', (e) => {
+              window.open(`${e.target.attributes['data-url'].nodeValue}_0.csv`);
+            });
 
-            if (goal.facts[j].data_values.length > 1 && goal.facts[j].text_type !== '7') {
+            // var shareIcon = domConstruct.create('div', { class: 'icon-ui-overview-arrow-top-right', 'data-url': url }, factMenu, 'last');
+            // on(downloadIcon, 'click', (e) => {
+            //   window.open(`${e.target.attributes['data-url'].nodeValue}`);
+            // });
+ 
+            // if there are data values AND they are numeric (not something like '> 95 percent')
+            if (goal.facts[j].data_values.length && 
+               !isNaN(parseInt(goal.facts[j].data_values[0])) ) {
+
               var groupId = `${fact}-${j}`;
 
-              var cardGroupContainer = this.createCardGroupContainer(ol, groupId);
+              var cardGroupContainer = this.createCardGroupContainer(subFactsContainer, groupId);
 
               var chartId = `chart-card-goal${fact}-${j}`;              
               var chartSpec = this.createLineChartCardSpec(goal.facts[j].data_values, goal.facts[j].data_years, goal.facts[j].fact_years, colorInfo.hex);
               
               this.createChartCard(cardGroupContainer, chartId, chartSpec);
 
-              // if (!testing) {
               if (goal.facts[j].hub) {
-                testing = true;
                 var mapId = `map-card-goal-${fact}-${j}`;  
                 var responseInfo = {
                   lat: response.Y,
@@ -495,16 +502,17 @@ define([
                 }
                 this.createMapCard(cardGroupContainer, mapId, colorInfo.hex, responseInfo);                
               }
+              
             }
           }          
         }
       },
 
-      createCardGroupContainer: function (ol, groupId) {
+      createCardGroupContainer: function (subFactsContainer, groupId) {
         var returnId = `card-group-container-${groupId}`;
-        var groupHtml = `<li class="grid-container-fluid"> <div class="column-20"> <div id="${returnId}" class="block-group block-group-2-up tablet-block-group-1-up phone-block-group-1-up"> </div> </div> </li>`;
+        var groupHtml = `<div class="grid-container-fluid"> <div class="column-20 leader-1"> <div id="${returnId}" class="block-group block-group-2-up tablet-block-group-1-up phone-block-group-1-up"> </div> </div> </div>`;
         var groupNode = domConstruct.toDom(groupHtml);
-        domConstruct.place(groupNode, ol, 'last');
+        domConstruct.place(groupNode, subFactsContainer, 'last');
 
         return returnId;
       },
@@ -547,20 +555,12 @@ define([
         };
       },
 
-      createLineChartCardSpec: function (values, years, fact_years, color) {
-        
-        //adjust years
-        var min, max;
-        years.forEach(year => {
-          min = Math.min(min, parseInt(year))
-          max = Math.max(max, parseInt(year));
-        })
-        
+      createLineChartCardSpec: function (values, dataYears, factYears, color) {
         var chartFeatures = [];
         values.forEach((val, i) => {
-          var year = years[i];
+          var year = dataYears[i];
           var isFactYear = false;
-          if (fact_years.indexOf(year) > -1) {
+          if (factYears.indexOf(year) > -1) {
             isFactYear = true;
           }
           chartFeatures.push({
@@ -569,7 +569,8 @@ define([
               dataYear: year,
               color: color,
               lineColor: color,
-              alphaColor: (isFactYear) ? 1 : 0
+              alphaColor: (isFactYear) ? 1 : .30,
+              bulletSize: (isFactYear) ? 8 : 1
             }
           });
         });
@@ -609,7 +610,9 @@ define([
             colorField: 'color',
             lineColorField: 'lineColor',
             alphaField: 'alphaColor',
-            lineAlpha: 0.35
+            bulletSizeField: 'bulletSize',
+            lineAlpha: 0.35,
+            dashLength: 3
           }]
         });
 
@@ -621,7 +624,7 @@ define([
         var newMapId = `card-attach-${mapId}`;
         var newMapIdImg = `${newMapId}-img`;
         var loaderId = `${newMapId}-loader`;
-        var innerHTML = `<div class="card card-bar-blue block" style="${mapCardTopStyle}"> <div class="card-content map-card-content"> <div class="ph-item" id="${loaderId}"> <div class="ph-col-4 pre-3"> <div class="ph-avatar"></div></div></div> <img id="${newMapIdImg}" src=""/><div class="map-card" id="${newMapId}"></div> </div> </div>`;
+        var innerHTML = `<div class="card card-bar-blue block" style="${mapCardTopStyle}"> <div class="card-content map-card-content"> <div class="ph-item" id="${loaderId}"> <div class="ph-col-4 pre-3"> <div class="ph-avatar"></div></div></div> <img id="${newMapIdImg}" class="map-image" src=""/><div class="map-card" id="${newMapId}"></div> </div> </div>`;
         // testing w/o the loading div
         // var innerHTML = `<div class="card card-bar-blue block" style="${mapCardTopStyle}"> <div class="card-content map-card-content">  <img id="${newMapIdImg}" src=""/><div class="map-card" id="${newMapId}"></div> </div> </div>`;
         var mapCard = domConstruct.toDom(innerHTML);
@@ -631,7 +634,8 @@ define([
           newMapId: newMapId,
           newMapIdImg: newMapIdImg,
           loaderId: loaderId,
-          responseInfo: responseInfo
+          responseInfo: responseInfo,
+          goalColor: topColor
         };
 
         this.createMapObserver(mapOptions);
@@ -671,18 +675,22 @@ define([
         var view = new MapView({
           container: mapOptions.newMapId,
           map: map,
-          zoom: 4,
+          zoom: 3,
           center: [ mapOptions.responseInfo.lng, mapOptions.responseInfo.lat ]
         });
 
         var highlightGraphic = new Graphic({
           geometry: view.center,
           symbol: {
-            type: "simple-marker",
-            color: [226, 119, 40, 0],
+            type: 'simple-marker',
+            style: 'diamond',
+            color: [255, 255, 255, 0],
+            size: '20px',
             outline: {
-              width: 0.4,
-              color: 'red'
+              width: 1.4,
+              // color: mapOptions.goalColor,
+              color: 'yellow',
+              style: 'dash'
             }
           }
         });
@@ -696,40 +704,69 @@ define([
           portalItem: {
             id: mapOptions.responseInfo.hubItemId
           }
-        }).then(function(layer) {
+        })
+          .then(function(layer) {
+            map.addMany([unbasemap, graphicsLayer, layer]);
 
-          map.addMany([unbasemap, graphicsLayer, layer]);
-
-          view.whenLayerView(layer).then(function(lyrView){
-            watchUtils.watch(lyrView, 'updating', function(ov, nv) {
-              // console.log(ov, nv);
-              // take screenshot and dispose of map
-              var options = {
-                width: 476,
-                height: 232,
-                quality: 100,
-                format: 'png'
-              };
-                
-              view.takeScreenshot(options).then(function(screenshot) {
-                var imageElement = document.getElementById(mapOptions.newMapIdImg);
-                imageElement.src = screenshot.dataUrl;
-
-                domConstruct.destroy(mapOptions.newMapId);
-                var anOut = fx.fadeOut({ node: mapOptions.loaderId });
-                var anIn = fx.fadeIn({ node: mapOptions.newMapIdImg });
-                
-                var comb = coreFx.combine([anOut, anIn]);
-                connect.connect(comb, 'onEnd', () => {
-                  domConstruct.destroy(mapOptions.loaderId);
-                  delete view;
-                  delete map;
-                });
-                comb.play();
-              });
+            // TODO :: find a way to trap errors that occur when layers don't load.
+            // WHY DOESN'T THIS FIRE WHEN THE LAYER ERRROS??
+            layer.watch('loadError', (ov, nv) => {
+              console.log('error loading the layer!', layer);
             });
+
+            view.whenLayerView(layer)
+              .then(lyrView => {
+                var watchHandle = watchUtils.watch(lyrView, 'updating', (ov, nv) => {
+
+                  // var query = lyrView.layer.createQuery();
+                  // query.where = `ISO3CD ='${mapOptions.responseInfo.iso3cd}'`;
+                  // console.log(query.where);
+
+                  // lyrView.layer.queryFeatures(query).then(result => {
+                  //   console.log(result);
+                  // });
+
+                  watchHandle.remove();
+
+                  // take screenshot and dispose of map
+                  var options = {
+                    width: 476,
+                    height: 232,
+                    quality: 100,
+                    format: 'png'
+                  };
+                    
+                  view.takeScreenshot(options).then(function(screenshot) {
+                    var imageElement = document.getElementById(mapOptions.newMapIdImg);
+                    imageElement.src = screenshot.dataUrl;
+                    on(imageElement, 'click', () => {
+                      window.open(`http://www.sdg.org/datasets/${mapOptions.responseInfo.hubItemId}_0`);
+                    });
+
+                    domConstruct.destroy(mapOptions.newMapId);
+                    var anOut = fx.fadeOut({ node: mapOptions.loaderId });
+                    var anIn = fx.fadeIn({ node: mapOptions.newMapIdImg });
+                    
+                    var comb = coreFx.combine([anOut, anIn]);
+                    connect.connect(comb, 'onEnd', () => {
+                      domConstruct.destroy(mapOptions.loaderId);
+                      delete unbasemap;
+                      delete graphicsLayer;
+                      delete layer;
+                      delete view;
+                      delete map;
+                    });
+                    comb.play();
+                  });
+                });
+              })
+              .catch(error => {
+                console.log(`error loading layerview for :: ${layer.title}`);
+              });
+          })
+          .catch(error => {
+            console.log(`error loading portal item :: ${mapOptions.responseInfo.hubItemId}`);
           });
-        });
         
       }
 

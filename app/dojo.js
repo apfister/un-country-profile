@@ -29,6 +29,7 @@
   var dojoLocale = search.match(localeUrlParamRegex) ?
     RegExp.$1 :
     undefined;
+    
   var config = {
     async: true,
     locale: dojoLocale,
@@ -39,12 +40,14 @@
     },
     {
       name: "ApplicationBase",
-      location: appPath + "/node_modules/@esri/application-base-js",
+      // location: appPath + "/node_modules/@esri/application-base-js",
+      location: appPath + "/app/ApplicationBase",
       main: "ApplicationBase"
     },
     {
       name: "TemplateApplicationBase",
-      location: templateAppPath + "/node_modules/@esri/application-base-js",
+      // location: templateAppPath + "/node_modules/@esri/application-base-js",
+      location: appPath + "/app/ApplicationBase",
       main: "ApplicationBase"
     },
     {
@@ -58,5 +61,6 @@
       ['@esri/arcgis-rest-feature-service', 'https://unpkg.com/@esri/arcgis-rest-feature-service']
 ] 
   };
+  // console.log('config', config);
   window["dojoConfig"] = config;
 })();
