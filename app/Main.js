@@ -427,7 +427,7 @@ define([
           var goalCardIconImg = domConstruct.create('img', 
             {
               class: 'card-wide-image card-image-override',
-              src: `../assets/images/sdg-icons-new/E_SDG%20goals_icons-individual-rgb-${fact}.png`
+              src: `/../assets/images/sdg-icons-new/E_SDG%20goals_icons-individual-rgb-${fact}.png`
             },
             goalCardIcon,
             'first');
