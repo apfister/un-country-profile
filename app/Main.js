@@ -573,7 +573,12 @@ define([
             window.open(`${e.target.attributes['data-url'].nodeValue}_0.csv`);
           });
 
-          var hardUrl = `${window.location.origin}${window.location.search}#${hardLink}`;          
+          var hardUrl = window.location.origin;
+          if (window.location.pathname !== '/') {
+            hardUrl = `${hardUrl}/${window.location.pathname}${window.location.search}#${hardLink}`;
+          } else {
+            hardUrl = `${hardUrl}/${window.location.search}#${hardLink}`;
+          }       
           var shareIcon = domConstruct.create('div', { 
             class: 'icon-ui-overview-arrow-top-right icon-share-override column-1 text-left',
             title: 'Share Link to Fact',
