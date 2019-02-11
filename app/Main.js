@@ -2,6 +2,7 @@
 
 define([
   'dojo/_base/declare',
+  'dojo/window',
   'dojo/dom',
   'dojo/dom-class',
   'dojo/dom-construct',
@@ -11,12 +12,15 @@ define([
   'dojo/query',
   'dojo/io-query',
   'dojo/dom-attr',
+  'dojo/dom-style',
+  'dojo/dom-geometry',
   'dojo/request/xhr',
   'dojo/_base/fx',
   'dojo/fx',
   'dojo/_base/connect',
   'dojo/_base/lang',
   'dojo/Stateful',
+  'dojo/ready',
 
   'ApplicationBase/ApplicationBase',
   'dojo/i18n!./nls/resources',
@@ -40,6 +44,7 @@ define([
   'esri/core/watchUtils'
 ], function (
   declare,
+  win,
   dom,
   domClass,
   domConstruct,
@@ -49,12 +54,15 @@ define([
   query,
   ioQuery,
   domAttr,
+  domStyle,
+  domGeometry,
   xhr,
   fx,
   coreFx,
   connect,
   lang,
   Stateful,
+  ready,
 
   ApplicationBase,
   i18n,
@@ -307,6 +315,10 @@ define([
           window.location = event.target.location;
         }
       };
+      
+      on(dom.byId('alert-close'), 'click', () => {
+        domClass.remove('share-link-container', 'is-active');
+      });
 
       calciteWeb.init();
 
@@ -416,7 +428,7 @@ define([
                   dashboard = sdgsDashboards[fact.goalCode][fact.seriesCode];
                   fact.dashboardItemId = dashboard.dashboardItemId;
                 } catch (error) {
-                  console.log(`error getting dashboard for series: ${fact.seriesCode}`);
+                  console.log(`error getting dashboard for SDG ${fact.goalCode}, target ${fact.targetCode}, indicator ${fact.indicatorCode}, series ${fact.seriesCode}`);
                 }
               });
 
@@ -428,6 +440,15 @@ define([
                 this.zoomMap(x, y);
                 this.highlightFeature(response.ISO3CD);
               }
+
+              // look for hash on incoming URL and scroll to it
+              ready(() =>{
+                if (window.location.hash) {
+                  var hash = window.location.hash.replace('#','');
+                  var node = dom.byId(hash);
+                  node.scrollIntoView();                  
+                }
+              });
             }
           }));
       }
@@ -529,20 +550,21 @@ define([
         for (var j = 0; j < goal.facts.length; j++) {
           var title = goal.facts[j].fact_text;
 
+          var hardLink = `SDG-${goal.facts[j].goalCode}-TARGET-${goal.facts[j].targetCode}-INDICATOR-${goal.facts[j].indicatorCode}-SERIES-${goal.facts[j].seriesCode}`.replace(/\./g, '-').replace(/_/g, '-');
           domConstruct.create('div', {
-            class: 'leader-1 trailer-1 font-size-2 column-18',
+            class: 'leader-1 trailer-1 font-size-2 column-17',
             style: `border-left:1px solid ${colorInfo.hex}`,
-            innerHTML: `<div class="fact-text-container">${title}</div>`
+            innerHTML: `<div class="fact-text-container" id="${hardLink}">${title}</div>`
           }, subFactsContainer, 'last');
 
           var factMenu = domConstruct.create('div', {
-            class: 'leader-1 trailer-2 li-menu column-2 text-right',
+            class: 'leader-1 trailer-2 column-3 text-right',
             style: 'cursor:pointer;'
           }, subFactsContainer, 'last');
 
           var url = `http://www.sdg.org/datasets/${goal.facts[j].hub}`;
           var downloadIcon = domConstruct.create('div', {
-            class: 'icon-ui-download icon-download-override',
+            class: 'icon-ui-download icon-download-override column-1',
             'data-url': url,
             title: 'Download Dataset as CSV'
           }, factMenu, 'last');
@@ -551,10 +573,56 @@ define([
             window.open(`${e.target.attributes['data-url'].nodeValue}_0.csv`);
           });
 
-          // var shareIcon = domConstruct.create('div', { class: 'icon-ui-overview-arrow-top-right', 'data-url': url }, factMenu, 'last');
-          // on(downloadIcon, 'click', (e) => {
-          //   window.open(`${e.target.attributes['data-url'].nodeValue}`);
-          // });
+          var hardUrl = `${window.location.origin}${window.location.search}#${hardLink}`;          
+          var shareIcon = domConstruct.create('div', { 
+            class: 'icon-ui-overview-arrow-top-right icon-share-override column-1 text-left',
+            title: 'Share Link to Fact',
+            'data-url': hardUrl
+          }, factMenu, 'last');
+
+          on(shareIcon, 'click', (e) => {
+            var sectionLink = e.target.attributes['data-url'].nodeValue;
+
+            // copy to clipboard
+            var input = domConstruct.create('input', { value: sectionLink }, document.body, 'last');
+            input.select();
+            document.execCommand('copy');
+            domConstruct.destroy();
+
+            var shareLink = dom.byId('share-link');
+            domAttr.set(shareLink, 'href', sectionLink);
+            var alertNode = dom.byId('share-link-container');
+
+            var coords = domGeometry.docScroll();
+            domStyle.set(alertNode, 'top', `${coords.y}px`);
+
+            domClass.add(alertNode, 'is-active');
+
+            // // var loc = window.location;
+            // var path = 'https://arcg.is/prod/shorten';
+            // xhr(path, {
+            //   handleAs: 'json',
+            //   method: 'POST',
+            //   headers: {
+            //     'X-Requested-With': null
+            //     // ,':authority:': 'arcgi.is'
+            //   },
+            //   query: {
+            //     longUrl: sectionLink,
+            //     f: 'json'
+            //   }
+            // })
+            //   .then((response => {
+            //     if (response && response.data) {
+            //       var shortenedUrl = response.data.long_url;
+            //       console.log(shortenedUrl);
+            //     }
+            //   }))
+            //   .catch(error => {
+            //     console.log(error);
+            //   });
+      
+          });
 
           // if there are data values AND they are numeric (not something like '> 95 percent')
           if (goal.facts[j].data_values.length &&
