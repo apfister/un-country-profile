@@ -575,7 +575,7 @@ define([
 
           var hardUrl = window.location.origin;
           if (window.location.pathname !== '/') {
-            hardUrl = `${hardUrl}/${window.location.pathname}${window.location.search}#${hardLink}`;
+            hardUrl = `${hardUrl}${window.location.pathname}${window.location.search}#${hardLink}`;
           } else {
             hardUrl = `${hardUrl}/${window.location.search}#${hardLink}`;
           }       
