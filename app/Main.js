@@ -137,11 +137,6 @@ define([
         }, second, 'last');
 
         var countryName = country.name;
-        domConstruct.create('span', {
-          class: `flag flag-icon flag-icon-${country['alpha-2'].toLowerCase()} flag-override`
-        },
-        third,
-        'last');
         domConstruct.create('p', {
           class: 'modal-country-name',
           innerHTML: `<a href='#'>${countryName}</a>`
@@ -174,7 +169,7 @@ define([
       var url = `${window.location.origin}${window.location.pathname}?${queryStr}`;
       console.log(url);
 
-      window.history.pushState(params, '', url);
+      window.history.pushState(params, null, url);
 
       var foundItem = this.parseUrlParams(params);
       this.updateHeader(params.country, foundItem.name);
@@ -280,6 +275,9 @@ define([
 
     highlightFeature: function (iso3code) {
       if (this.webmap.loaded) {
+        if (!this.mapLayer) {
+          this.mapLayer = this.webmap.allLayers.items[1];
+        }
         this.mapLayer.definitionExpression = `ISO3CD = '${iso3code}'`;
       } else {
         this.webmap.loadAll()
@@ -291,6 +289,25 @@ define([
     },
 
     init: function (base) {
+
+      window.onpopstate = (event) => {
+        // console.log(event);
+        // window.history.go(-1);
+        // window.location = event.target.location;
+        var searchString = event.target.location.href.substring(event.target.location.href.indexOf('?') + 1, event.target.location.href.length);
+        if (searchString.indexOf('country=') > -1) {
+          var splits = searchString.split('=');
+          var countryCode = splits[1];
+
+          var params = {country: countryCode};
+          var foundItem = this.parseUrlParams(params);
+          this.updateHeader(params.country, foundItem.name);
+          this.loadCountryProfile(countryCode);
+        } else {
+          window.location = event.target.location;
+        }
+      };
+
       calciteWeb.init();
 
       this.createMap();
@@ -311,6 +328,8 @@ define([
 
       if (countryCode !== 'unitednations') {
         this.loadCountryProfile(countryCode);
+      } else {
+        this.loadInitialView();
       }
 
       var path = 'https://services7.arcgis.com/gp50Ao2knMlOM89z/arcgis/rest/services/CountryProfiles/FeatureServer/0/query';
@@ -334,6 +353,35 @@ define([
           document.body.classList.remove(this.CSS.loading);
         }));
 
+    },
+
+    loadInitialView: function () {
+      var container = dom.byId('fact-container');
+      countryLookups.forEach(country => {
+        var first = domConstruct.create('div', {
+          class: 'column-4 trailer-half cursor'
+        }, container, 'last');
+        var second = domConstruct.create('div', {
+          class: 'card card-bar-blue',
+        }, first, 'last');
+        var third = domConstruct.create('div', {
+          class: 'card-content'
+        }, second, 'last');
+
+        var countryName = country.name;
+        domConstruct.create('p', {
+          class: 'modal-country-name',
+          innerHTML: `<a href='#'>${countryName}</a>`
+        },
+        third,
+        'last');
+
+        on(first, 'click', (e) => {
+          e.preventDefault();
+          // calciteWeb.bus.emit('modal:close');
+          this.updateActiveCountry(country['alpha-2'].toLowerCase());
+        });
+      });
     },
 
     updateHeader: function (countryCode, titleText) {
@@ -473,7 +521,7 @@ define([
         'last');
 
         var subFactsContainer = domConstruct.create('div', {
-          class: 'column-21'
+          class: 'column-21 trailer-1'
         },
         panelCard,
         'last');
@@ -482,8 +530,9 @@ define([
           var title = goal.facts[j].fact_text;
 
           domConstruct.create('div', {
-            class: 'leader-1 font-size-1 column-18',
-            innerHTML: title
+            class: 'leader-1 trailer-1 font-size-2 column-18',
+            style: `border-left:1px solid ${colorInfo.hex}`,
+            innerHTML: `<div class="fact-text-container">${title}</div>`
           }, subFactsContainer, 'last');
 
           var factMenu = domConstruct.create('div', {
@@ -493,8 +542,9 @@ define([
 
           var url = `http://www.sdg.org/datasets/${goal.facts[j].hub}`;
           var downloadIcon = domConstruct.create('div', {
-            class: 'icon-ui-download',
-            'data-url': url
+            class: 'icon-ui-download icon-download-override',
+            'data-url': url,
+            title: 'Download Dataset as CSV'
           }, factMenu, 'last');
 
           on(downloadIcon, 'click', (e) => {
@@ -546,7 +596,7 @@ define([
 
     createCardGroupContainer: function (chartId, colorHex, hubItemId, dashboardItemId) {
       var html = `
-        <div class='grid-container-fluid'>
+        <div class='column-21 trailer-1'>
             <div class='column-17'>              
                 <div class='card card-bar-blue block' style='border-top: 3px solid ${colorHex}'>
                     <div class='card-content'>

@@ -117,11 +117,11 @@ body {
 }
 
 .modal-overlay .card {
-  height: 70px;
+  height: auto;
 }
 
 .modal-country-name {
-  margin-left: 40px;
+  font-size: 16px;
 }
 
 .list-numbered > li:before {
@@ -173,6 +173,9 @@ a[href="http://www.amcharts.com"] {
 }
 
 /* facts */
+.fact-text-container {
+  margin-left: 10px;
+}
 .fact-value {
   font-weight: bold;
 }
@@ -234,4 +237,8 @@ a[href="http://www.amcharts.com"] {
 
 html:not([dir="rtl"]) [class*="column-"] [class*="column-"]:first-of-type {
   margin-left: 0 !important;
+}
+
+.icon-download-override {
+  font-size: 22px;
 }
