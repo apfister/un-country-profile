@@ -181,10 +181,6 @@ a[href="http://www.amcharts.com"] {
   font-weight: bold;  
 }
 
-.fact-unit {
-
-}
-
 .li-fact-1::before { border-right: 1px solid #e5243b !important}.li-fact-2::before { border-right: 1px solid #e5b735 !important}.li-fact-3::before { border-right: 1px solid #4c9f38 !important}.li-fact-4::before { border-right: 1px solid #c5192d !important}.li-fact-5::before { border-right: 1px solid #ff3a21 !important}.li-fact-6::before { border-right: 1px solid #26bde2 !important}.li-fact-7::before { border-right: 1px solid #fcc30b !important}.li-fact-8::before { border-right: 1px solid #a21942 !important}.li-fact-9::before { border-right: 1px solid #fd6925 !important}.li-fact-10::before { border-right: 1px solid #dd1367 !important}.li-fact-11::before { border-right: 1px solid #fd9d24 !important}.li-fact-12::before { border-right: 1px solid #c9992d !important}.li-fact-13::before { border-right: 1px solid #3f7e44 !important}.li-fact-14::before { border-right: 1px solid #0a97d9 !important}.li-fact-15::before { border-right: 1px solid #56c02b !important}.li-fact-16::before { border-right: 1px solid #00689d !important}.li-fact-17::before { border-right: 1px solid #19486a !important}
 
 .li-menu::before {
@@ -215,4 +211,27 @@ a[href="http://www.amcharts.com"] {
   z-index: 1 !important;
   height: 100% !important;
   width: 100% !important;
+}
+
+.dashboard-icon {
+  height: 30px;
+}
+
+.hub-icon {
+  height: 30px;
+  width: 30px;
+  margin-left: 20px;
+}
+
+.icon-link-card {
+  height: 100px;
+  padding: 5px !important;
+  cursor: pointer;
+}
+.icon-link-card .card-content {
+  padding: 20px 2px 2px 2px !important;
+}
+
+html:not([dir="rtl"]) [class*="column-"] [class*="column-"]:first-of-type {
+  margin-left: 0 !important;
 }
