@@ -214,6 +214,9 @@ define([
     },
 
     diasbleAllMapInteraction: function (view) {
+
+      view.popup.autoOpenEnabled = false;
+
       // prevents panning with the mouse drag event
       view.on('drag', function (event) {
         event.stopPropagation();
@@ -240,6 +243,10 @@ define([
         if (prohibitedKeys.indexOf(keyPressed) !== -1) {
           event.stopPropagation();
         }
+      });
+
+      view.on('click', function (event) {
+        event.stopPropagation();
       });
 
       // prevents double click zoom
@@ -425,7 +432,7 @@ define([
               response.facts.forEach(fact => {                
                 var dashboard = null;
                 try {
-                  dashboard = sdgsDashboards[fact.goalCode][fact.seriesCode];
+                  dashboard = sdgsDashboards[fact.goalCode];
                   fact.dashboardItemId = dashboard.dashboardItemId;
                 } catch (error) {
                   console.log(`error getting dashboard for SDG ${fact.goalCode}, target ${fact.targetCode}, indicator ${fact.indicatorCode}, series ${fact.seriesCode}`);
@@ -580,26 +587,28 @@ define([
             hardUrl = `${hardUrl}/${window.location.search}#${hardLink}`;
           }       
           var shareIcon = domConstruct.create('div', { 
-            class: 'icon-ui-overview-arrow-top-right icon-share-override column-1 text-left',
+            class: 'icon-share-override column-1 text-left',
             title: 'Share Link to Fact',
+            innerHTML: '<img src="https://s3.amazonaws.com/un-country-profiles-2019/share-icon.png" />',
             'data-url': hardUrl
           }, factMenu, 'last');
 
           on(shareIcon, 'click', (e) => {
-            var sectionLink = e.target.attributes['data-url'].nodeValue;
+            var sectionLink = e.currentTarget.attributes['data-url'].nodeValue;
 
             // copy to clipboard
             var input = domConstruct.create('input', { value: sectionLink }, document.body, 'last');
             input.select();
             document.execCommand('copy');
-            domConstruct.destroy();
+            domConstruct.destroy(input);
 
             var shareLink = dom.byId('share-link');
             domAttr.set(shareLink, 'href', sectionLink);
             var alertNode = dom.byId('share-link-container');
 
             var coords = domGeometry.docScroll();
-            domStyle.set(alertNode, 'top', `${coords.y}px`);
+            var newTop = coords.y+5;
+            domStyle.set(alertNode, 'top', `${newTop}px`);
 
             domClass.add(alertNode, 'is-active');
 
@@ -635,7 +644,7 @@ define([
            
             var chartId = `chart-card-goal${fact}-${j}`;
             
-            var cardGroupNode = this.createCardGroupContainer(chartId, colorInfo.hex, goal.facts[j].hub, goal.facts[j].dashboardItemId);
+            var cardGroupNode = this.createCardGroupContainer(chartId, colorInfo.hex, goal.facts[j].hub, goal.facts[j].dashboardItemId, response.ISO3CD);
             domConstruct.place(cardGroupNode, subFactsContainer, 'last');
 
             var chartSpec = this.createLineChartCardSpec(goal.facts[j].data_values, goal.facts[j].data_years, goal.facts[j].fact_years, colorInfo.hex);
@@ -681,15 +690,15 @@ define([
               <a href='http://undesa.maps.arcgis.com/apps/opsdashboard/index.html#/${dashboardItemId}' target='_blank'>
                 <div class='card card-bar-blue block trailer-1 icon-link-card' style='border-top: 3px solid ${colorHex};'>
                   <div class='card-content center-column'>
-                    <img class='dashboard-icon' src='assets/images/dashboard16.svg'/> 
+                    <img class='dashboard-icon' src='https://s3.amazonaws.com/un-country-profiles-2019/dashboard16.svg'/> 
                     <span class='font-size--3'>View Dashboard</span>
                   </div>
                 </div>
               </a>
-              <a href='http://www.sdg.org/datasets/${hubItemId}_0'>
+              <a href='http://www.sdg.org/datasets/${hubItemId}_0' target='_blank'>
                 <div class='card card-bar-blue block icon-link-card' style='border-top: 3px solid ${colorHex};'>
                   <div class='card-content center-column'>
-                    <img class='hub-icon' src='assets/images/globe.svg' /> 
+                    <img class='hub-icon' src='https://s3.amazonaws.com/un-country-profiles-2019/globe.svg' /> 
                     <span class='font-size--3'>View Dataset</span>
                   </div>
                 </div>
