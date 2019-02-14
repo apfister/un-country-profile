@@ -133,9 +133,33 @@ define([
 
     createModalCountries: function (countryLookups) {
       var container = dom.byId('countryContainer');
+
+      var searchContainer = domConstruct.create('div', {
+        class: 'column-20 '
+      }, container, 'first');
+
+      var searchBox = domConstruct.create('input', {
+        type: 'text',
+        placeholder: 'Filter Countries',
+        class: 'modifier-class trailer-1 column-10'
+      }, searchContainer, 'first');
+
+      on(searchBox, 'input', (e) => {
+        var currentText = e.currentTarget.value.toLowerCase();
+        if (currentText === '') {
+          query('.country-card-modal').removeClass('visually-hidden');
+        } else {
+          query(`.country-card-modal[data-name*="${currentText}"]`).removeClass('visually-hidden');
+          query(`.country-card-modal:not([data-name*="${currentText}"])`).addClass('visually-hidden');
+        }
+      });
+
       countryLookups.forEach(country => {
+        var countryName = country.name;
+
         var first = domConstruct.create('div', {
-          class: 'block trailer-half cursor'
+          class: 'block trailer-half cursor country-card-modal',
+          'data-name': countryName.toLowerCase()
         }, container, 'last');
         var second = domConstruct.create('div', {
           class: 'card card-bar-blue'
@@ -143,8 +167,7 @@ define([
         var third = domConstruct.create('div', {
           class: 'card-content'
         }, second, 'last');
-
-        var countryName = country.name;
+        
         domConstruct.create('p', {
           class: 'modal-country-name',
           innerHTML: `<a href='#'>${countryName}</a>`
@@ -376,9 +399,33 @@ define([
 
     loadInitialView: function () {
       var container = dom.byId('fact-container');
+
+      var searchContainer = domConstruct.create('div', {
+        class: 'column-20 '
+      }, container, 'first');
+
+      var searchBox = domConstruct.create('input', {
+        type: 'text',
+        placeholder: 'Filter Countries',
+        class: 'modifier-class trailer-1 column-10'
+      }, searchContainer, 'first');
+
+      on(searchBox, 'input', (e) => {
+        var currentText = e.currentTarget.value.toLowerCase();
+        if (currentText === '') {
+          query('.country-card').removeClass('visually-hidden');
+        } else {
+          query(`.country-card[data-name*="${currentText}"]`).removeClass('visually-hidden');
+          query(`.country-card:not([data-name*="${currentText}"])`).addClass('visually-hidden');
+        }
+      });
+
       countryLookups.forEach(country => {
+        var countryName = country.name;
+
         var first = domConstruct.create('div', {
-          class: 'column-4 trailer-half cursor'
+          class: 'column-4 trailer-half cursor country-card',
+          'data-name': countryName.toLowerCase(),
         }, container, 'last');
         var second = domConstruct.create('div', {
           class: 'card card-bar-blue',
@@ -387,7 +434,6 @@ define([
           class: 'card-content'
         }, second, 'last');
 
-        var countryName = country.name;
         domConstruct.create('p', {
           class: 'modal-country-name',
           innerHTML: `<a href='#'>${countryName}</a>`
@@ -397,7 +443,6 @@ define([
 
         on(first, 'click', (e) => {
           e.preventDefault();
-          // calciteWeb.bus.emit('modal:close');
           this.updateActiveCountry(country['alpha-2'].toLowerCase());
         });
       });
