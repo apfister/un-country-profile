@@ -259,3 +259,63 @@ html:not([dir="rtl"]) [class*="column-"] [class*="column-"]:first-of-type {
   left: 25% !important;
   margin: 0 auto !important;  
 }
+
+.is-sticky {
+  left: -15px !important;
+  right: 0 !important;
+  border: 1px solid red;
+}
+
+.goal-filter {
+  margin-top: -20px;
+  z-index: 9;
+}
+.goal-filter a,
+.goal-filter a:hover {
+  text-decoration: none;
+}
+
+.img-nav-filter {
+  height: 50px;
+  /* width: 20px; */
+}
+
+.third-nav-link,
+.third-nav-link:hover {
+  text-decoration: none;
+  color: none;
+}
+
+.nav-num-filter {
+  height: 45px;
+  width: 45px !important;
+  /* border: 1px solid rgba(255, 255, 255, 0.5); */
+  margin-right: 10px;
+  padding: 10px;
+}
+
+.nav-num {
+  font-size: 15px;
+  color: white;
+}
+
+.nav-num-all {
+  padding: 0px;
+  height: 45px;
+  width: 45px !important;
+  /* border: 1px solid rgba(255, 255, 255, 0.5); */
+  margin-right: 10px;
+  background-color: #eee;
+}
+.nav-num-all img {
+  height: 35px;
+  margin-top: 4px;
+  width: 35px;
+  max-width: none;
+  margin-left: -4px;
+}
+
+.nav-num-highlight {
+  box-shadow: 0px 1px 8px 5px #fff;
+  border: none;
+}

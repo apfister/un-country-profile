@@ -89,6 +89,7 @@ define([
 
     currentFlagClass: 'unitednations',
     profilesInfo: null,
+    visableGoals: [],
 
     constructor: function () {
       this.CSS = {
@@ -328,6 +329,18 @@ define([
 
     init: function (base) {
 
+      // var hideFilter = query('.scroll-hide')[0];
+      // var top = parseInt(domAttr.get(hideFilter, 'data-top'));
+      // on(window, 'scroll', () => {
+      //   var vs = win.getBox();
+      //   console.log(vs);
+      //   if (vs.t >= top) {
+      //     domClass.add(hideFilter, 'hide');
+      //   } else {
+      //     domClass.remove(hideFilter, 'hide');
+      //   }
+      // });
+
       window.onpopstate = (event) => {
         // console.log(event);
         // window.history.go(-1);
@@ -357,6 +370,56 @@ define([
       countryLookups = JSON.parse(countryLookups);
       sdgsMoreInfo = JSON.parse(sdgsMoreInfo).data;
       sdgsDashboards = JSON.parse(sdgsDashboards);
+
+      this.visableGoals = [];
+
+      // style the background color for the goal filter buttons at the top
+      query('.nav-num').forEach(item => {
+        var goal = parseInt(item.innerHTML);
+        if (!isNaN(goal)) {
+          var foundInfo = sdgsMoreInfo.filter(info => info.goal === goal)[0];
+          foundInfo.colorInfo.rgb.push(0.75);
+          domStyle.set(item.parentElement, 'background-color', `rgb(${foundInfo.colorInfo.rgb.join(',')})`);
+        } else {
+          domStyle.set(item.parentElement, 'background-color',  'rgba(255, 255, 255, 0.5)');
+        }
+
+        // set click handler for filtering of goal panels
+        on(item.parentElement, 'click', (e) => {
+          e.preventDefault();
+
+          var clicked = e.currentTarget;
+          var goalClicked = clicked.getAttribute('data-filter');
+
+          if (goalClicked === 'all') {
+            query('[data-goal]').removeClass('visually-hidden');
+            query('.nav-num-filter').removeClass('nav-num-highlight');
+            this.visableGoals = [];
+          } else {
+            if (domClass.contains(clicked, 'nav-num-highlight')) {
+              domClass.remove(clicked, 'nav-num-highlight');
+              var foundIndex = this.visableGoals.indexOf(goalClicked);
+              this.visableGoals.splice(foundIndex, 1);            
+            } else {
+              domClass.add(clicked, 'nav-num-highlight');
+              this.visableGoals.push(goalClicked);
+            }
+  
+            if (this.visableGoals.length === 0 || goalClicked === 'all') {
+              query('[data-goal]').removeClass('visually-hidden');
+            } else {
+              query('[data-goal]').forEach(goalPanel =>{
+                var goal = goalPanel.getAttribute('data-goal');
+                if (this.visableGoals.indexOf(goal) !== -1) {
+                  domClass.remove(goalPanel, 'visually-hidden');
+                } else {
+                  domClass.add(goalPanel, 'visually-hidden');
+                }
+              });
+            }
+          }
+        });
+      });
 
       this.createModalCountries(countryLookups);
       this.createNavFilter();
@@ -484,7 +547,12 @@ define([
                 }
               });
 
-              this.updateFactSheet(response);
+              var stashedFacts = this.updateFactSheet(response);
+
+              // show/hide goal filter buttons
+              this.updateGoalFilterVisibility(stashedFacts);
+
+              this.resetGoalFilters();
               
               if (response.X && response.Y) {
                 var x = parseFloat(response.X);
@@ -538,8 +606,11 @@ define([
       var groupedFacts = this.groupFactsBySDG(facts);
 
       var factContainer = dom.byId('fact-container');
-      // for (var i=0; i< groupedFacts.length;i++) {
+      var stashedFacts = [];
       for (var fact in groupedFacts) {
+
+        // stash facts to return to show/hide the goal filter buttons at the top (underneath the map)
+        stashedFacts.push(fact);
 
         var goal = groupedFacts[fact];
         var moreInfo = this.getMoreSDGInfo(fact);
@@ -709,7 +780,7 @@ define([
             //   }
             //   this.createMapCard(cardGroupContainer, mapId, colorInfo.hex, responseInfo);
             // }
-
+          
           } else {
             // add a separator for now
 
@@ -719,6 +790,8 @@ define([
         }
 
       }
+
+      return stashedFacts;
     },
 
     createCardGroupContainer: function (chartId, colorHex, hubItemId, dashboardItemId) {
@@ -1026,6 +1099,24 @@ define([
           console.log(`error loading portal item :: ${mapOptions.responseInfo.hubItemId} \n ${error}`);
         });
 
+    },
+
+    updateGoalFilterVisibility: function (stashedFacts) {
+      query('.nav-num-filter').forEach(item => {
+        var incomingGoal = item.getAttribute('data-filter');
+        if (stashedFacts.indexOf(incomingGoal) === -1) {
+          // domClass.add(item, 'visually-hidden');
+          domClass.add(item, 'btn-disabled');
+        } else {
+          // domClass.remove(item, 'visually-hidden');
+          domClass.remove(item, 'btn-disabled');
+        }
+      });      
+    },
+
+    resetGoalFilters: function () {
+      this.visableGoals = [];
+      query('.nav-num-filter').removeClass('nav-num-highlight');
     }
 
   });

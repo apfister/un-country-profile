@@ -50,10 +50,10 @@
       <div id="countryContainer" class="block-group block-group-4-up tablet-block-group-2-up phone-block-group-1-up">
       </div>
 
-      <div class="text-center">
-        <button class="btn js-modal-toggle">okay</button>
-        <button class="btn btn-clear js-modal-toggle">cancel</button>
-      </div>
+      <!-- <div class="text-center"> -->
+      <!-- <button class="btn js-modal-toggle">okay</button> -->
+      <!-- <button class="btn btn-clear js-modal-toggle">Close</button> -->
+      <!-- </div> -->
     </div>
   </div>
 
@@ -92,36 +92,87 @@
   </header>
 
   <!-- Header -->
-  <div class="grid-container-fluid header-container trailer-2">
+  <div class="grid-container-fluid header-container">
     <div id="map"></div>
-    <!-- <div class="column-5 text-right" style="margin-left: 15px;">
-      <div>
-        <span id="flagNode" class="flag flag-icon"></span>
-      </div>
-    </div> -->
-    <!-- <div class="title-node text-white"> -->
-      <p id="titleNode" class="title-node"></p>
-    <!-- </div> -->
+    <p id="titleNode" class="title-node"></p>
   </div>
 
-  <!-- TODO: Goal Filter -->
-  <!-- <div class="grid-container">
-    <div class="column-24 text-center">
-        <header class="third-nav">
-            <div class="third-nav-container">
-              <div class="grid-container">
-                <nav class="column-24" role="navigation" aria-labelledby="thirdnav">
-                  <a class="third-nav-link is-active" data-filter="All" href="#">All</a>
-                  <a class="third-nav-link" data-filter="1" href="#">1</a>
-                  <a class="third-nav-link" data-filter="2" href="#">2</a>
-                  <a class="third-nav-link" data-filter="3" href="#">3</a>
-                  <a class="third-nav-link" data-filter="4" href="#">4</a>
-                </nav>
-              </div>
-            </div>
-          </header>
+  <!-- Goal Filter -->
+  <div class="grid-container-fluid scroll-hide trailer-1 goal-filter text-center center-column" data-top="125">
+      <a class="column-1 nav-num-all" data-filter="all" href="#">
+        <img class="nav-num" src="https://s3.amazonaws.com/un-country-profiles-2019/sdg-logo-only.png" />
+      </a>
+      <a class="column-1 nav-num-filter" data-filter="1" href="#">
+        <span class="nav-num">1</span>
+      </a>
+      <a class="column-1 nav-num-filter" data-filter="2" href="#">
+        <span class="nav-num">2</span>
+      </a>
+      <a class="column-1 nav-num-filter" data-filter="3" href="#">
+        <span class="nav-num">3</span>
+      </a>
+      <a class="column-1 nav-num-filter" data-filter="4" href="#">
+        <span class="nav-num">4</span>
+      </a>
+      <a class="column-1 nav-num-filter" data-filter="5" href="#">
+        <span class="nav-num">5</span>
+      </a>
+      <a class="column-1 nav-num-filter" data-filter="6" href="#">
+        <span class="nav-num">6</span>
+      </a>
+      <a class="column-1 nav-num-filter" data-filter="7" href="#">
+        <span class="nav-num">7</span>
+      </a>
+      <a class="column-1 nav-num-filter" data-filter="8" href="#">
+        <span class="nav-num">8</span>
+      </a>
+      <a class="column-1 nav-num-filter" data-filter="9" href="#">
+        <span class="nav-num">9</span>
+      </a>
+      <a class="column-1 nav-num-filter" data-filter="10" href="#">
+        <span class="nav-num">10</span>
+      </a>
+      <a class="column-1 nav-num-filter" data-filter="11" href="#">
+        <span class="nav-num">11</span>
+      </a>
+      <a class="column-1 nav-num-filter" data-filter="12" href="#">
+        <span class="nav-num">12</span>
+      </a>
+      <a class="column-1 nav-num-filter" data-filter="13" href="#">
+        <span class="nav-num">13</span>
+      </a>
+      <a class="column-1 nav-num-filter" data-filter="14" href="#">
+        <span class="nav-num">14</span>
+      </a>
+      <a class="column-1 nav-num-filter" data-filter="15" href="#">
+        <span class="nav-num">15</span>
+      </a>
+      <a class="column-1 nav-num-filter" data-filter="16" href="#">
+        <span class="nav-num">16</span>
+      </a>
+      <a class="column-1 nav-num-filter" data-filter="17" href="#">
+        <span class="nav-num">17</span>
+      </a>
+  </div>
+
+  <!-- Goal Filter (sticky) -->
+  <div class="grid-container-fluid">
+    <div class="column-24 text-center scroll-show js-sticky is-sticky" data-top="2" style="width:auto;max-width:none;">
+      <header class="third-nav">
+        <div class="third-nav-container">
+          <div class="grid-container">
+            <nav class="" role="navigation" aria-labelledby="thirdnav" style="max-width:none;width:auto;">
+              <a class="third-nav-link is-active" data-filter="All" href="#">All</a>
+              <a class="third-nav-link" data-filter="1" href="#">1</a>
+              <a class="third-nav-link" data-filter="2" href="#">2</a>
+              <a class="third-nav-link" data-filter="3" href="#">3</a>
+              <a class="third-nav-link" data-filter="4" href="#">4</a>
+            </nav>
+          </div>
+        </div>
+      </header>
     </div>
-  </div> -->
+  </div>
 
   <!-- Body -->
   <div class="grid-container leader-3">
@@ -134,12 +185,13 @@
     <div class="grid-container-fluid">
       <div class="column-10">
         <div class="column-9">
-          Link copied to clipboard. You can paste into a new tab or <a href="" target="_blank" id="share-link">click here</a>.
+          Link copied to clipboard. You can paste into a new tab or <a href="" target="_blank" id="share-link">click
+            here</a>.
         </div>
         <div class="column-1" style="width: 40px;">
           <button class="alert-close" id="alert-close">
             <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" class="svg-icon">
-              <path d="M18.404 16l9.9 9.9-2.404 2.404-9.9-9.9-9.9 9.9L3.696 25.9l9.9-9.9-9.9-9.898L6.1 3.698l9.9 9.899 9.9-9.9 2.404 2.406-9.9 9.898z"/>
+              <path d="M18.404 16l9.9 9.9-2.404 2.404-9.9-9.9-9.9 9.9L3.696 25.9l9.9-9.9-9.9-9.898L6.1 3.698l9.9 9.899 9.9-9.9 2.404 2.406-9.9 9.898z" />
             </svg>
           </button>
         </div>
