@@ -260,12 +260,6 @@ html:not([dir="rtl"]) [class*="column-"] [class*="column-"]:first-of-type {
   margin: 0 auto !important;  
 }
 
-.is-sticky {
-  left: -15px !important;
-  right: 0 !important;
-  border: 1px solid red;
-}
-
 .goal-filter {
   margin-top: -20px;
   z-index: 9;

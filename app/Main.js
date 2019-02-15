@@ -363,6 +363,12 @@ define([
         domClass.remove('share-link-container', 'is-active');
       });
 
+      on(dom.byId('btnBackToTop'), 'click', (e) => {
+        e.preventDefault();
+        document.body.scrollTop = 0; // For Safari
+        document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+      });
+
       calciteWeb.init();
 
       this.createMap();
