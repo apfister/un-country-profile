@@ -313,3 +313,13 @@ html:not([dir="rtl"]) [class*="column-"] [class*="column-"]:first-of-type {
   box-shadow: 0px 1px 8px 5px #fff;
   border: none;
 }
+
+.btn-white:hover {
+  color: #4c4c4c;
+  background: #f8f8f8 !important;
+  border-color: #efefef !important;
+}
+
+.btn-white {
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1), 0 0 16px 0 rgba(0, 0, 0, 0.05);
+}
